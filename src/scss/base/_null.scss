@@ -22,10 +22,10 @@ body {
 	min-width: $minWidth + px;
 }
 body {
-	color: $mainColor;
+	color: $primary-color;
 	line-height: 1;
-	font-family: $fontFamily;
-	font-size: $fontSize;
+	font-family: $primary-fontFamily;
+	font-size: $primary-fontSize;
 	//text-rendering: optimizeLegibility;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
@@ -36,7 +36,7 @@ body {
 input,
 button,
 textarea {
-	font-family: $fontFamily;
+	font-family: $primary-fontFamily;
 	font-size: inherit;
 }
 button {

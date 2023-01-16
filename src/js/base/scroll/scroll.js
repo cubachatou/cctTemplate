@@ -1,6 +1,6 @@
 // Підключення функціоналу "Чертоги Фрілансера"
 import { isMobile, getHash, menuClose } from "../functions.js";
-import { flsModules } from "../../files/modules.js";
+import { flsModules } from "../modules.js";
 // Модуль прокручування до блоку
 import { gotoBlock } from "./gotoblock.js";
 // Змінна контролю додавання події window scroll.
@@ -21,14 +21,14 @@ export function pageNavigation() {
 	function pageNavigationAction(e) {
 		if (e.type === "click") {
 			const targetElement = e.target;
-			if (targetElement.closest('[data-goto]')) {
-				const gotoLink = targetElement.closest('[data-goto]');
-				const gotoLinkSelector = gotoLink.dataset.goto ? gotoLink.dataset.goto : '';
-				const noHeader = gotoLink.hasAttribute('data-goto-header') ? true : false;
+			if (targetElement.closest("[data-goto]")) {
+				const gotoLink = targetElement.closest("[data-goto]");
+				const gotoLinkSelector = gotoLink.dataset.goto ? gotoLink.dataset.goto : "";
+				const noHeader = gotoLink.hasAttribute("data-goto-header") ? true : false;
 				const gotoSpeed = gotoLink.dataset.gotoSpeed ? gotoLink.dataset.gotoSpeed : 500;
 				const offsetTop = gotoLink.dataset.gotoTop ? parseInt(gotoLink.dataset.gotoTop) : 0;
 				if (flsModules.fullpage) {
-					const fullpageSection = document.querySelector(`${gotoLinkSelector}`).closest('[data-fp-section]');
+					const fullpageSection = document.querySelector(`${gotoLinkSelector}`).closest("[data-fp-section]");
 					const fullpageSectionId = fullpageSection ? +fullpageSection.dataset.fpId : null;
 					if (fullpageSectionId !== null) {
 						flsModules.fullpage.switchingSection(fullpageSectionId);
@@ -43,7 +43,7 @@ export function pageNavigation() {
 			const entry = e.detail.entry;
 			const targetElement = entry.target;
 			// Обробка пунктів навігації, якщо вказано значення navigator, підсвічуємо поточний пункт меню
-			if (targetElement.dataset.watch === 'navigator') {
+			if (targetElement.dataset.watch === "navigator") {
 				const navigatorActiveItem = document.querySelector(`[data-goto]._navigator-active`);
 				let navigatorCurrentItem;
 				if (targetElement.id && document.querySelector(`[data-goto="#${targetElement.id}"]`)) {
@@ -60,10 +60,10 @@ export function pageNavigation() {
 				if (entry.isIntersecting) {
 					// Бачимо об'єкт
 					// navigatorActiveItem ? navigatorActiveItem.classList.remove('_navigator-active') : null;
-					navigatorCurrentItem ? navigatorCurrentItem.classList.add('_navigator-active') : null;
+					navigatorCurrentItem ? navigatorCurrentItem.classList.add("_navigator-active") : null;
 				} else {
 					// Не бачимо об'єкт
-					navigatorCurrentItem ? navigatorCurrentItem.classList.remove('_navigator-active') : null;
+					navigatorCurrentItem ? navigatorCurrentItem.classList.remove("_navigator-active") : null;
 				}
 			}
 		}
@@ -82,8 +82,8 @@ export function pageNavigation() {
 // Робота з шапкою при скролі
 export function headerScroll() {
 	addWindowScrollEvent = true;
-	const header = document.querySelector('header.header');
-	const headerShow = header.hasAttribute('data-scroll-show');
+	const header = document.querySelector("header.header");
+	const headerShow = header.hasAttribute("data-scroll-show");
 	const headerShowTimer = header.dataset.scrollShow ? header.dataset.scrollShow : 500;
 	const startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
 	let scrollDirection = 0;
@@ -92,23 +92,23 @@ export function headerScroll() {
 		const scrollTop = window.scrollY;
 		clearTimeout(timer);
 		if (scrollTop >= startPoint) {
-			!header.classList.contains('_header-scroll') ? header.classList.add('_header-scroll') : null;
+			!header.classList.contains("_header-scroll") ? header.classList.add("_header-scroll") : null;
 			if (headerShow) {
 				if (scrollTop > scrollDirection) {
 					// downscroll code
-					header.classList.contains('_header-show') ? header.classList.remove('_header-show') : null;
+					header.classList.contains("_header-show") ? header.classList.remove("_header-show") : null;
 				} else {
 					// upscroll code
-					!header.classList.contains('_header-show') ? header.classList.add('_header-show') : null;
+					!header.classList.contains("_header-show") ? header.classList.add("_header-show") : null;
 				}
 				timer = setTimeout(() => {
-					!header.classList.contains('_header-show') ? header.classList.add('_header-show') : null;
+					!header.classList.contains("_header-show") ? header.classList.add("_header-show") : null;
 				}, headerShowTimer);
 			}
 		} else {
-			header.classList.contains('_header-scroll') ? header.classList.remove('_header-scroll') : null;
+			header.classList.contains("_header-scroll") ? header.classList.remove("_header-scroll") : null;
 			if (headerShow) {
-				header.classList.contains('_header-show') ? header.classList.remove('_header-show') : null;
+				header.classList.contains("_header-show") ? header.classList.remove("_header-show") : null;
 			}
 		}
 		scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
@@ -118,7 +118,7 @@ export function headerScroll() {
 export function digitsCounter() {
 	// Обнулення
 	if (document.querySelectorAll("[data-digits-counter]").length) {
-		document.querySelectorAll("[data-digits-counter]").forEach(element => {
+		document.querySelectorAll("[data-digits-counter]").forEach((element) => {
 			element.dataset.digitsCounter = element.innerHTML;
 			element.innerHTML = `0`;
 		});
@@ -128,7 +128,7 @@ export function digitsCounter() {
 	function digitsCountersInit(digitsCountersItems) {
 		let digitsCounters = digitsCountersItems ? digitsCountersItems : document.querySelectorAll("[data-digits-counter]");
 		if (digitsCounters.length) {
-			digitsCounters.forEach(digitsCounter => {
+			digitsCounters.forEach((digitsCounter) => {
 				digitsCountersAnimate(digitsCounter);
 			});
 		}
@@ -168,4 +168,3 @@ setTimeout(() => {
 		});
 	}
 }, 0);
-
