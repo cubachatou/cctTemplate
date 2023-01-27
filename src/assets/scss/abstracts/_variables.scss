@@ -1,8 +1,7 @@
 /*VARIABLES*/
 
 //===================== 1. FONT =====================//
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,600,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500,600,700&display=swap");
 // @import "fonts/fonts";
 // @import "../fonts/icons";
 
@@ -10,16 +9,26 @@ $primary-fontFamily: "Montserrat", sans-serif;
 $primary-fontSize: rem(14);
 
 //===================== 2. COLOR =====================//
-$black: #000;
-$white: #fff;
+$neutral-10: #ffffff;
+$neutral-20: #eeeeef;
+$neutral-30: #e8e8e9;
+$neutral-40: #dcddde;
+$neutral-50: #c3c4c6;
+$neutral-60: #a4a5a9;
+$neutral-70: #808288;
+$neutral-80: #6f7279;
+$neutral-90: #555860;
+$neutral-100: #1c202c;
 
-$primary-color: #426eb7;
-$primary-color_hovered: #a0b7db;
-$primary-color_active: #ecf0f8;
+$primary-main: #00aec5;
+$primary-shadow: #008b9e;
 
-$additional-color: #ffe559;
-$additional-color_hovered: #fff2ac;
-$additional-color_active: #fffcee;
+$turquoise: #40e2e2;
+$blue: #6dc8ff;
+$purple: #ad86f5;
+$red: #e96283;
+$orange: #fa905e;
+$yellow: #fccd20;
 
 //===================== BOXSHADOW =====================//
 
