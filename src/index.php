@@ -7,7 +7,7 @@
 
 <!-- MAIN -->
 <main class="page page_main">
-
+  <h1>test</h1>
 </main>
 
 <!-- FOOTER -->
