@@ -1,12 +1,14 @@
 /*VARIABLES*/
 
 //===================== 1. FONT =====================//
-@import url("https://fonts.googleapis.com/css?family=Inter:regular,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,500,600,700&display=swap");
 // @import "fonts/fonts";
 // @import "../fonts/icons";
 
 $primary-fontFamily: "Montserrat", sans-serif;
-$primary-fontSize: rem(14);
+$secondary-fontFamily: "Open Sans", sans-serif;
+$primary-fontSize: rem(16);
 
 //===================== 2. COLOR =====================//
 $neutral-10: #ffffff;
@@ -20,7 +22,7 @@ $neutral-80: #6f7279;
 $neutral-90: #555860;
 $neutral-100: #1c202c;
 
-$primary-color: $neutral-100;
+$text-primary-color: $neutral-100;
 $primary-main: #00aec5;
 $primary-shadow: #008b9e;
 $turquoise: #40e2e2;
@@ -31,6 +33,7 @@ $orange: #fa905e;
 $yellow: #fccd20;
 
 //===================== BOXSHADOW =====================//
+$imageShadow: 0px rem(64) rem(64) rem(-32) rgba(0, 0, 0, 0.24);
 
 //===================== BORDER =====================//
 
@@ -39,62 +42,45 @@ $yellow: #fccd20;
 //===================== TEXT-SHADOW =====================//
 
 //===================== ANIMATION =====================//
-$primary-curve: cubic-bezier(0.62, 0.05, 0.01, 0.99);
-$primary-duration: 1.25s;
-$primary-delay: 0.07s;
-$base-translate3d: translate3d(0, 0, 0);
-$base-clipPath: inset(0 0 0 0);
-$base-scale3d: scale3d(1, 1, 1);
+// $primary-curve: cubic-bezier(0.62, 0.05, 0.01, 0.99);
+// $primary-duration: 1.25s;
+// $primary-delay: 0.07s;
+// $base-translate3d: translate3d(0, 0, 0);
+// $base-clipPath: inset(0 0 0 0);
+// $base-scale3d: scale3d(1, 1, 1);
 
 //===================== BREAKPOINTS =====================//
-$minWidth: 320;
+$minWidth: 375;
 $maxWidth: 1920;
-$maxWidthContainer: 1200;
-$containerPadding: 40;
+$maxWidthContainer: 1440;
+$containerPadding: 480;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
-$pc: em($containerWidth);
-$tablet: em(991.98);
+$pc: em(1439.98);
+$tablet: em(1023.98);
 $mobile: em(767.98);
-$mobileSmall: em(479.98);
+$mobileSmall: em(414.98);
 
-$responsiveType: 1;
+//===================== BASED ON BRAKPOINTS =====================//
+[class*="__container"] {
+	margin: 0 auto;
+	max-width: rem($maxWidthContainer);
+	box-sizing: content-box;
+	padding: 0 rem(math.div($containerPadding, 2));
 
-@if ($responsiveType==1) {
-	//===================== RESPONSIVE =====================//
-	[class*="__container"] {
-		@if ($maxWidthContainer>0) {
-			max-width: rem($maxWidthContainer);
-			box-sizing: content-box;
-			margin: 0 auto;
-		}
-		@if ($containerPadding>0) {
-			padding: 0 rem(math.div($containerPadding, 2));
-		}
+	@media (max-width: $pc) {
+		max-width: rem(1312);
+		padding: 0 rem(64);
 	}
-} @else {
-	//===================== BASED ON BRAKPOINTS =====================//
-	[class*="__container"] {
-		margin: 0 auto;
-		@if ($maxWidthContainer>0) {
-			max-width: rem($maxWidthContainer);
-			box-sizing: content-box;
-		}
-		@if ($containerPadding>0) {
-			padding: 0 rem(math.div($containerPadding, 2));
-		}
-
-		@media (max-width: $pc) {
-			max-width: rem(970);
-		}
-		@media (max-width: $tablet) {
-			max-width: rem(750);
-		}
-		@media (max-width: $mobile) {
-			max-width: none;
-			@if ($containerPadding>0 and $maxWidthContainer>0) {
-				padding: 0 rem(math.div($containerPadding, 2));
-			}
-		}
+	@media (max-width: $tablet) {
+		max-width: rem(944);
+		padding: 0 rem(40);
+	}
+	@media (max-width: $mobile) {
+		max-width: rem(688);
+	}
+	@media (max-width: $mobileSmall) {
+		max-width: none;
+		padding: 0 rem(16);
 	}
 }

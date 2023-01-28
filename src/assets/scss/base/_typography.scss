@@ -2,24 +2,103 @@
 
 h1,
 .h1 {
+	@media (min-width: $mobile) {
+		font-weight: 900;
+		font-size: 80px;
+		line-height: 100%;
+	}
+	@media (min-width: em(1024)) {
+		font-size: rem(104);
+		line-height: 1;
+		font-weight: 900;
+	}
 }
 
 h2,
 .h2 {
+	font-size: rem(48);
+	line-height: math.div(59, 48);
+	font-weight: 900;
 }
 
 h3,
 .h3 {
+	font-size: rem(36);
+	line-height: math.div(44, 36);
+	font-weight: 900;
 }
 
 h4,
 .h4 {
+	font-size: rem(24);
+	line-height: math.div(29, 24);
+	font-weight: 900;
 }
 
 h5,
 .h5 {
+	font-size: rem(24);
+	line-height: math.div(29, 24);
+	font-weight: 800;
 }
 
 h6,
 .h6 {
+	font-size: rem(18);
+	line-height: math.div(18, 22);
+	font-weight: 700;
+}
+
+.p1 {
+	font-size: rem(48);
+	line-height: math.div(59, 48);
+	font-weight: 600;
+}
+.p2 {
+	font-family: $secondary-fontFamily;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 150%;
+}
+.p3 {
+	font-family: $secondary-fontFamily;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 33px;
+}
+.p4 {
+	font-family: $secondary-fontFamily;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+}
+.p5 {
+	font-family: $secondary-fontFamily;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 150%;
+}
+.p6 {
+	font-family: $secondary-fontFamily;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+}
+.capt-1 {
+	font-family: $secondary-fontFamily;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 19px;
+}
+.capt-2 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	text-transform: uppercase;
 }
