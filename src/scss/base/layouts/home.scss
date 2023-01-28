@@ -42,3 +42,73 @@
 	&__button {
 	}
 }
+
+// services
+.services {
+	// .services__container
+	&__container {
+	}
+	// .services__inner
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: rem(96) rem(64);
+		gap: rem(48);
+	}
+	// .services__heading
+	&__heading {
+		text-align: center;
+	}
+	// .services__title
+	&__title {
+	}
+	// .services__sub-title
+	&__sub-title {
+	}
+	// .services__grid
+	&__grid {
+		display: flex;
+		justify-content: center;
+		gap: rem(32);
+	}
+	// .services__card
+	&__card {
+	}
+	// .services__more-button
+	&__more-button {
+	}
+}
+.service-card {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	flex: 0 0 rem(416);
+	min-height: rem(472);
+	padding: rem(64) rem(40);
+	border-radius: rem(24);
+	background-color: $neutral-10;
+	// .service-card__content
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: rem(25);
+	}
+	// .service-card__number
+	&__number {
+		font-weight: 900;
+		font-size: rem(64);
+		line-height: math.div(78, 64);
+	}
+	// .service-card__title
+	&__title {
+	}
+	// .service-card__text
+	&__text {
+		color: $neutral-90;
+	}
+	// .service-card__button
+	&__button {
+		margin-top: auto;
+	}
+}
