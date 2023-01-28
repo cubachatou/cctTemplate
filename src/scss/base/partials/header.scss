@@ -1,4 +1,13 @@
 .header {
+	position: absolute;
+	width: 100%;
+	&__container {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: rem(136);
+	}
 }
 
 // .icon-menu {

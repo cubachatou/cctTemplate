@@ -1,0 +1,44 @@
+// fh-section
+.fh-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	// .fh-section__title
+	&__title {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: rem(196);
+		line-height: 1;
+		span {
+		}
+	}
+}
+
+// short-about
+.short-about {
+	// .short-about__container
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	// .short-about__inner
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: rem(48);
+		padding: rem(200) rem(64) rem(280);
+		text-align: center;
+	}
+	// .short-about__title
+	&__title {
+		max-width: rem(865);
+	}
+	// .short-about__button
+	&__button {
+	}
+}
