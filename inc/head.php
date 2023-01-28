@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="format-detection" content="telephone=no">
   <!-- <style>body{opacity: 0;}</style> -->
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/dist/css/style.css">
   <link rel="shortcut icon" href="/favicons/favicon.ico">
   <!-- <meta name="robots" content="noindex, nofollow"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
