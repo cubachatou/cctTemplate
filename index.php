@@ -10,7 +10,7 @@
   <section class="fh-section">
     <div class="fh-section__container">
       <div class="fh-section__inner">
-        <h1 class="fh-section__title">
+        <h1 class="fh-section__title hamburger">
           <span>Mavericks</span>
           <span>agency</span>
         </h1>
@@ -62,7 +62,14 @@
       </div>
     </div>
   </section>
+
 </main>
+
+<svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
+  <path class="shape-overlays__path"></path>
+  <path class="shape-overlays__path"></path>
+  <path class="shape-overlays__path"></path>
+</svg>
 
 <!-- FOOTER -->
 <?php include('inc/footer.php'); ?>

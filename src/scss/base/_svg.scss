@@ -5,3 +5,14 @@
 		fill: $primary-main;
 	}
 }
+
+.shape-overlays {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.shape-overlays path {
+	fill: $turquoise;
+}

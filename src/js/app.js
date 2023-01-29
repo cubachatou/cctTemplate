@@ -1,14 +1,16 @@
-import { createApp } from "vue";
+import {
+  createApp
+} from "vue";
 import example from "./components/example.vue";
 
 createApp({
-	data() {
-		return {};
-	},
-	methods: {},
-	components: {
-		example,
-	},
+  data() {
+    return {};
+  },
+  methods: {},
+  components: {
+    example,
+  },
 }).mount("#app");
 
 window["FLS"] = false;
@@ -84,7 +86,7 @@ import * as flsForms from "./base/forms/forms.js";
 
 // Plugin documentation: https://swiperjs.com/
 // Snippet(HTML): swiper
-import "./base/sliders.js";
+// import "./base/sliders.js";
 
 //===================== SCROLLING =====================//
 
