@@ -67,9 +67,13 @@
 
 <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
   <path class="shape-overlays__path"></path>
-  <path class="shape-overlays__path"></path>
-  <path class="shape-overlays__path"></path>
 </svg>
+
+<div id="MenuBulge" class="MenuBulge">
+  <svg class="wiper" viewBox="0 0 65 1088">
+    <path id="wiper" d="M 0 1088 V 0 C 0 0 0 317.333 0 543.37 C 0 757 0 1088 0 1088 Z"></path>
+  </svg>
+</div>
 
 <!-- FOOTER -->
 <?php include('inc/footer.php'); ?>

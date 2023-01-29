@@ -1,5 +1,7 @@
 // fh-section
 .fh-section {
+	position: relative;
+	z-index: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -11,6 +13,7 @@
 		align-items: center;
 		font-size: rem(196);
 		line-height: 1;
+		cursor: default;
 		span {
 		}
 	}
