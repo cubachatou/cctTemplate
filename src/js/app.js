@@ -24,7 +24,7 @@ import * as flsFunctions from "./base/functions.js";
 // flsFunctions.isWebp();
 // flsFunctions.addTouchClass();
 // flsFunctions.addLoadedClass();
-// flsFunctions.menuInit();
+flsFunctions.menuInit();
 // flsFunctions.setAnimateDelay(0.07);
 // flsFunctions.fullVHfix();
 

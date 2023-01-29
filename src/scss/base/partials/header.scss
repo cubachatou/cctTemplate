@@ -12,16 +12,23 @@
 //MENU
 .menu {
 	position: absolute;
-	top: 4rem;
-	right: 4rem;
+	inset: 0;
+	height: 100vh;
+	.menu-open & {
+		z-index: 999;
+	}
 }
 .icon-menu {
+	z-index: 5;
+	opacity: 0;
+	position: fixed;
+	top: 50%;
+	left: 0;
 	display: block;
-	position: relative;
 	width: rem(24);
 	height: rem(18);
 	cursor: pointer;
-	z-index: 5;
+	transition: all 0.5s ease 0s;
 	span,
 	&::before,
 	&::after {
@@ -31,7 +38,7 @@
 		position: absolute;
 		width: 100%;
 		height: rem(2);
-		background-color: #000;
+		background-color: $neutral-10;
 		border-radius: 8px;
 	}
 	&::before {
@@ -43,20 +50,29 @@
 	span {
 		top: calc(50% - rem(1));
 	}
-	.menu-open & {
-		span {
-			width: 0;
-		}
-		&::before,
-		&::after {
-		}
-		&::before {
-			top: calc(50% - rem(1));
-			transform: rotate(-45deg);
-		}
-		&::after {
-			bottom: calc(50% - rem(1));
-			transform: rotate(45deg);
-		}
+	// .menu-open & {
+	// 	opacity: 0;
+	// 	span {
+	// 		width: 0;
+	// 	}
+	// 	&::before,
+	// 	&::after {
+	// 	}
+	// 	&::before {
+	// 		top: calc(50% - rem(1));
+	// 		transform: rotate(-45deg);
+	// 	}
+	// 	&::after {
+	// 		bottom: calc(50% - rem(1));
+	// 		transform: rotate(45deg);
+	// 	}
+	// }
+	.menu-hovered & {
+		opacity: 1;
+		left: rem(16);
+	}
+	.menu-hovered.menu-open & {
+		opacity: 0;
+		transition: all 0.3s ease 0s;
 	}
 }
