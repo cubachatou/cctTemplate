@@ -130,16 +130,12 @@ class ShapeOverlays {
       return false;
     }
     overlay.toggle();
-    if (overlay.isOpened === true) {
-      elmHamburger.classList.add("is-opened-navi");
-      for (var i = 0; i < gNavItems.length; i++) {
-        gNavItems[i].classList.add("is-opened");
-      }
-    } else {
-      elmHamburger.classList.remove("is-opened-navi");
-      for (var i = 0; i < gNavItems.length; i++) {
-        gNavItems[i].classList.remove("is-opened");
-      }
+  });
+
+  document.addEventListener("click", function (e) {
+    if (e.target.closest("[data-menu-close]")) {
+      overlay.close();
     }
   });
+
 })();

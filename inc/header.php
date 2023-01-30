@@ -9,30 +9,41 @@
   <div class="header__menu __container menu">
     <button type="button" class="menu__icon icon-menu"><span></span></button>
     <div class="menu__header header-menu">
-      <nav class="menu__navigation">
-        <ul class="menu__list">
-          <li class="menu__item"><a href="javascript:void(0)" class="menu__link">Home</a></li>
-          <li class="menu__item">
-            <a href="javascript:void(0)" class="menu__link">Services</a>
-            <ul class="menu__sub-list">
-              <li class="menu__sub-item"><span class="menu__sub-link">/</span></li>
-              <li class="menu__sub-item"><a href="javascript:void(0)" class="menu__sub-link">design</a></li>
-              <li class="menu__sub-item"><span class="menu__sub-link">/</span></li>
-              <li class="menu__sub-item"><a href="javascript:void(0)" class="menu__sub-link">development</a></li>
-              <li class="menu__sub-item"><span class="menu__sub-link">/</span></li>
-              <li class="menu__sub-item"><a href="javascript:void(0)" class="menu__sub-link">support</a></li>
-              <li class="menu__sub-item"><span class="menu__sub-link">/</span></li>
+      <nav class="header-menu__navigation">
+        <ul class="header-menu__list">
+          <li class="header-menu__item"><a href="javascript:void(0)" class="header-menu__link _active">Home</a></li>
+          <li class="header-menu__item">
+            <a href="javascript:void(0)" class="header-menu__link">Services</a>
+            <ul class="header-menu__sub-list">
+              <li class="header-menu__sub-item"><span class="header-menu__sub-link">/</span></li>
+              <li class="header-menu__sub-item"><a href="javascript:void(0)" class="header-menu__sub-link hover:text-red">design</a></li>
+              <li class="header-menu__sub-item"><span class="header-menu__sub-link">/</span></li>
+              <li class="header-menu__sub-item"><a href="javascript:void(0)" class="header-menu__sub-link hover:text-blue">development</a></li>
+              <li class="header-menu__sub-item"><span class="header-menu__sub-link">/</span></li>
+              <li class="header-menu__sub-item"><a href="javascript:void(0)" class="header-menu__sub-link hover:text-purple">support</a></li>
+              <li class="header-menu__sub-item"><span class="header-menu__sub-link">/</span></li>
             </ul>
           </li>
-          <li class="menu__item"><a href="javascript:void(0)" class="menu__link">Portfolio</a></li>
-          <li class="menu__item"><a href="javascript:void(0)" class="menu__link">About</a></li>
-          <li class="menu__item"><a href="javascript:void(0)" class="menu__link">Blog</a></li>
-          <li class="menu__item"><a href="javascript:void(0)" class="menu__link">Contacts</a></li>
+          <li class="header-menu__item"><a href="javascript:void(0)" class="header-menu__link">Portfolio</a></li>
+          <li class="header-menu__item"><a href="javascript:void(0)" class="header-menu__link">About</a></li>
+          <li class="header-menu__item"><a href="javascript:void(0)" class="header-menu__link">Blog</a></li>
+          <li class="header-menu__item"><a href="javascript:void(0)" class="header-menu__link">Contacts</a></li>
         </ul>
       </nav>
+      <nav class="header-menu__lang-list lang-menu">
+        <ul class="lang-menu__list">
+          <li class="lang-menu__item"><a href="javascript:void(0)" class="lang-menu__link">Eng</a></li>
+          <li class="lang-menu__item"><a href="javascript:void(0)" class="lang-menu__link">Ua</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="header-menu__close" data-menu-close>
+        <svg class="icon icon-close">
+          <use xlink:href="/images/svgMap.svg#icon-close"></use>
+        </svg>
+      </button>
     </div>
     <div class="menu__footer footer-menu">
-      <a href="javascript:void(0)" class="footer-menu__brief">Fill out the brief</a>
+      <a href="javascript:void(0)" class="footer-menu__brief button button_primary">Fill out the brief</a>
       <div class="footer-menu__socials socials-menu">
         <a href="javascript:void(0)" class="socials-menu__link">Instagram</a>
         <a href="javascript:void(0)" class="socials-menu__link">Behance</a>

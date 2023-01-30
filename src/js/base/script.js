@@ -1,6 +1,7 @@
 // Підключення функціоналу "Чертоги Фрілансера"
 import {
-  isMobile
+  isMobile,
+  menuClose
 } from "./functions.js";
 // Підключення списку активних модулів
 import {
@@ -59,3 +60,10 @@ document.documentElement.addEventListener("mousemove", function (e) {
 window.addEventListener("load", function () {
   document.body.classList.remove("no-transition")
 })
+
+//================================
+document.addEventListener("click", function (e) {
+  if (e.target.closest("[data-menu-close]")) {
+    menuClose();
+  }
+});

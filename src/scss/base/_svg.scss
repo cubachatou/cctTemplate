@@ -1,8 +1,13 @@
 .icon {
-	&.icon-logo {
+	&-logo {
 		width: rem(56.2);
 		height: rem(40);
 		fill: $primary-main;
+	}
+	&-close {
+		width: 1.5rem;
+		height: 1.5rem;
+		fill: $neutral-10;
 	}
 }
 
