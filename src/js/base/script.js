@@ -92,18 +92,26 @@ class ShapeOverlays {
   }
   updatePath(time) {
     const points = [];
-    for (var i = 0; i < this.numPoints; i++) {
-      points[i] = ease.cubicInOut(Math.min(Math.max(time - this.delayPointsArray[i], 0) / this.duration, 1)) * 100
+    if (this.isOpened) {
+      for (var i = 0; i < this.numPoints; i++) {
+        points[i] = ease.cubicInOut(Math.min(Math.max(time - this.delayPointsArray[i], 0) / this.duration, 1)) * 100
+      }
+    } else {
+      for (var i = 0; i < this.numPoints; i++) {
+        points[i] = ease.cubicInOut(Math.min(Math.max(time - this.delayPointsArray[i], 0) / this.duration, 1)) * 0
+      }
     }
 
     let str = '';
-    str += (this.isOpened) ? `M 0 0 V ${points[0]} ` : `M 0 ${points[0]} `;
+    str += (this.isOpened) ? `M ${points[0]} 0 ` : `M 0 0 H ${points[0]} `;
+
     for (var i = 0; i < this.numPoints - 1; i++) {
       const p = (i + 1) / (this.numPoints - 1) * 100;
       const cp = p - (1 / (this.numPoints - 1) * 100) / 2;
-      str += `C ${cp} ${points[i]} ${cp} ${points[i + 1]} ${p} ${points[i + 1]} `;
+      str += `C ${points[i]} ${cp} ${points[i + 1]} ${cp} ${points[i + 1]} ${p} `;
     }
-    str += (this.isOpened) ? `V 0 H 0` : `V 100 H 0`;
+
+    str += (this.isOpened) ? `H 0 V 0` : `H 0 V 0`;
     return str;
   }
   render() {
