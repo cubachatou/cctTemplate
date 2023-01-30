@@ -94,7 +94,7 @@ class ShapeOverlays {
 			str += `C ${points[i]} ${cp} ${points[i + 1]} ${cp} ${points[i + 1]} ${p} `;
 		}
 
-		str += this.isOpened ? `H 0 V 0` : `H 0 V 0`;
+		str += `H 0 V 0`;
 		return str;
 	}
 	render() {
