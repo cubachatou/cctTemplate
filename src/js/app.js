@@ -1,16 +1,14 @@
-import {
-  createApp
-} from "vue";
+import { createApp } from "vue";
 import example from "./components/example.vue";
 
 createApp({
-  data() {
-    return {};
-  },
-  methods: {},
-  components: {
-    example,
-  },
+	data() {
+		return {};
+	},
+	methods: {},
+	components: {
+		example,
+	},
 }).mount("#app");
 
 window["FLS"] = false;
@@ -138,4 +136,5 @@ import * as flsScroll from "./base/scroll/scroll.js";
 // import './libs/wNumb.min.js';
 
 //===================== MY-CODE =====================//
+import "./base/svgOverlay.js";
 import "./base/script.js";
