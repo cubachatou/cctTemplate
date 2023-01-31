@@ -3,8 +3,8 @@
 // Документація: 
 
 // Підключення функціоналу "Чортоги Фрілансера"
-import { isMobile, FLS } from "../files/functions.js";
-import { flsModules } from "../files/modules.js";
+import { isMobile, FLS } from "../base/functions.js";
+import { flsModules } from "../base/modules.js";
 
 /*
 Предмету, який рухатиметься за мишею, вказати атрибут data-prlx-mouse.

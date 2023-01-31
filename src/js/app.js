@@ -138,5 +138,14 @@ import * as flsScroll from "./base/scroll/scroll.js";
 // import './libs/wNumb.min.js';
 
 //===================== MY-CODE =====================//
+import {
+  gsap
+} from "gsap";
+import MorphSVGPlugin from "gsap/MorphSVGPlugin.js";
+gsap.registerPlugin(MorphSVGPlugin);
+
+import "./base/cursor.js";
+import "./base/menu_bulge.js";
 import "./base/svgOverlay.js";
+import "./base/tilt.js";
 import "./base/script.js";

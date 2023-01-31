@@ -1,5 +1,5 @@
-import { isMobile } from "../files/functions.js";
-import { flsModules } from "../files/modules.js";
+import { isMobile } from "../base/functions.js";
+import { flsModules } from "../base/modules.js";
 
 /*
 	data-fp - оболонка

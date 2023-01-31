@@ -3,10 +3,10 @@ import {
   isMobile,
   uniqArray,
   FLS
-} from "../files/functions.js";
+} from "../base/functions.js";
 import {
   flsModules
-} from "../files/modules.js";
+} from "../base/modules.js";
 
 // Спостерігач об'єктів [всевидюче око]
 // data-watch - можна писати значення для застосування кастомного коду

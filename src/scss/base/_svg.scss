@@ -143,6 +143,18 @@ $mf-color-text: #fff !default;
 		height: 165px;
 		margin: (-177px * 0.5) 0 0 (-173px * 0.5);
 
+		transform: scale(0);
+		opacity: 0;
+
+		transition: transform 0.35s, opacity 0.2s 0.2s;
+
+		#{$root}.-media & {
+			opacity: 1;
+			transform: scale(1);
+			transition-duration: 0.4s, 0.4s;
+			transition-delay: 0s, 0s;
+		}
+
 		img,
 		video {
 			position: absolute;

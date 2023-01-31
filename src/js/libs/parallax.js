@@ -1,4 +1,4 @@
-import { flsModules } from '../files/modules.js';
+import { flsModules } from '../base/modules.js';
 
 class Parallax {
 	constructor(elements) {

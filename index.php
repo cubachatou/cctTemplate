@@ -33,7 +33,7 @@
           <span class="services__sub-title p6">Lorem ipsum</span>
         </div>
         <div class="services__grid">
-          <div class="services__card service-card">
+          <div class="services__card service-card" data-tilt>
             <div class="service-card__content">
               <span class="service-card__number text-red">01</span>
               <h3 class="service-card__title">Дизайн</h3>
@@ -41,7 +41,7 @@
             </div>
             <a href="javascript:void(0)" class="service-card__button button button_underline">Деталі</a>
           </div>
-          <div class="services__card service-card">
+          <div class="services__card service-card" data-tilt>
             <div class="service-card__content">
               <span class="service-card__number text-blue">02</span>
               <h3 class="service-card__title">Розробка</h3>
@@ -49,7 +49,7 @@
             </div>
             <a href="javascript:void(0)" class="service-card__button button button_underline">Деталі</a>
           </div>
-          <div class="services__card service-card">
+          <div class="services__card service-card" data-tilt>
             <div class="service-card__content">
               <span class="service-card__number text-purple">03</span>
               <h3 class="service-card__title">Підтримка</h3>
