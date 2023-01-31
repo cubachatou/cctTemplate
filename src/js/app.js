@@ -146,6 +146,6 @@ gsap.registerPlugin(MorphSVGPlugin);
 
 import "./base/cursor.js";
 import "./base/menu_bulge.js";
-import "./base/svgOverlay.js";
+import "./base/svg_overlay.js";
 import "./base/tilt.js";
 import "./base/script.js";

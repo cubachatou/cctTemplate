@@ -9,6 +9,18 @@
 	}
 }
 
+@keyframes gradient {
+	0% {
+		background-position: 55% 55%;
+	}
+	50% {
+		background-position: 100% 100%;
+	}
+	100% {
+		background-position: 55% 55%;
+	}
+}
+
 // .transition-fade {
 // 	transition: 0.7s;
 // 	transition-timing-function: $primary-curve;

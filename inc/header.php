@@ -7,6 +7,7 @@
     </div>
   </div>
   <div class="header__menu __container menu">
+    <div class="menu__gradient"></div>
     <button type="button" class="menu__icon icon-menu"><span></span></button>
     <div class="menu__header header-menu">
       <div class="header-menu__col header-menu__col_left">
@@ -17,11 +18,11 @@
               <a href="javascript:void(0)" class="header-menu__link">Services</a>
               <ul class="header-menu__sub-list">
                 <li class="header-menu__sub-item"><span class="header-menu__sub-link">/</span></li>
-                <li class="header-menu__sub-item"><a href="javascript:void(0)" class="header-menu__sub-link hover:text-red">design</a></li>
+                <li class="header-menu__sub-item"><a href="javascript:void(0)" class="header-menu__sub-link gradient-red hover:text-red">design</a></li>
                 <li class="header-menu__sub-item"><span class="header-menu__sub-link">/</span></li>
-                <li class="header-menu__sub-item"><a href="javascript:void(0)" class="header-menu__sub-link hover:text-blue">development</a></li>
+                <li class="header-menu__sub-item"><a href="javascript:void(0)" class="header-menu__sub-link gradient-blue hover:text-blue">development</a></li>
                 <li class="header-menu__sub-item"><span class="header-menu__sub-link">/</span></li>
-                <li class="header-menu__sub-item"><a href="javascript:void(0)" class="header-menu__sub-link hover:text-purple">support</a></li>
+                <li class="header-menu__sub-item"><a href="javascript:void(0)" class="header-menu__sub-link gradient-purple hover:text-purple">support</a></li>
                 <li class="header-menu__sub-item"><span class="header-menu__sub-link">/</span></li>
               </ul>
             </li>
