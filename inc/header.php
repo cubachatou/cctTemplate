@@ -9,38 +9,40 @@
   <div class="header__menu __container menu">
     <button type="button" class="menu__icon icon-menu"><span></span></button>
     <div class="menu__header header-menu">
-      <nav class="header-menu__navigation">
-        <ul class="header-menu__list">
-          <li class="header-menu__item"><a href="javascript:void(0)" class="header-menu__link _active">Home</a></li>
-          <li class="header-menu__item">
-            <a href="javascript:void(0)" class="header-menu__link">Services</a>
-            <ul class="header-menu__sub-list">
-              <li class="header-menu__sub-item"><span class="header-menu__sub-link">/</span></li>
-              <li class="header-menu__sub-item"><a href="javascript:void(0)" class="header-menu__sub-link hover:text-red">design</a></li>
-              <li class="header-menu__sub-item"><span class="header-menu__sub-link">/</span></li>
-              <li class="header-menu__sub-item"><a href="javascript:void(0)" class="header-menu__sub-link hover:text-blue">development</a></li>
-              <li class="header-menu__sub-item"><span class="header-menu__sub-link">/</span></li>
-              <li class="header-menu__sub-item"><a href="javascript:void(0)" class="header-menu__sub-link hover:text-purple">support</a></li>
-              <li class="header-menu__sub-item"><span class="header-menu__sub-link">/</span></li>
-            </ul>
-          </li>
-          <li class="header-menu__item"><a href="javascript:void(0)" class="header-menu__link">Portfolio</a></li>
-          <li class="header-menu__item"><a href="javascript:void(0)" class="header-menu__link">About</a></li>
-          <li class="header-menu__item"><a href="javascript:void(0)" class="header-menu__link">Blog</a></li>
-          <li class="header-menu__item"><a href="javascript:void(0)" class="header-menu__link">Contacts</a></li>
-        </ul>
-      </nav>
-      <nav class="header-menu__lang-list lang-menu">
-        <ul class="lang-menu__list">
-          <li class="lang-menu__item"><a href="javascript:void(0)" class="lang-menu__link">Eng</a></li>
-          <li class="lang-menu__item"><a href="javascript:void(0)" class="lang-menu__link">Ua</a></li>
-        </ul>
-      </nav>
-      <button type="button" class="header-menu__close" data-menu-close>
-        <svg class="icon icon-close">
-          <use xlink:href="/images/svgMap.svg#icon-close"></use>
-        </svg>
-      </button>
+      <div class="header-menu__col header-menu__col_left">
+        <nav class="header-menu__navigation">
+          <ul class="header-menu__list">
+            <li class="header-menu__item"><a href="javascript:void(0)" class="header-menu__link _active">Home</a></li>
+            <li class="header-menu__item">
+              <a href="javascript:void(0)" class="header-menu__link">Services</a>
+              <ul class="header-menu__sub-list">
+                <li class="header-menu__sub-item"><span class="header-menu__sub-link">/</span></li>
+                <li class="header-menu__sub-item"><a href="javascript:void(0)" class="header-menu__sub-link hover:text-red">design</a></li>
+                <li class="header-menu__sub-item"><span class="header-menu__sub-link">/</span></li>
+                <li class="header-menu__sub-item"><a href="javascript:void(0)" class="header-menu__sub-link hover:text-blue">development</a></li>
+                <li class="header-menu__sub-item"><span class="header-menu__sub-link">/</span></li>
+                <li class="header-menu__sub-item"><a href="javascript:void(0)" class="header-menu__sub-link hover:text-purple">support</a></li>
+                <li class="header-menu__sub-item"><span class="header-menu__sub-link">/</span></li>
+              </ul>
+            </li>
+            <li class="header-menu__item"><a href="javascript:void(0)" class="header-menu__link">Portfolio</a></li>
+            <li class="header-menu__item"><a href="javascript:void(0)" class="header-menu__link">About</a></li>
+            <li class="header-menu__item"><a href="javascript:void(0)" class="header-menu__link">Blog</a></li>
+            <li class="header-menu__item"><a href="javascript:void(0)" class="header-menu__link">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-menu__col header-menu__col-right">
+        <select name="language-select" data-class-modif="lang">
+          <option value="1" data-href="javascript:void(0)" selected>Eng</option>
+          <option value="2" data-href="javascript:void(0)">Ua</option>
+        </select>
+        <button type="button" class="header-menu__close" data-menu-close>
+          <svg class="icon icon-close">
+            <use xlink:href="/images/svgMap.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
     </div>
     <div class="menu__footer footer-menu">
       <a href="javascript:void(0)" class="footer-menu__brief button button_primary">Fill out the brief</a>

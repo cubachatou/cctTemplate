@@ -1,14 +1,16 @@
-import { createApp } from "vue";
+import {
+  createApp
+} from "vue";
 import example from "./components/example.vue";
 
 createApp({
-	data() {
-		return {};
-	},
-	methods: {},
-	components: {
-		example,
-	},
+  data() {
+    return {};
+  },
+  methods: {},
+  components: {
+    example,
+  },
 }).mount("#app");
 
 window["FLS"] = false;
@@ -66,7 +68,7 @@ import * as flsForms from "./base/forms/forms.js";
 // flsForms.formQuantity();
 // flsForms.formRating();
 
-// import "./libs/select.js";
+import "./libs/select.js";
 // import "./base/forms/datepicker.js";
 
 // Plugin documentation: https://github.com/RobinHerbots/inputmask
