@@ -28,9 +28,9 @@
   <section class="services">
     <div class="services__container">
       <div class="services__inner">
-        <div class="services__heading">
-          <h2 class="services__title">Наші послуги</h2>
-          <span class="services__sub-title p6">Lorem ipsum</span>
+        <div class="services__heading section-heading">
+          <h2 class="section-heading__title">Наші послуги</h2>
+          <span class="section-heading__sub-title p6">Lorem ipsum</span>
         </div>
         <div class="services__grid">
           <div class="services__card service-card" data-tilt>
@@ -62,7 +62,84 @@
       </div>
     </div>
   </section>
-
+  <section class="clients">
+    <div class="clients__container">
+      <div class="clients__inner">
+        <div class="clients__heading section-heading">
+          <h2 class="section-heading__title">Наші клієнти</h2>
+          <span class="section-heading__sub-title">ідеї яких ми втілили в життя</span>
+        </div>
+        <div class="clients__grid">
+          <div class="clients__grid-item">
+            <img src="images/clients/gulliver.png" alt="Gulliver">
+          </div>
+          <div class="clients__grid-item">
+            <img src="images/clients/zelena.png" alt="Zelena">
+          </div>
+          <div class="clients__grid-item">
+            <img src="images/clients/sbinua.png" alt="Social business IN UA">
+          </div>
+          <div class="clients__grid-item">
+            <img src="images/clients/veedoo.png" alt="Veedoo">
+          </div>
+          <div class="clients__grid-item">
+            <img src="images/clients/olx.png" alt="OLX">
+          </div>
+          <div class="clients__grid-item">
+            <img src="images/clients/clario.png" alt="Clario">
+          </div>
+          <div class="clients__grid-item">
+            <img src="images/clients/agrigo.png" alt="AgriGo">
+          </div>
+          <div class="clients__grid-item">
+            <img src="images/clients/vector.png" alt="Vector">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="calc">
+    <div class="calc__container">
+      <div class="calc__inner">
+        <div class="calc__block block-calc">
+          <div class="block-calc__content">
+            <h3 class="block-calc__title">Дізнайтеся, скільки коштуватиме ваш сайт</h3>
+            <a href="javascript:void(0)" class="block-calc__link button button_underline">Дізнатися ціну</a>
+          </div>
+          <div class="block-calc__image">
+            <img src="images/home/shell.png" alt="Shell">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="from-blog">
+    <div class="from-blog__container">
+      <div class="from-blog__inner">
+        <div class="from-blog__heading section-heading">
+          <h2 class="section-heading__title">Корисне з блогу</h2>
+          <span class="section-heading__sub-title">Цікаво та не завжди коротко про тренди, факапи і багато чого іншого</span>
+        </div>
+        <div class="from-blog__grid">
+          <div class="from-blog__grid-item blog-item">
+            <span class="blog-item__tag tag">Стаття</span>
+            <a href="javascript:void(0)" class="blog-item__title">
+              <h4>ТОП 10 причин, чому юристу потрібен надійний сайт</h4>
+            </a>
+            <span class="blog-item__date">30 вересня 2022</span>
+          </div>
+          <div class="from-blog__grid-item blog-item">
+            <span class="blog-item__tag tag">Стаття</span>
+            <a href="javascript:void(0)" class="blog-item__title">
+              <h4>ТОП 10 причин, чому юристу потрібен надійний сайт</h4>
+            </a>
+            <span class="blog-item__date">30 вересня 2022</span>
+          </div>
+        </div>
+        <a href="javascript:void(0)" class="from-blog__link button button_primary">Перейти до блогу</a>
+      </div>
+    </div>
+  </section>
 </main>
 
 <!-- FOOTER -->
