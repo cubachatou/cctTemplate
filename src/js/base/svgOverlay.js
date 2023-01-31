@@ -121,7 +121,6 @@ class ShapeOverlays {
 
 (function svgOverlay() {
   const elmHamburger = document.querySelector(".icon-menu");
-  const gNavItems = document.querySelectorAll(".global-menu__item");
   const elmOverlay = document.querySelector(".shape-overlays");
   const overlay = new ShapeOverlays(elmOverlay);
 
