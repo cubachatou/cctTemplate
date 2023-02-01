@@ -24,3 +24,9 @@ document.addEventListener("keydown", function (e) {
     menuClose();
   }
 });
+document.addEventListener("mouseover", function (e) {
+  const gradientMenu = document.querySelector('.gradient-menu');
+  e.target.closest(".menu-gradient-red") ? gradientMenu.classList.add("menu-gradient-red") : gradientMenu.classList.remove("menu-gradient-red");
+  e.target.closest(".menu-gradient-blue") ? gradientMenu.classList.add("menu-gradient-blue") : gradientMenu.classList.remove("menu-gradient-blue");
+  e.target.closest(".menu-gradient-purple") ? gradientMenu.classList.add("menu-gradient-purple") : gradientMenu.classList.remove("menu-gradient-purple");
+});
