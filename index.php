@@ -62,6 +62,48 @@
       </div>
     </div>
   </section>
+  <section class="cases">
+    <div class="cases__container">
+      <div class="cases__inner">
+        <div class="cases__heading section-heading">
+          <h2 class="sction-heading__title">Останні кейси</h2>
+          <span class="section-heading__sub-title next">Наші останні роботи з портфоліо</span>
+        </div>
+        <div class="cases__slider case-slider">
+          <div class="case-slider__controls">
+            <button type="button" class="case-slider__arrow case-slider__arrow_prev">
+              <svg class="icon icon-chevron-left">
+                <use xlink:href="/images/svgMap.svg#icon-chevron-left"></use>
+              </svg>
+              <svg class="circle" viewBox="0 0 88 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="circle-path" d="M 90 45 C 90 53.8168 86.5881 64.3174 81.4058 71.4503 C 76.2234 78.5833 67.291 85.073 58.9058 87.7975 C 50.5205 90.5221 39.4795 90.5221 31.0942 87.7975 C 22.709 85.073 13.7766 78.5833 8.5942 71.4503 C 3.4119 64.3174 0 53.8168 0 45 C -0 36.1832 3.4119 25.6826 8.5942 18.5497 C 13.7766 11.4167 22.709 4.927 31.0942 2.2025 C 39.4795 -0.5221 50.5205 -0.5221 58.9058 2.2025 C 67.291 4.927 76.2234 11.4167 81.4058 18.5497 C 86.5881 25.6826 90 36.1832 90 45 C 90 53.8168 86.5881 64.3174 81.4058 71.4503" />
+              </svg>
+            </button>
+            <button type="button" class="case-slider__arrow case-slider__arrow_next">
+              <svg class="icon icon-chevron-left">
+                <use xlink:href="/images/svgMap.svg#icon-chevron-left"></use>
+              </svg>
+            </button>
+          </div>
+          <ul class="case-slider__cards">
+            <li class="case-slider__item">
+              <span class="case-slider__item-bg"></span>
+              <img class="case-slider__img" src="images/cases/Gulliver.jpg" alt="Gulliver">
+            </li>
+            <li class="case-slider__item">
+              <span class="case-slider__item-bg"></span>
+              <img class="case-slider__img" src="https://picsum.photos/id/237/1296/828" alt="Gulliver">
+            </li>
+            <li class="case-slider__item">
+              <span class="case-slider__item-bg"></span>
+              <img class="case-slider__img" src="https://picsum.photos/id/238/1296/828" alt="Gulliver">
+            </li>
+          </ul>
+        </div>
+        <a href="javascript:void(0)" class="cases__link button button_primary">Всі кейси</a>
+      </div>
+    </div>
+  </section>
   <section class="clients">
     <div class="clients__container">
       <div class="clients__inner">

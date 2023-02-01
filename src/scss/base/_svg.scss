@@ -14,11 +14,17 @@
 		height: 6px;
 		fill: $neutral-10;
 	}
+	&-chevron-left {
+		stroke: $neutral-100;
+		fill: none;
+		width: rem(14);
+		height: rem(26);
+	}
 }
 
 .shape-overlays {
 	position: fixed;
-	z-index: 2;
+	z-index: 12;
 	top: 0;
 	left: 0;
 	width: 100vw;
