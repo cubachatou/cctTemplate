@@ -81,10 +81,11 @@ $mf-color-text: #fff !default;
 	}
 
 	&.-exclusion {
-		@supports (mix-blend-mode: exclusion) {
-			mix-blend-mode: exclusion;
+		@supports (mix-blend-mode: screen) {
+			mix-blend-mode: screen;
 
 			&:before {
+				scale: 10;
 				background: invert($mf-color-base);
 			}
 		}

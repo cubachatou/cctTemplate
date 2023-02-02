@@ -92,14 +92,29 @@
             <div class="case-slider__item swiper-slide">
               <span class="case-slider__item-bg"></span>
               <img class="case-slider__img" src="images/cases/Gulliver.jpg" alt="Gulliver">
+              <div class="case-slider__item-content">
+                <h3 class="case-slider__item-title">Gulliver</h3>
+                <span class="case-slider__item-subtitle capt-1">Дизайн сайту для торгово-розважального і бізнес-центру Gulliver</span>
+                <a href="javascript:void(0)" class="case-slider__item-link button button_underline _light">Дивитися</a>
+              </div>
             </div>
             <div class="case-slider__item swiper-slide">
               <span class="case-slider__item-bg"></span>
               <img class="case-slider__img" src="https://picsum.photos/id/237/1296/828" alt="Gulliver">
+              <div class="case-slider__item-content">
+                <h3 class="case-slider__item-title">Gulliver</h3>
+                <span class="case-slider__item-subtitle capt-1">Дизайн сайту для торгово-розважального і бізнес-центру Gulliver</span>
+                <a href="javascript:void(0)" class="case-slider__item-link button button_underline _light">Дивитися</a>
+              </div>
             </div>
             <div class="case-slider__item swiper-slide">
               <span class="case-slider__item-bg"></span>
               <img class="case-slider__img" src="https://picsum.photos/id/238/1296/828" alt="Gulliver">
+              <div class="case-slider__item-content">
+                <h3 class="case-slider__item-title">Gulliver</h3>
+                <span class="case-slider__item-subtitle capt-1">Дизайн сайту для торгово-розважального і бізнес-центру Gulliver</span>
+                <a href="javascript:void(0)" class="case-slider__item-link button button_underline _light">Дивитися</a>
+              </div>
             </div>
           </div>
         </div>
@@ -114,6 +129,10 @@
           <h2 class="section-heading__title">Наші клієнти</h2>
           <span class="section-heading__sub-title">ідеї яких ми втілили в життя</span>
         </div>
+        <!-- <div class="relative"> -->
+        <!-- <div class="spotlight">
+          <div class="spotlight__cursor"></div>
+        </div> -->
         <div class="clients__grid">
           <div class="clients__grid-item">
             <img src="images/clients/gulliver.png" alt="Gulliver">
@@ -140,6 +159,7 @@
             <img src="images/clients/vector.png" alt="Vector">
           </div>
         </div>
+        <!-- </div> -->
       </div>
     </div>
   </section>
