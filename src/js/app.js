@@ -86,7 +86,7 @@ import "./libs/select.js";
 
 // Plugin documentation: https://swiperjs.com/
 // Snippet(HTML): swiper
-// import "./base/sliders.js";
+import "./base/sliders.js";
 
 //===================== SCROLLING =====================//
 

@@ -69,7 +69,7 @@
           <h2 class="sction-heading__title">Останні кейси</h2>
           <span class="section-heading__sub-title next">Наші останні роботи з портфоліо</span>
         </div>
-        <div class="cases__slider case-slider">
+        <div class="cases__slider case-slider swiper">
           <div class="case-slider__controls">
             <button type="button" class="case-slider__arrow case-slider__arrow_prev">
               <svg class="icon icon-chevron-left">
@@ -88,20 +88,20 @@
               </svg>
             </button>
           </div>
-          <ul class="case-slider__cards">
-            <li class="case-slider__item">
+          <div class="case-slider__cards swiper-wrapper">
+            <div class="case-slider__item swiper-slide">
               <span class="case-slider__item-bg"></span>
               <img class="case-slider__img" src="images/cases/Gulliver.jpg" alt="Gulliver">
-            </li>
-            <li class="case-slider__item">
+            </div>
+            <div class="case-slider__item swiper-slide">
               <span class="case-slider__item-bg"></span>
               <img class="case-slider__img" src="https://picsum.photos/id/237/1296/828" alt="Gulliver">
-            </li>
-            <li class="case-slider__item">
+            </div>
+            <div class="case-slider__item swiper-slide">
               <span class="case-slider__item-bg"></span>
               <img class="case-slider__img" src="https://picsum.photos/id/238/1296/828" alt="Gulliver">
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
         <a href="javascript:void(0)" class="cases__link button button_primary">Всі кейси</a>
       </div>
