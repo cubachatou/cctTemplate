@@ -12,17 +12,16 @@
 	// .header__container
 	&__container {
 		z-index: 12;
-		position: absolute;
-		width: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		min-height: rem(136);
+		height: rem(136);
 	}
 	// .header__menu
 	&__menu {
 	}
 }
+
 //MENU
 .menu {
 	position: fixed;

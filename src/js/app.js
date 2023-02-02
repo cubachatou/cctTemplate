@@ -1,17 +1,17 @@
-import {
-  createApp
-} from "vue";
-import example from "./components/example.vue";
+// import {
+//   createApp
+// } from "vue";
+// import example from "./components/example.vue";
 
-createApp({
-  data() {
-    return {};
-  },
-  methods: {},
-  components: {
-    example,
-  },
-}).mount("#app");
+// createApp({
+//   data() {
+//     return {};
+//   },
+//   methods: {},
+//   components: {
+//     example,
+//   },
+// }).mount("#app");
 
 window["FLS"] = false;
 
@@ -138,12 +138,7 @@ import * as flsScroll from "./base/scroll/scroll.js";
 // import './libs/wNumb.min.js';
 
 //===================== MY-CODE =====================//
-import {
-  gsap
-} from "gsap";
-import MorphSVGPlugin from "gsap/MorphSVGPlugin.js";
-gsap.registerPlugin(MorphSVGPlugin);
-
+import "./base/lenis.js"
 import "./base/cursor.js";
 import "./base/menu_bulge.js";
 import "./base/svg_overlay.js";

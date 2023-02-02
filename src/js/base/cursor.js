@@ -4,7 +4,7 @@ import gsap from "gsap";
 MouseFollower.registerGSAP(gsap);
 
 export const cursor = new MouseFollower({
-  visible: true,
+  visible: false,
   skewingMedia: 0
 });
 
@@ -21,8 +21,12 @@ el.addEventListener("mouseleave", () => {
 });
 
 document.querySelector(".clients").addEventListener("mouseover", () => {
-  cursor.addState("-media -spotlight");
+  cursor.show();
+  cursor.addState("-spotlight");
 });
 document.querySelector(".clients").addEventListener("mouseleave", () => {
-  cursor.removeState("-media -spotlight");
+  cursor.hide();
+  setTimeout(() => {
+    cursor.removeState("-spotlight");
+  }, 250);
 });
