@@ -32,40 +32,37 @@ document.addEventListener("mouseover", function (e) {
 });
 //================================================================
 
-window.onload = () => {
-  const sliderImagesBox = document.querySelectorAll('.case-slider');
-  const sliderImageControls = document.querySelector('.case-slider__controls');
-  const sliderImagePrev = document.querySelector('.case-slider__arrow_prev');
-  const sliderImageNext = document.querySelector('.case-slider__arrow_next');
-  sliderImagesBox.forEach(el => {
-    let imageNodes = el.querySelectorAll('.case-slider__item')
-    let arrIndexes = []; // Index array
-    (() => {
-      // The loop that added values to the arrIndexes array for the first time
-      let start = 0;
-      while (imageNodes.length > start) {
-        arrIndexes.push(start++);
-      }
-    })();
+// window.onload = () => {
+//   const sliderImagesBox = document.querySelectorAll('.case-slider');
+//   const sliderImagePrev = document.querySelector('.case-slider__arrow_prev');
+//   const sliderImageNext = document.querySelector('.case-slider__arrow_next');
+//   sliderImagesBox.forEach(el => {
+//     let imageNodes = el.querySelectorAll('.case-slider__item')
+//     let arrIndexes = []; // Index array
+//     (() => {
+//       // The loop that added values to the arrIndexes array for the first time
+//       let start = 0;
+//       while (imageNodes.length > start) {
+//         arrIndexes.push(start++);
+//       }
+//     })();
 
-    console.log(arrIndexes);
-
-    let setIndex = (arr) => {
-      for (let i = 0; i < imageNodes.length; i++) {
-        imageNodes[i].dataset.slide = arr[i] // Set indexes
-      }
-    }
-    sliderImageNext.addEventListener('click', () => {
-      arrIndexes.unshift(arrIndexes.pop());
-      setIndex(arrIndexes)
-    })
-    sliderImagePrev.addEventListener('click', () => {
-      arrIndexes.push(arrIndexes.shift());
-      setIndex(arrIndexes)
-    })
-    setIndex(arrIndexes) // The first indexes addition
-  });
-};
+//     let setIndex = (arr) => {
+//       for (let i = 0; i < imageNodes.length; i++) {
+//         imageNodes[i].dataset.slide = arr[i] // Set indexes
+//       }
+//     }
+//     sliderImageNext.addEventListener('click', () => {
+//       arrIndexes.unshift(arrIndexes.pop());
+//       setIndex(arrIndexes)
+//     })
+//     sliderImagePrev.addEventListener('click', () => {
+//       arrIndexes.push(arrIndexes.shift());
+//       setIndex(arrIndexes)
+//     })
+//     setIndex(arrIndexes) // The first indexes addition
+//   });
+// };
 
 //================================================================
 
@@ -150,7 +147,33 @@ import MorphSVGPlugin from "gsap/MorphSVGPlugin.js";
 gsap.registerPlugin(MorphSVGPlugin);
 
 // our <path> element
-const path = document.querySelector(".circle-path");
+let blobPath = document.querySelector(".icon-nav-blob__path");
+const blobPathes = document.querySelectorAll(".icon-nav-blob__path");
+const blobButtons = document.querySelectorAll('.case-slider__arrow_prev, .case-slider__arrow_next');
+
+blobPathes.forEach(el => {
+  gsap.to(el, {
+    transition: "all .1s ease 0"
+  });
+});
+
+blobButtons.forEach((blobButton) => {
+  blobButton.addEventListener("mouseenter", function (e) {
+    blobPath = blobButton.querySelector(".icon-nav-blob__path");
+    gsap.to(blobPath, {
+      transition: "all 0s ease 0",
+    });
+    animate()
+  });
+  blobButton.addEventListener("mouseleave", function (e) {
+    cancelAnimationFrame(requestAnimationFrameID)
+    gsap.to(blobPath, {
+      morphSVG: "M 90 45 C 90 53.8168 86.5881 64.3174 81.4058 71.4503 C 76.2234 78.5833 67.291 85.073 58.9058 87.7975 C 50.5205 90.5221 39.4795 90.5221 31.0942 87.7975 C 22.709 85.073 13.7766 78.5833 8.5942 71.4503 C 3.4119 64.3174 0 53.8168 0 45 C 0 36.1832 3.4119 25.6826 8.5942 18.5497 C 13.7766 11.4167 22.709 4.927 31.0942 2.2025 C 39.4795 -0.5221 50.5205 -0.5221 58.9058 2.2025 C 67.291 4.927 76.2234 11.4167 81.4058 18.5497 C 86.5881 25.6826 90 36.1832 90 45 C 90 53.8168 86.5881 64.3174 81.4058 71.4503",
+      duration: 0.3,
+      transition: "all .1s ease 0"
+    });
+  });
+});
 
 let hueNoiseOffset = 0;
 let noiseStep = 0.008;
@@ -162,7 +185,8 @@ const points = createPoints();
 let requestAnimationFrameID = null;
 
 function animate() {
-  path.setAttribute("d", spline(points, 1, true));
+
+  blobPath.setAttribute("d", spline(points, 1, true));
 
   // // for every point...
   for (let i = 0; i < points.length; i++) {
@@ -191,27 +215,6 @@ function animate() {
 
   requestAnimationFrameID = requestAnimationFrame(animate);
 };
-
-const test = document.querySelector('.case-slider__arrow_prev');
-
-gsap.to(path, {
-  transition: "all .1s ease 0"
-});
-
-test.addEventListener("mouseenter", function (e) {
-  gsap.to(path, {
-    transition: "all 0s ease 0",
-  });
-  animate()
-});
-test.addEventListener("mouseleave", function (e) {
-  cancelAnimationFrame(requestAnimationFrameID)
-  gsap.to(path, {
-    morphSVG: "M 90 45 C 90 53.8168 86.5881 64.3174 81.4058 71.4503 C 76.2234 78.5833 67.291 85.073 58.9058 87.7975 C 50.5205 90.5221 39.4795 90.5221 31.0942 87.7975 C 22.709 85.073 13.7766 78.5833 8.5942 71.4503 C 3.4119 64.3174 0 53.8168 0 45 C 0 36.1832 3.4119 25.6826 8.5942 18.5497 C 13.7766 11.4167 22.709 4.927 31.0942 2.2025 C 39.4795 -0.5221 50.5205 -0.5221 58.9058 2.2025 C 67.291 4.927 76.2234 11.4167 81.4058 18.5497 C 86.5881 25.6826 90 36.1832 90 45 C 90 53.8168 86.5881 64.3174 81.4058 71.4503",
-    duration: 0.3,
-    transition: "all .1s ease 0"
-  });
-});
 
 function map(n, start1, end1, start2, end2) {
   return ((n - start1) / (end1 - start1)) * (end2 - start2) + start2;
