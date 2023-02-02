@@ -80,12 +80,26 @@ $mf-color-text: #fff !default;
 		color: invert($mf-color-base);
 	}
 
-	&.-exclusion {
+	&.-spotlight {
+		z-index: 0;
 		@supports (mix-blend-mode: screen) {
 			mix-blend-mode: screen;
 
 			&:before {
-				scale: 10;
+				scale: 100;
+				background: rgb(255, 255, 255);
+				background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 25%);
+				transition: transform 0.25s ease-in-out, opacity 0.1s;
+			}
+		}
+	}
+
+	&.-exclusion {
+		@supports (mix-blend-mode: exclusion) {
+			mix-blend-mode: exclusion;
+
+			&:before {
+				scale: 1;
 				background: invert($mf-color-base);
 			}
 		}

@@ -4,9 +4,8 @@ import gsap from "gsap";
 MouseFollower.registerGSAP(gsap);
 
 export const cursor = new MouseFollower({
-  visible: false,
-  skewingMedia: 0,
-  container: document.querySelector(".clients__inner"),
+  visible: true,
+  skewingMedia: 0
 });
 
 const el = document.querySelector(".fh-section");
@@ -21,7 +20,9 @@ el.addEventListener("mouseleave", () => {
   cursor.hide();
 });
 
-document.querySelector(".clients").addEventListener("mouseenter", () => {
-  cursor.show();
-  cursor.addState("-exclusion");
+document.querySelector(".clients").addEventListener("mouseover", () => {
+  cursor.addState("-media -spotlight");
+});
+document.querySelector(".clients").addEventListener("mouseleave", () => {
+  cursor.removeState("-media -spotlight");
 });

@@ -31,15 +31,3 @@ document.addEventListener("mouseover", function (e) {
   e.target.closest(".menu-gradient-purple") ? gradientMenu.classList.add("menu-gradient-purple") : gradientMenu.classList.remove("menu-gradient-purple");
 });
 //================================================================
-
-import gsap from "gsap";
-
-// document.body.addEventListener("mousemove", evt => {
-//   const mouseX = evt.clientX;
-//   const mouseY = evt.clientY;
-
-//   gsap.to(document.querySelector(".spotlight__cursor"), {
-//     x: mouseX,
-//     y: mouseY,
-//   })
-// })

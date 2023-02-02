@@ -129,10 +129,10 @@
           <h2 class="section-heading__title">Наші клієнти</h2>
           <span class="section-heading__sub-title">ідеї яких ми втілили в життя</span>
         </div>
-        <!-- <div class="relative"> -->
-        <!-- <div class="spotlight">
-          <div class="spotlight__cursor"></div>
-        </div> -->
+        <!-- <div class="relative bg-[#f7f7f7]">
+          <div class="spotlight">
+            <div class="spotlight__cursor"></div>
+          </div> -->
         <div class="clients__grid">
           <div class="clients__grid-item">
             <img src="images/clients/gulliver.png" alt="Gulliver">
@@ -160,8 +160,8 @@
           </div>
         </div>
         <!-- </div> -->
+        <!-- </div> -->
       </div>
-    </div>
   </section>
   <section class="calc">
     <div class="calc__container">
