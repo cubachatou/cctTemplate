@@ -6,7 +6,7 @@
 <?php include('inc/header.php'); ?>
 
 <!-- MAIN -->
-<main class="page page_home">
+<main class="page page_home" data-barba="container" data-barba-namespace="home">
   <section class="fh-section">
     <div class="fh-section__container">
       <div class="fh-section__inner">

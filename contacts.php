@@ -6,7 +6,7 @@
 <?php include('inc/header.php'); ?>
 
 <!-- MAIN -->
-<main class="page page_contacts">
+<main class="page page_contacts" data-barba="container" data-barba-namespace="contacts">
   <section class="page-heading">
     <div class="page-heading__container">
       <a href="javascript:void(0)" class="page-heading__button"></a>
