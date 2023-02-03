@@ -1,25 +1,27 @@
-import { flsModules } from "../base/modules.js";
+import {
+  flsModules
+} from "../base/modules.js";
 import barba from "@barba/core";
-import { gsap } from "gsap";
-import { menuClose } from "./functions.js";
+import {
+  menuClose
+} from "./functions.js";
 
 barba.init({
-	views: [
-		{
-			namespace: "home",
-			beforeEnter() {
-				menuClose();
-				flsModules.svgOverlay.close();
-			},
-			afterEnter() {},
-		},
-		{
-			namespace: "contacts",
-			beforeEnter() {
-				menuClose();
-				flsModules.svgOverlay.close();
-			},
-			afterEnter() {},
-		},
-	],
+  views: [{
+      namespace: "home",
+      beforeLeave() {
+        menuClose();
+        flsModules.svgOverlay.invert();
+      },
+      afterEnter() {},
+    },
+    {
+      namespace: "contacts",
+      beforeLeave() {
+        menuClose();
+        flsModules.svgOverlay.invert();
+      },
+      afterEnter() {},
+    },
+  ],
 });
