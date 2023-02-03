@@ -9,5 +9,9 @@
 	}
 	// .page_contacts
 	&_contacts {
+		padding-top: rem(136);
+		& [class*="__container"] {
+			max-width: 1312px;
+		}
 	}
 }

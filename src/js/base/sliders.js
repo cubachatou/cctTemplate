@@ -34,25 +34,23 @@ function initSliders() {
     new Swiper(".feedback-slider", {
       modules: [Navigation, EffectCreative],
       speed: 800,
-      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 16,
       allowTouchMove: false,
       effect: "creative",
       creativeEffect: {
         prev: {
           shadow: true,
-          translate: ["0%", "-8%", 112],
-          opacity: 0
+          translate: [0, 0, -400],
         },
         next: {
-          shadow: true,
-          translate: ["0%", "8%", -112],
-          opacity: 1
+          translate: ["calc(100% + 16px)", 0, 0],
         },
       },
 
       navigation: {
-        prevEl: ".case-slider__arrow_prev",
-        nextEl: ".case-slider__arrow_next",
+        prevEl: ".feedbacks__button_prev",
+        nextEl: ".feedbacks__button_next",
       },
     });
   }

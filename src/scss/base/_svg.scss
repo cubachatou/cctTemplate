@@ -48,7 +48,13 @@
 		width: 1.25rem;
 		height: 1.25rem;
 		stroke: $neutral-100;
-		fill: transparent;
+		fill: none;
+	}
+	&-arrow-upleft {
+		width: 1.25rem;
+		height: 1.25rem;
+		stroke: $neutral-100;
+		fill: none;
 	}
 }
 

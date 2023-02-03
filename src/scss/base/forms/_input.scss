@@ -10,11 +10,13 @@ textarea {
 	appearance: none;
 }
 .input {
-	border-radius: 0 !important;
+	border-radius: 8px !important;
 	width: 100%;
 	display: block;
-	padding: 0px 20px;
-	border: 1px solid #eee;
+	padding: 16px 24px;
+	gap: 8px;
+	background-color: $neutral-20;
+	border: 1px solid $neutral-40;
 	&._form-focus {
 	}
 	&._form-error {
@@ -31,5 +33,6 @@ textarea {
 
 textarea.input {
 	resize: none;
-	padding: 0px 0px;
+	padding: 16px 24px;
+	min-height: 128px;
 }

@@ -9,7 +9,13 @@
 <main class="page page_contacts" data-barba="container" data-barba-namespace="contacts">
   <section class="page-heading">
     <div class="page-heading__container">
-      <a href="javascript:void(0)" class="page-heading__button"></a>
+      <a href="javascript:void(0)" class="page-heading__button">
+        <span>
+          <svg class="icon icon-arrow-upleft">
+            <use xlink:href="/images/svgMap.svg#icon-arrow-upleft"></use>
+          </svg>
+        </span>
+        Назад</a>
       <h1 class="page-heading__title">Контакти</h1>
     </div>
   </section>
@@ -21,10 +27,10 @@
             <span class="contact-info__title p5">Замовити проект</span>
             <ul class="contact-info__link-list">
               <li class="contact-info__link-item">
-                <a href="mailto:hi@mavericks.agency" class="contact-info__link">hi@mavericks.agency</a>
+                <a href="mailto:hi@mavericks.agency" class="contact-info__link p2">hi@mavericks.agency</a>
               </li>
               <li class="contact-info__link-item">
-                <a href="tel:+380974355343" class="contact-info__link">+38 097 435 53 43</a>
+                <a href="tel:+380974355343" class="contact-info__link p2">+38 097 435 53 43</a>
               </li>
             </ul>
           </div>
@@ -32,19 +38,23 @@
             <span class="contact-info__title p5">Наші офіси</span>
             <ul class="contact-info__link-list">
               <li class="contact-info__link-item">
-                <a href="javascript:void(0)" class="contact-info__link">
+                <a href="javascript:void(0)" class="contact-info__link p2">
                   Київ
-                  <svg class="icon icon-map-pin">
-                    <use xlink:href="/images/svgMap.svg#icon-map-pin"></use>
-                  </svg>
+                  <span>
+                    <svg class="icon icon-map-pin">
+                      <use xlink:href="/images/svgMap.svg#icon-map-pin"></use>
+                    </svg>
+                  </span>
                 </a>
               </li>
               <li class="contact-info__link-item">
-                <a href="javascript:void(0)" class="contact-info__link">
+                <a href="javascript:void(0)" class="contact-info__link p2">
                   Прага
-                  <svg class="icon icon-map-pin">
-                    <use xlink:href="/images/svgMap.svg#icon-map-pin"></use>
-                  </svg>
+                  <span>
+                    <svg class="icon icon-map-pin">
+                      <use xlink:href="/images/svgMap.svg#icon-map-pin"></use>
+                    </svg>
+                  </span>
                 </a>
               </li>
             </ul>
@@ -53,7 +63,7 @@
             <span class="contact-info__title p5">Підписуйтеся на соцмережі</span>
             <ul class="contact-info__link-list">
               <li class="contact-info__link-item">
-                <a href="javascript:void(0)" class="contact-info__link">
+                <a href="javascript:void(0)" class="contact-info__link p5">
                   <svg class="icon icon-behance">
                     <use xlink:href="/images/svgMap.svg#icon-behance"></use>
                   </svg>
@@ -61,7 +71,7 @@
                 </a>
               </li>
               <li class="contact-info__link-item">
-                <a href="javascript:void(0)" class="contact-info__link">
+                <a href="javascript:void(0)" class="contact-info__link p5">
                   <svg class="icon icon-facebook">
                     <use xlink:href="/images/svgMap.svg#icon-facebook"></use>
                   </svg>
@@ -69,7 +79,7 @@
                 </a>
               </li>
               <li class="contact-info__link-item">
-                <a href="javascript:void(0)" class="contact-info__link">
+                <a href="javascript:void(0)" class="contact-info__link p5">
                   <svg class="icon icon-linkedin">
                     <use xlink:href="/images/svgMap.svg#icon-linkedin"></use>
                   </svg>
@@ -77,7 +87,7 @@
                 </a>
               </li>
               <li class="contact-info__link-item">
-                <a href="javascript:void(0)" class="contact-info__link">
+                <a href="javascript:void(0)" class="contact-info__link p5">
                   <svg class="icon icon-instagram">
                     <use xlink:href="/images/svgMap.svg#icon-instagram"></use>
                   </svg>
@@ -86,14 +96,14 @@
               </li>
             </ul>
           </div>
-          <div class="contact-info__row">
+          <div class="contact-info__row contact-info__row_last">
             <span class="contact-info__row__title p2">Хочете отримати попередню пропозицію?</span>
-            <span class="contact-info__row__sub-title p6">Дайте відповідь на декілька запитань і ми надішлемо вам розрахунок</span>
+            <span class="contact-info__row__sub-title p6 text-neutral-90">Дайте відповідь на декілька запитань і ми надішлемо вам розрахунок</span>
             <a href="javascript:void(0)" class="contact-info__row__button button button_primary">Заповнити бриф</a>
           </div>
         </div>
         <form action="#" method="post" class="contact-action__col contact-action__col_right form form_contact">
-          <span class="form__heading p5">#</span>
+          <span class="form__heading p5">Або заповніть форму і ми з вами зв’яжемося</span>
           <fieldset class="form__fieldset">
             <div class="form__line">
               <label for="name" class="form__label">Ваше ім’я</label>
@@ -119,14 +129,14 @@
       </div>
     </div>
   </section>
-  <div class="fw-image">
+  <div class="fw-image -ibg">
     <img src="images/contacts/meeting.jpg" alt="Meeting">
   </div>
   <section class="short-us">
     <div class="short-us__container">
       <span class="short-us__title">Про нас</span>
       <div class="short-us__content">
-        <span class="short-us__text">Ми допомагаємо стартапам і відомим компаніям розробляти нові цифрові продукти та оптимізувати існуючі онлайн-послуги, орієнтовані на клієнтів, досліджуючи та розробляючи чудовий і цінний досвід користувачів, а також розробляючи високоефективні веб-і мобільні додатки.</span>
+        <span class="short-us__text p2">Ми допомагаємо стартапам і відомим компаніям розробляти нові цифрові продукти та оптимізувати існуючі онлайн-послуги, орієнтовані на клієнтів, досліджуючи та розробляючи чудовий і цінний досвід користувачів, а також розробляючи високоефективні веб-і мобільні додатки.</span>
         <a href="javascript:void(0)" class="short-us__link button button_primary">Більше про нас</a>
       </div>
     </div>
@@ -140,37 +150,37 @@
         <div class="feedbacks__slider feedback-slider swiper">
           <div class="feedback-slider__wrapper swiper-wrapper">
             <div class="feedback-slider__slide feedback-slide swiper-slide">
-              <span class="feedback-slide__rate">5.0</span>
-              <span class="feedback-slide__text">The site has performed well, doubling traffic in just two months. Mavericks Agency delivered the site on time and provided regular progress reports. Their advice regarding specific features resulted in marked improvement. Communication was clear and direct.</span>
+              <span class="feedback-slide__rate h4">5.0</span>
+              <span class="feedback-slide__text p3">The site has performed well, doubling traffic in just two months. Mavericks Agency delivered the site on time and provided regular progress reports. Their advice regarding specific features resulted in marked improvement. Communication was clear and direct.</span>
               <div class="feedback-slide__from">
-                <span class="feedback-slide__from-name">Anton Tarasuik</span>
-                <span class="feedback-slide__from-about">Managing Partner, Legal IT Group</span>
+                <span class="feedback-slide__from-name h6">Anton Tarasuik</span>
+                <span class="feedback-slide__from-about capt-1">Managing Partner, Legal IT Group</span>
               </div>
             </div>
             <div class="feedback-slider__slide feedback-slide swiper-slide">
-              <span class="feedback-slide__rate">5.0</span>
-              <span class="feedback-slide__text">The site has performed well, doubling traffic in just two months. Mavericks Agency delivered the site on time and provided regular progress reports. Their advice regarding specific features resulted in marked improvement. Communication was clear and direct.</span>
+              <span class="feedback-slide__rate h4">5.0</span>
+              <span class="feedback-slide__text p3">The site has performed well, doubling traffic in just two months. Mavericks Agency delivered the site on time and provided regular progress reports. Their advice regarding specific features resulted in marked improvement. Communication was clear and direct.</span>
               <div class="feedback-slide__from">
-                <span class="feedback-slide__from-name">Anton Tarasuik</span>
-                <span class="feedback-slide__from-about">Managing Partner, Legal IT Group</span>
+                <span class="feedback-slide__from-name h6">Anton Tarasuik</span>
+                <span class="feedback-slide__from-about capt-1">Managing Partner, Legal IT Group</span>
               </div>
             </div>
             <div class="feedback-slider__slide feedback-slide swiper-slide">
-              <span class="feedback-slide__rate">5.0</span>
-              <span class="feedback-slide__text">The site has performed well, doubling traffic in just two months. Mavericks Agency delivered the site on time and provided regular progress reports. Their advice regarding specific features resulted in marked improvement. Communication was clear and direct.</span>
+              <span class="feedback-slide__rate h4">5.0</span>
+              <span class="feedback-slide__text p3">The site has performed well, doubling traffic in just two months. Mavericks Agency delivered the site on time and provided regular progress reports. Their advice regarding specific features resulted in marked improvement. Communication was clear and direct.</span>
               <div class="feedback-slide__from">
-                <span class="feedback-slide__from-name">Anton Tarasuik</span>
-                <span class="feedback-slide__from-about">Managing Partner, Legal IT Group</span>
+                <span class="feedback-slide__from-name h6">Anton Tarasuik</span>
+                <span class="feedback-slide__from-about capt-1">Managing Partner, Legal IT Group</span>
               </div>
             </div>
           </div>
           <div class="feedbacks__controls">
-            <button type="button" class="feedbacks__button-prev">
+            <button type="button" class="feedbacks__button feedbacks__button_prev">
               <svg class="icon icon-arrow">
                 <use xlink:href="/images/svgMap.svg#icon-arrow"></use>
               </svg>
             </button>
-            <button type="button" class="feedbacks__button-next">
+            <button type="button" class="feedbacks__button feedbacks__button_next">
               <svg class="icon icon-arrow rotate-180">
                 <use xlink:href="/images/svgMap.svg#icon-arrow"></use>
               </svg>
