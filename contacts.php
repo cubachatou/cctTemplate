@@ -189,3 +189,4 @@
 <!-- POPUP -->
 <?php include('inc/popup.php'); ?>
 <!-- SCRIPTS + HTML Close -->
+<?php include('inc/scripts.php'); ?>

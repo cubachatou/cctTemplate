@@ -1,9 +1,13 @@
 @import "home";
+@import "contact";
 
 .page {
 	.menu-open & {
 	}
 	// .page_home
 	&_home {
+	}
+	// .page_contacts
+	&_contacts {
 	}
 }

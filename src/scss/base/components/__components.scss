@@ -9,3 +9,38 @@
 // @import "fullpage";
 // @import "ripple";
 // @import "swiper";
+
+.section-heading {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	text-align: center;
+	// .section-heading__title
+	&__title {
+	}
+	// .section-heading__sub-title
+	&__sub-title {
+		color: $neutral-80;
+	}
+}
+
+.tag {
+	display: inline-block;
+	padding: 0.25rem 1rem;
+	border: 1px solid $neutral-50;
+	border-radius: 2.5rem;
+	@extend .capt-1;
+}
+
+.page-heading {
+	// .page-heading__container
+	&__container {
+	}
+	// .page-heading__button
+	&__button {
+	}
+	// .page-heading__title
+	&__title {
+	}
+}

@@ -8,25 +8,31 @@ export const cursor = new MouseFollower({
   skewingMedia: 0
 });
 
-const el = document.querySelector(".fh-section");
+const fhSection = document.querySelector(".fh-section");
 
-el.addEventListener("mouseenter", () => {
-  cursor.show();
-  cursor.setImg("/images/svg/circle-path-group.svg");
-});
+if (fhSection) {
+  fhSection.addEventListener("mouseenter", () => {
+    cursor.show();
+    cursor.setImg("/images/svg/circle-path-group.svg");
+  });
 
-el.addEventListener("mouseleave", () => {
-  cursor.removeImg();
-  cursor.hide();
-});
+  fhSection.addEventListener("mouseleave", () => {
+    cursor.removeImg();
+    cursor.hide();
+  });
+}
 
-document.querySelector(".clients").addEventListener("mouseover", () => {
-  cursor.show();
-  cursor.addState("-spotlight");
-});
-document.querySelector(".clients").addEventListener("mouseleave", () => {
-  cursor.hide();
-  setTimeout(() => {
-    cursor.removeState("-spotlight");
-  }, 250);
-});
+const clients = document.querySelector('.clients');
+
+if (clients) {
+  clients.addEventListener("mouseover", () => {
+    cursor.show();
+    cursor.addState("-spotlight");
+  });
+  clients.addEventListener("mouseleave", () => {
+    cursor.hide();
+    setTimeout(() => {
+      cursor.removeState("-spotlight");
+    }, 250);
+  });
+}
