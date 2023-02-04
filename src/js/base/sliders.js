@@ -2,6 +2,7 @@ import Swiper, {
   Navigation,
   EffectCreative
 } from "swiper";
+import gsap from "gsap";
 
 function initSliders() {
   if (document.querySelector(".case-slider")) {
@@ -31,12 +32,14 @@ function initSliders() {
     });
   }
   if (document.querySelector(".feedback-slider")) {
+
     new Swiper(".feedback-slider", {
       modules: [Navigation, EffectCreative],
       speed: 800,
-      slidesPerView: 1,
+      // slidesPerView: 3,
       spaceBetween: 16,
       allowTouchMove: false,
+      // virtualTranslate: true,
       effect: "creative",
       creativeEffect: {
         prev: {
@@ -52,6 +55,9 @@ function initSliders() {
         prevEl: ".feedbacks__button_prev",
         nextEl: ".feedbacks__button_next",
       },
+      on: {
+
+      }
     });
   }
 }

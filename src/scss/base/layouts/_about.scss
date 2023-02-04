@@ -1,0 +1,51 @@
+.hight-hero {
+	padding: 64px 0 75px;
+	// .hight-hero__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 96px;
+	}
+	// .hight-hero__title
+	&__title {
+		text-align: center;
+	}
+	// .hight-hero__arrow
+	&__arrow {
+	}
+	// .hight-hero__fish
+	&__fish {
+		width: 958px;
+		padding-top: 31.175%;
+	}
+}
+.numbers {
+	padding: 96px 0;
+	// .numbers__container
+	&__container {
+	}
+	// .numbers__list
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 112px;
+	}
+	// .numbers__item
+	&__item {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+		text-align: center;
+	}
+	// .numbers__number
+	&__number {
+		width: 232px;
+	}
+	// .numbers__descr
+	&__descr {
+	}
+}

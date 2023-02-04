@@ -10,7 +10,7 @@
   <section class="page-heading">
     <div class="page-heading__container">
       <a href="javascript:void(0)" class="page-heading__button">
-        <span>
+        <span class="icon-wrapper">
           <svg class="icon icon-arrow-upleft">
             <use xlink:href="/images/svgMap.svg#icon-arrow-upleft"></use>
           </svg>
@@ -40,7 +40,7 @@
               <li class="contact-info__link-item">
                 <a href="javascript:void(0)" class="contact-info__link p2">
                   Київ
-                  <span>
+                  <span class="icon-wrapper">
                     <svg class="icon icon-map-pin">
                       <use xlink:href="/images/svgMap.svg#icon-map-pin"></use>
                     </svg>
@@ -50,7 +50,7 @@
               <li class="contact-info__link-item">
                 <a href="javascript:void(0)" class="contact-info__link p2">
                   Прага
-                  <span>
+                  <span class="icon-wrapper">
                     <svg class="icon icon-map-pin">
                       <use xlink:href="/images/svgMap.svg#icon-map-pin"></use>
                     </svg>

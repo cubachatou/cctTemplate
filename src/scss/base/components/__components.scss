@@ -62,3 +62,13 @@
 	&__title {
 	}
 }
+
+.icon-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 36px;
+	height: 36px;
+	background-color: $neutral-30;
+	border-radius: 50%;
+}

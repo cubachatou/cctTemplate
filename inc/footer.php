@@ -2,9 +2,10 @@
   <div class="footer__container">
     <div class="footer__inner">
       <div class="footer__top top-footer">
-        <span class="top-footer__text">
+        <span class="top-footer__text -ibg_contain">
           <span>Почніть свій проект</span>
           <span>зараз</span>
+          <img src="images/fishes/whale.png" alt="Whale">
         </span>
         <div class="top-footer__buttons">
           <a href="javascript:void(0)" class="top-footer__button button button_primary">Заповнити бриф</a>

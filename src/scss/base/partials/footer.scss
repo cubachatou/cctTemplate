@@ -21,6 +21,7 @@
 	padding: rem(96) 0 rem(200);
 	// .top-footer__text
 	&__text {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		font-size: rem(48);
@@ -28,10 +29,17 @@
 		font-weight: 900;
 		text-align: center;
 		color: #000;
-		& span:last-child {
+		& span:nth-child(2) {
 			margin-top: -4rem;
 			font-size: rem(196);
 			line-height: math.div(240, 196);
+		}
+		img {
+			position: absolute;
+			top: 93px;
+			left: 167px;
+			width: 337px;
+			height: 144px;
 		}
 	}
 	// .top-footer__buttons

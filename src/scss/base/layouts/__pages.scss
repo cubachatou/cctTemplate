@@ -1,5 +1,6 @@
 @import "home";
 @import "contact";
+@import "about";
 
 .page {
 	.menu-open & {
@@ -9,6 +10,13 @@
 	}
 	// .page_contacts
 	&_contacts {
+		padding-top: rem(136);
+		& [class*="__container"] {
+			max-width: 1312px;
+		}
+	}
+	// .page_about
+	&_about {
 		padding-top: rem(136);
 		& [class*="__container"] {
 			max-width: 1312px;

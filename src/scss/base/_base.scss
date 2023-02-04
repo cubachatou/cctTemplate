@@ -56,20 +56,35 @@ body {
 	}
 }
 
-// %listCounter {
-// 	list-style-type: none;
-// 	counter-reset: item;
-// 	li {
-// 		position: relative;
-// 		&:before {
-// 			counter-increment: item;
-// 			content: counter(item);
-// 			position: absolute;
-// 			left: 0;
-// 			top: 0;
-// 		}
-// 	}
-// }
+%listCounter {
+	list-style-type: none;
+	counter-reset: item;
+	display: flex;
+	flex-direction: column;
+	gap: 64px;
+	li {
+		position: relative;
+		padding-left: 50px;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		&:before {
+			counter-increment: item;
+			content: "0" counter(item);
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 36px;
+			height: 36px;
+			background: $neutral-100;
+			border-radius: 2rem;
+			color: $neutral-10;
+		}
+	}
+}
 
 // %responsiveVideo {
 // 	position: relative;
