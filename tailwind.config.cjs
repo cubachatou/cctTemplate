@@ -1,24 +1,23 @@
 module.exports = {
   mode: "jit",
-  content: ["./src/**/*.vue", "index.php", "header.php", "footer.php", "home.php", "contacts.php", "about.php", "404.php", "inc/**/*.php"],
+  content: ["./src/**/*.vue", "index.php", "header.php", "footer.php", "home.php", "contacts.php", "about.php", "404.php", "portfolio.php", "inc/**/*.php"],
   theme: {
     content: {},
-    // container: {
-    //   center: true,
-    //   padding: "4rem",
-    // },
+    container: {
+      center: true,
+      padding: {
+        mmd1: '15rem',
+        mmd2: '4rem',
+        mmd3: '4rem',
+        mmd4: '2.5rem',
+      },
+    },
     /*===================================<Breakpoints>===================================*/
     screens: {
-      md4: "479.98px",
-      // => @media (min-width: 479.98px) { ... }
-      md3: "767.98px",
-      // => @media (min-width: 767.98px) { ... }
-      md2: "991.98px",
-      // => @media (min-width: 991.98px) { ... }
-      lg: "1199.98px",
-      // => @media (min-width: 1199.98px) { ... }
-      xl: "1439.98px",
-      // => @media (min-width: 1439.98px) { ... }
+      mmd4: "414.98px",
+      mmd3: "767.98px",
+      mmd2: "1023.98px",
+      mmd1: "1439.98px",
     },
     /*===================================<Colors>===================================*/
     colors: {

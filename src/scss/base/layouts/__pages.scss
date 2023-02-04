@@ -2,32 +2,25 @@
 @import "contact";
 @import "about";
 @import "portfolio";
+@import "blog";
 
 .page {
-	.menu-open & {
+	&:not(&_home) {
+		padding-top: rem(136);
+		& [class*="__container"] {
+			max-width: 1312px;
+		}
 	}
 	// .page_home
 	&_home {
 	}
 	// .page_contacts
 	&_contacts {
-		padding-top: rem(136);
-		& [class*="__container"] {
-			max-width: 1312px;
-		}
 	}
 	// .page_about
 	&_about {
-		padding-top: rem(136);
-		& [class*="__container"] {
-			max-width: 1312px;
-		}
 	}
 	// .page_portfolio
 	&_portfolio {
-		padding-top: rem(136);
-		& [class*="__container"] {
-			max-width: 1312px;
-		}
 	}
 }

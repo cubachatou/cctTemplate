@@ -25,7 +25,6 @@
 		color: $neutral-80;
 	}
 }
-
 .tag {
 	display: inline-block;
 	padding: 0.25rem 1rem;
@@ -33,7 +32,6 @@
 	border-radius: 2.5rem;
 	@extend .capt-1;
 }
-
 .page-heading {
 	padding-top: 4rem;
 	// .page-heading__container
@@ -63,7 +61,6 @@
 	&__title {
 	}
 }
-
 .icon-wrapper {
 	display: flex;
 	justify-content: center;
@@ -72,4 +69,35 @@
 	height: 36px;
 	background-color: $neutral-30;
 	border-radius: 50%;
+}
+.blog-filter {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	// .blog-filter__list-item
+	&__list-item {
+	}
+	// .blog-filter__button
+	&__button {
+		padding: 3px 16px 5px;
+		border: 1px solid $neutral-100;
+		border-radius: 2.5rem;
+		@extend .capt-1;
+		&._active {
+			background-color: $neutral-100;
+			color: $neutral-10;
+		}
+	}
+}
+.tags {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	// .tags__item
+	&__item {
+		padding: 4px 16px;
+		border: 1px solid $neutral-50;
+		border-radius: 2.5rem;
+		@extend .capt-1;
+	}
 }

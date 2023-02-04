@@ -64,23 +64,21 @@ $mobileSmall: em(414.98);
 //===================== BASED ON BRAKPOINTS =====================//
 [class*="__container"] {
 	margin: 0 auto;
-	max-width: rem($maxWidthContainer);
 	box-sizing: content-box;
-	padding: 0 rem(math.div($containerPadding, 2));
-
-	@media (max-width: $pc) {
-		max-width: rem(1312);
-		padding: 0 rem(64);
-	}
-	@media (max-width: $tablet) {
-		max-width: rem(944);
+	padding: 0 rem(16);
+	@media (min-width: $mobileSmall) {
+		max-width: rem(688);
 		padding: 0 rem(40);
 	}
-	@media (max-width: $mobile) {
-		max-width: rem(688);
+	@media (min-width: $mobile) {
+		max-width: rem(944);
+		padding: 0 rem(64);
 	}
-	@media (max-width: $mobileSmall) {
-		max-width: none;
-		padding: 0 rem(16);
+	@media (min-width: $tablet) {
+		max-width: rem(1312);
+	}
+	@media (min-width: $pc) {
+		max-width: rem($maxWidthContainer);
+		padding: 0 rem(math.div($containerPadding, 2));
 	}
 }

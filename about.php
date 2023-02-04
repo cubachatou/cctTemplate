@@ -6,7 +6,7 @@
 <?php include('inc/header.php'); ?>
 
 <!-- MAIN -->
-<main class="page page_about" data-barba="container" data-barba-namespace="contacts">
+<main class="page page_about" data-barba="container" data-barba-namespace="about">
   <section class="hight-hero">
     <div class="hight-hero__container">
       <h1 class="hight-hero__title">Люди, які розробляють рішення та створюють вебсайти для людей</h1>
@@ -162,6 +162,44 @@
             </button>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+  <section class="awards">
+    <div class="awards__container">
+      <div class="awards__heading section-heading">
+        <h2 class="section-heading__title">Нагороди</h2>
+        <span class="section-heading__sub-title">чим ми пишаємося</span>
+      </div>
+      <div class="awards__grid awards-grid">
+        <figure class="awards-grid__figure">
+          <img class="awards-grid__image" src="images/awards/1.png" alt="Ukrainian Design The Very Best Of">
+          <figcaption class="awards-grid__figcap">
+            <span class="awards-grid__title p6">Best of Websites Design</span>
+            <span class="awards-grid__year h5">2018</span>
+          </figcaption>
+        </figure>
+        <figure class="awards-grid__figure">
+          <img class="awards-grid__image" src="images/awards/1.png" alt="Ukrainian Design The Very Best Of">
+          <figcaption class="awards-grid__figcap">
+            <span class="awards-grid__title p6">Best of Websites Design</span>
+            <span class="awards-grid__year h5">2019</span>
+          </figcaption>
+        </figure>
+        <figure class="awards-grid__figure">
+          <img class="awards-grid__image" src="images/awards/2.png" alt="Ukrainian Design The Very Best Of">
+          <figcaption class="awards-grid__figcap">
+            <span class="awards-grid__title p6">Best of Websites Design</span>
+            <span class="awards-grid__year h5">2018</span>
+          </figcaption>
+        </figure>
+        <figure class="awards-grid__figure">
+          <img class="awards-grid__image" src="images/awards/1.png" alt="Ukrainian Design The Very Best Of">
+          <figcaption class="awards-grid__figcap">
+            <span class="awards-grid__title p6">Best of Digital Platforms & Websites Design</span>
+            <span class="awards-grid__year h5">2020</span>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
