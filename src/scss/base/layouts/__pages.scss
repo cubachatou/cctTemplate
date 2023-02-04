@@ -1,6 +1,7 @@
 @import "home";
 @import "contact";
 @import "about";
+@import "portfolio";
 
 .page {
 	.menu-open & {
@@ -17,6 +18,13 @@
 	}
 	// .page_about
 	&_about {
+		padding-top: rem(136);
+		& [class*="__container"] {
+			max-width: 1312px;
+		}
+	}
+	// .page_portfolio
+	&_portfolio {
 		padding-top: rem(136);
 		& [class*="__container"] {
 			max-width: 1312px;

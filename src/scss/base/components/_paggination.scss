@@ -1,0 +1,26 @@
+.paggination {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+	// .paggination__arrow
+	&__arrow {
+	}
+	// .paggination__list
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+	// .paggination__item
+	&__item {
+		&._active {
+		}
+	}
+	// .paggination__link
+	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 36px;
+		height: 36px;
+	}
+}
