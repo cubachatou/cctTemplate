@@ -10,7 +10,7 @@
   <section class="fh-section">
     <div class="fh-section__container">
       <div class="fh-section__inner">
-        <h1 class="fh-section__title hamburger">
+        <h1 class="fh-section__title">
           <span>Mavericks</span>
           <span>agency</span>
         </h1>

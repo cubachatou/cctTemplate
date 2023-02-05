@@ -16,9 +16,12 @@ a:focus,
 a:active {
 	outline: none;
 }
+html {
+	scroll-behavior: initial;
+}
 html,
 body {
-	// height: 100%;
+	height: auto;
 	min-width: $minWidth + px;
 }
 body {

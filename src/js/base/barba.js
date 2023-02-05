@@ -1,10 +1,18 @@
 import {
   flsModules
 } from "../base/modules.js";
-import barba from "@barba/core";
 import {
   menuClose
 } from "./functions.js";
+import {
+  initSliders
+} from "./sliders.js";
+import VanillaTilt from "vanilla-tilt";
+import {
+  cursorsInit
+} from "./cursor.js";
+
+import barba from "@barba/core";
 
 barba.init({
   views: [{
@@ -13,7 +21,15 @@ barba.init({
         menuClose();
         flsModules.svgOverlay.invert();
       },
-      afterEnter() {},
+      afterEnter() {
+        flsModules.lenis.scrollTo(0, {
+          immediate: true,
+        });
+        cursorsInit();
+        initSliders();
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"))
+        flsModules.select.selectInit();
+      },
     },
     {
       namespace: "portoflio",
@@ -21,7 +37,15 @@ barba.init({
         menuClose();
         flsModules.svgOverlay.invert();
       },
-      afterEnter() {},
+      afterEnter() {
+        flsModules.lenis.scrollTo(0, {
+          immediate: true,
+        });
+        cursorsInit();
+        initSliders();
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"))
+        flsModules.select.selectInit();
+      },
     },
     {
       namespace: "about",
@@ -29,7 +53,15 @@ barba.init({
         menuClose();
         flsModules.svgOverlay.invert();
       },
-      afterEnter() {},
+      afterEnter() {
+        flsModules.lenis.scrollTo(0, {
+          immediate: true,
+        });
+        cursorsInit();
+        initSliders();
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"))
+        flsModules.select.selectInit();
+      },
     },
     {
       namespace: "blog",
@@ -37,7 +69,15 @@ barba.init({
         menuClose();
         flsModules.svgOverlay.invert();
       },
-      afterEnter() {},
+      afterEnter() {
+        flsModules.lenis.scrollTo(0, {
+          immediate: true,
+        });
+        cursorsInit();
+        initSliders();
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"))
+        flsModules.select.selectInit();
+      },
     },
     {
       namespace: "contacts",
@@ -45,7 +85,15 @@ barba.init({
         menuClose();
         flsModules.svgOverlay.invert();
       },
-      afterEnter() {},
+      afterEnter() {
+        flsModules.lenis.scrollTo(0, {
+          immediate: true,
+        });
+        cursorsInit();
+        initSliders();
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"))
+        flsModules.select.selectInit();
+      },
     },
   ],
 });

@@ -2,8 +2,8 @@ import {
   gsap
 } from "gsap";
 import {
-  cursor
-} from "./cursor.js";
+  flsModules
+} from "./modules.js";
 import MorphSVGPlugin from "gsap/MorphSVGPlugin.js";
 
 gsap.registerPlugin(MorphSVGPlugin);
@@ -16,8 +16,8 @@ document.documentElement.addEventListener("mousemove", function (e) {
       morphSVG: "M0 1088V0C0 0 65 317.333 65 543.37C65 769.407 0 1088 0 1088Z",
       duration: 0.5,
     });
-    cursor.hide();
-    cursor.removeImg();
+    flsModules.hide();
+    flsModules.removeImg();
   } else {
     document.documentElement.classList.remove("menu-hovered");
     gsap.to(wiper, {
@@ -25,8 +25,8 @@ document.documentElement.addEventListener("mousemove", function (e) {
       duration: 0.5,
     });
     if (e.target.classList.contains("fh-section")) {
-      cursor.show();
-      cursor.setImg("/images/svg/circle-path-group.svg");
+      flsModules.show();
+      flsModules.setImg("/images/svg/circle-path-group.svg");
     }
   }
 });

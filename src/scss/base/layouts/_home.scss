@@ -9,13 +9,29 @@
 	background-color: #f7f7f7;
 	// .fh-section__title
 	&__title {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		font-size: rem(196);
-		line-height: 1;
+		line-height: math.div(240, 196);
 		cursor: default;
+		&::before {
+			content: "";
+			position: absolute;
+			top: -1rem;
+			left: 133px;
+			width: 958px;
+			height: 409px;
+			background: url("../../../../images/fishes/whale.png") no-repeat center / contain;
+		}
 		span {
+			&:first-child {
+				z-index: 1;
+			}
+			&:last-child {
+				margin-top: -34.5px;
+			}
 		}
 	}
 }
@@ -37,6 +53,13 @@
 		gap: rem(48);
 		padding: rem(200) rem(64) rem(280);
 		text-align: center;
+		&::before {
+			content: "";
+			display: block;
+			width: 190px;
+			height: 81px;
+			background: url("../../../../images/fishes/whale-sm.png") no-repeat center / contain;
+		}
 	}
 	// .short-about__title
 	&__title {
@@ -85,17 +108,58 @@
 	padding: rem(64) rem(40);
 	border-radius: rem(24);
 	background-color: $neutral-10;
+	transform-style: preserve-3d;
 	// .service-card__content
 	&__content {
 		display: flex;
 		flex-direction: column;
+		align-items: flex-start;
 		gap: rem(25);
+		transform-style: preserve-3d;
 	}
 	// .service-card__number
 	&__number {
+		position: relative;
 		font-weight: 900;
 		font-size: rem(64);
 		line-height: math.div(78, 64);
+		transform-style: preserve-3d;
+		&.text-red {
+			&::before {
+				content: "";
+				position: absolute;
+				top: 13px;
+				left: -16px;
+				width: 119px;
+				height: 56px;
+				background: url(../../../../images/fishes/sailfish.png) no-repeat center / contain;
+				transform: translateZ(20px);
+			}
+		}
+		&.text-blue {
+			&::before {
+				content: "";
+				position: absolute;
+				top: 13px;
+				left: -16px;
+				width: 119px;
+				height: 56px;
+				background: url(../../../../images/fishes/blue-whale.png) no-repeat center / contain;
+				transform: translateZ(20px);
+			}
+		}
+		&.text-purple {
+			&::before {
+				content: "";
+				position: absolute;
+				top: 13px;
+				left: -16px;
+				width: 119px;
+				height: 56px;
+				background: url(../../../../images/fishes/shark.png) no-repeat center / contain;
+				transform: translateZ(20px);
+			}
+		}
 	}
 	// .service-card__title
 	&__title {

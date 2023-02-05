@@ -2,9 +2,11 @@ import Swiper, {
   Navigation,
   EffectCreative
 } from "swiper";
-import gsap from "gsap";
+import {
+  flsModules
+} from "./modules.js";
 
-function initSliders() {
+export function initSliders() {
   if (document.querySelector(".case-slider")) {
     new Swiper(".case-slider", {
       modules: [Navigation, EffectCreative],
@@ -32,7 +34,6 @@ function initSliders() {
     });
   }
   if (document.querySelector(".feedback-slider")) {
-
     new Swiper(".feedback-slider", {
       modules: [Navigation, EffectCreative],
       speed: 800,

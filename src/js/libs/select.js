@@ -503,5 +503,5 @@ class SelectConstructor {
     this.config.logging ? FLS(`[select]: ${message}`) : null;
   }
 }
-// Запускаємо та додаємо в об'єкт модулів
+
 flsModules.select = new SelectConstructor({});
