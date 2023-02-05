@@ -160,12 +160,12 @@
   <section class="calc">
     <div class="calc__container">
       <div class="calc__inner">
-        <div class="calc__block block-calc">
-          <div class="block-calc__content">
-            <h3 class="block-calc__title">Дізнайтеся, скільки коштуватиме ваш сайт</h3>
-            <a href="javascript:void(0)" class="block-calc__link button button_underline">Дізнатися ціну</a>
+        <div class="calc__block cta-block">
+          <div class="cta-block__content">
+            <h3 class="cta-block__title">Дізнайтеся, скільки коштуватиме ваш сайт</h3>
+            <a href="javascript:void(0)" class="cta-block__link button button_underline">Дізнатися ціну</a>
           </div>
-          <div class="block-calc__image">
+          <div class="cta-block__image">
             <img src="images/home/shell.png" alt="Shell">
           </div>
         </div>
@@ -180,20 +180,20 @@
           <span class="section-heading__sub-title">Цікаво та не завжди коротко про тренди, факапи і багато чого іншого</span>
         </div>
         <div class="from-blog__grid">
-          <div class="from-blog__grid-item blog-item">
+          <article class="from-blog__grid-item blog-item">
             <span class="blog-item__tag tag">Стаття</span>
             <a href="javascript:void(0)" class="blog-item__title">
               <h4>ТОП 10 причин, чому юристу потрібен надійний сайт</h4>
             </a>
-            <span class="blog-item__date">30 вересня 2022</span>
-          </div>
-          <div class="from-blog__grid-item blog-item">
+            <time pubdate datetime="2022-09-30" class="blog-item__date">30 вересня 2022</time>
+          </article>
+          <article class="from-blog__grid-item blog-item">
             <span class="blog-item__tag tag">Стаття</span>
             <a href="javascript:void(0)" class="blog-item__title">
               <h4>ТОП 10 причин, чому юристу потрібен надійний сайт</h4>
             </a>
-            <span class="blog-item__date">30 вересня 2022</span>
-          </div>
+            <time pubdate datetime="2022-09-30" class="blog-item__date">30 вересня 2022</time>
+          </article>
         </div>
         <a href="javascript:void(0)" class="from-blog__link button button_primary">Перейти до блогу</a>
       </div>

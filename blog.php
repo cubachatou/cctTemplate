@@ -27,146 +27,132 @@
         <li class="blog-filter__list-item"><button type="button" class="blog-filter__button">Кейси</button></li>
       </ul>
       <div class="blog__list">
-        <figure class="blog__figure blog-figure">
-          <div class="blog-figure__col blog-figure__col_left">
-            <div class="blog-figure__content">
-              <ul class="blog-figure__tags tags">
+        <article class="blog__article blog-article">
+          <div class="blog-article__col blog-article__col_left">
+            <div class="blog-article__content">
+              <ul class="blog-article__tags tags">
                 <li class="tags__item">Стаття</li>
                 <li class="tags__item">#факапи</li>
                 <li class="tags__item">#власний досвід</li>
               </ul>
-              <figcaption class="blog-figure__figcap">
-                <h2 class="blog-figure__title">Як ми створили якісну платформу LMS для освітніх проектів</h2>
-              </figcaption>
-              <span class="blog-figure__date p6">30 вересня 2022</span>
+              <h2 class="blog-article__title"><a href="javascript:void(0)">Як ми створили якісну платформу LMS для освітніх проектів</a></h2>
+              <time pubdate datetime="2022-09-30" class="blog-article__date p6">30 вересня 2022</time>
             </div>
           </div>
-          <div class="blog-figure__col blog-figure__col_right">
-            <div class="blog-figure__image -ibg">
+          <div class="blog-article__col blog-article__col_right">
+            <div class="blog-article__image -ibg">
               <img src="images/blog/1.jpg" alt="#">
             </div>
           </div>
-        </figure>
-        <figure class="blog__figure blog-figure">
-          <div class="blog-figure__col blog-figure__col_left">
-            <div class="blog-figure__content">
-              <ul class="blog-figure__tags tags">
+        </article>
+        <article class="blog__article blog-article">
+          <div class="blog-article__col blog-article__col_left">
+            <div class="blog-article__content">
+              <ul class="blog-article__tags tags">
                 <li class="tags__item">Стаття</li>
                 <li class="tags__item">#факапи</li>
                 <li class="tags__item">#власний досвід</li>
               </ul>
-              <figcaption class="blog-figure__figcap">
-                <h2 class="blog-figure__title">Топ-15 трендів у веб дизайні 2023 року</h2>
-              </figcaption>
-              <span class="blog-figure__date p6">30 вересня 2022</span>
+              <h2 class="blog-article__title"><a href="javascript:void(0)">Топ-15 трендів у веб дизайні 2023 року</a></h2>
+              <time pubdate datetime="2022-09-30" class="blog-article__date p6">30 вересня 2022</time>
             </div>
           </div>
-          <div class="blog-figure__col blog-figure__col_right">
-            <div class="blog-figure__image -ibg">
+          <div class="blog-article__col blog-article__col_right">
+            <div class="blog-article__image -ibg">
               <img src="images/blog/2.jpg" alt="#">
             </div>
           </div>
-        </figure>
-        <figure class="blog__figure blog-figure">
-          <div class="blog-figure__col blog-figure__col_left">
-            <div class="blog-figure__content">
-              <ul class="blog-figure__tags tags">
+        </article>
+        <article class="blog__article blog-article">
+          <div class="blog-article__col blog-article__col_left">
+            <div class="blog-article__content">
+              <ul class="blog-article__tags tags">
                 <li class="tags__item">Стаття</li>
                 <li class="tags__item">#факапи</li>
                 <li class="tags__item">#власний досвід</li>
               </ul>
-              <figcaption class="blog-figure__figcap">
-                <h2 class="blog-figure__title">Трохи про зароблені медіа або про те, як потрапити на аватар Google </h2>
-              </figcaption>
-              <span class="blog-figure__date p6">30 вересня 2022</span>
+              <h2 class="blog-article__title"><a href="javascript:void(0)">Трохи про зароблені медіа або про те, як потрапити на аватар Google</a></h2>
+              <time pubdate datetime="2022-09-30" class="blog-article__date p6">30 вересня 2022</time>
             </div>
           </div>
-          <div class="blog-figure__col blog-figure__col_right">
-            <div class="blog-figure__image -ibg">
+          <div class="blog-article__col blog-article__col_right">
+            <div class="blog-article__image -ibg">
               <img src="images/blog/3.jpg" alt="#">
             </div>
           </div>
-        </figure>
-        <figure class="blog__figure blog-figure">
-          <div class="blog-figure__col blog-figure__col_left">
-            <div class="blog-figure__content">
-              <ul class="blog-figure__tags tags">
+        </article>
+        <article class="blog__article blog-article">
+          <div class="blog-article__col blog-article__col_left">
+            <div class="blog-article__content">
+              <ul class="blog-article__tags tags">
                 <li class="tags__item">Стаття</li>
                 <li class="tags__item">#факапи</li>
                 <li class="tags__item">#власний досвід</li>
               </ul>
-              <figcaption class="blog-figure__figcap">
-                <h2 class="blog-figure__title">ІТ стане локомотивом, що витягне економіку України</h2>
-              </figcaption>
-              <span class="blog-figure__date p6">30 вересня 2022</span>
+              <h2 class="blog-article__title"><a href="javascript:void(0)">ІТ стане локомотивом, що витягне економіку України</a></h2>
+              <time pubdate datetime="2022-09-30" class="blog-article__date p6">30 вересня 2022</time>
             </div>
           </div>
-          <div class="blog-figure__col blog-figure__col_right">
-            <div class="blog-figure__image -ibg">
+          <div class="blog-article__col blog-article__col_right">
+            <div class="blog-article__image -ibg">
               <img src="images/blog/4.jpg" alt="#">
             </div>
           </div>
-        </figure>
-        <figure class="blog__figure blog-figure">
-          <div class="blog-figure__col blog-figure__col_left">
-            <div class="blog-figure__content">
-              <ul class="blog-figure__tags tags">
+        </article>
+        <article class="blog__article blog-article">
+          <div class="blog-article__col blog-article__col_left">
+            <div class="blog-article__content">
+              <ul class="blog-article__tags tags">
                 <li class="tags__item">Стаття</li>
                 <li class="tags__item">#факапи</li>
                 <li class="tags__item">#власний досвід</li>
               </ul>
-              <figcaption class="blog-figure__figcap">
-                <h2 class="blog-figure__title">Чого має навчатися розробник JAVA сьогодні, щоб бути затребуваним завтра?</h2>
-              </figcaption>
-              <span class="blog-figure__date p6">30 вересня 2022</span>
+              <h2 class="blog-article__title"><a href="javascript:void(0)">Чого має навчатися розробник JAVA сьогодні, щоб бути затребуваним завтра?</a></h2>
+              <time pubdate datetime="2022-09-30" class="blog-article__date p6">30 вересня 2022</time>
             </div>
           </div>
-          <div class="blog-figure__col blog-figure__col_right">
-            <div class="blog-figure__image -ibg">
+          <div class="blog-article__col blog-article__col_right">
+            <div class="blog-article__image -ibg">
               <img src="images/blog/5.jpg" alt="#">
             </div>
           </div>
-        </figure>
-        <figure class="blog__figure blog-figure">
-          <div class="blog-figure__col blog-figure__col_left">
-            <div class="blog-figure__content">
-              <ul class="blog-figure__tags tags">
+        </article>
+        <article class="blog__article blog-article">
+          <div class="blog-article__col blog-article__col_left">
+            <div class="blog-article__content">
+              <ul class="blog-article__tags tags">
                 <li class="tags__item">Стаття</li>
                 <li class="tags__item">#факапи</li>
                 <li class="tags__item">#власний досвід</li>
               </ul>
-              <figcaption class="blog-figure__figcap">
-                <h2 class="blog-figure__title">Взаємодія РМ/ВА: світло і тінь IT-реальності</h2>
-              </figcaption>
-              <span class="blog-figure__date p6">30 вересня 2022</span>
+              <h2 class="blog-article__title"><a href="javascript:void(0)">Взаємодія РМ/ВА: світло і тінь IT-реальності</a></h2>
+              <time pubdate datetime="2022-09-30" class="blog-article__date p6">30 вересня 2022</time>
             </div>
           </div>
-          <div class="blog-figure__col blog-figure__col_right">
-            <div class="blog-figure__image -ibg">
+          <div class="blog-article__col blog-article__col_right">
+            <div class="blog-article__image -ibg">
               <img src="images/blog/6.jpg" alt="#">
             </div>
           </div>
-        </figure>
-        <figure class="blog__figure blog-figure">
-          <div class="blog-figure__col blog-figure__col_left">
-            <div class="blog-figure__content">
-              <ul class="blog-figure__tags tags">
+        </article>
+        <article class="blog__article blog-article">
+          <div class="blog-article__col blog-article__col_left">
+            <div class="blog-article__content">
+              <ul class="blog-article__tags tags">
                 <li class="tags__item">Стаття</li>
                 <li class="tags__item">#факапи</li>
                 <li class="tags__item">#власний досвід</li>
               </ul>
-              <figcaption class="blog-figure__figcap">
-                <h2 class="blog-figure__title">Case: E-Commerce Accelerator Discovery</h2>
-              </figcaption>
-              <span class="blog-figure__date p6">30 вересня 2022</span>
+              <h2 class="blog-article__title"><a href="javascript:void(0)">Case: E-Commerce Accelerator Discovery</a></h2>
+              <time pubdate datetime="2022-09-30" class="blog-article__date p6">30 вересня 2022</time>
             </div>
           </div>
-          <div class="blog-figure__col blog-figure__col_right">
-            <div class="blog-figure__image -ibg">
+          <div class="blog-article__col blog-article__col_right">
+            <div class="blog-article__image -ibg">
               <img src="images/blog/7.jpg" alt="#">
             </div>
           </div>
-        </figure>
+        </article>
       </div>
       <a href="javascript:void(0)" class="blog__more-button button button_primary">Завантажити ще</a>
     </div>

@@ -38,7 +38,7 @@
     <div class="short-us__container">
       <h2 class="short-us__title">Наші принципи</h2>
       <div class="short-us__content">
-        <ul class="short-us__list short-us-list">
+        <ol class="short-us__list short-us-list">
           <li class="short-us-list__list-item">
             <h5 class="short-us-list__title">Неповторність</h5>
             <p class="short-us-list__text p6">Кожна хвиля – особлива, а кожна компанія заслуговує індивідуального сайту. Будьте неповторними, це приваблює.</p>
@@ -55,7 +55,7 @@
             <h5 class="short-us-list__title">Фокусування на головному</h5>
             <p class="short-us-list__text p6">Mavericks agency не розсіює увагу на безліч послуг, а робить тільки те, у чому є найкращою. Вона створює сайти.</p>
           </li>
-        </ul>
+        </ol>
       </div>
     </div>
   </section>

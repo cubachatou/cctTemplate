@@ -3,6 +3,7 @@
 @import "about";
 @import "portfolio";
 @import "blog";
+@import "single-article";
 
 .page {
 	&:not(&_home) {
@@ -22,5 +23,11 @@
 	}
 	// .page_portfolio
 	&_portfolio {
+	}
+	// .page_blog
+	&_blog {
+	}
+	// .page_single-article
+	&_single-article {
 	}
 }

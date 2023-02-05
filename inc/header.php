@@ -58,10 +58,10 @@
         <a href="javascript:void(0)" class="socials-menu__link">Facebook</a>
         <a href="javascript:void(0)" class="socials-menu__link">LinkedIn</a>
       </div>
-      <div class="footer-menu__contacts contacts-menu">
+      <address class="footer-menu__contacts contacts-menu">
         <a href="tel:+380983858280" class="contacts-menu__link">+38 098 385 82 80</a>
         <a href="mailto:hello@mavericksagency" class="contacts-menu__link">hello@mavericksagency</a>
-      </div>
+      </address>
     </div>
   </div>
   <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
