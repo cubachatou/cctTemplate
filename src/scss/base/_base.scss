@@ -134,6 +134,26 @@ body {
 	}
 }
 
+%textLimit-2 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2; /* number of lines to show */
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
+	margin-bottom: -0.25rem;
+}
+
+%textLimit-3 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3; /* number of lines to show */
+	line-clamp: 3;
+	-webkit-box-orient: vertical;
+	margin-bottom: -0.25rem;
+}
+
 // %videoBackground {
 // 	video,
 // 	iframe,
@@ -162,17 +182,13 @@ body {
 // 	}
 // }
 
-// %noselect {
-// 	user-select: none;
-// }
+%noselect {
+	user-select: none;
+}
 
-// %mirror {
-// 	transform: scale(-1, 1);
-// }
-
-// %smoothscroll {
-// 	-webkit-overflow-scrolling: touch;
-// }
+%mirror {
+	transform: scale(-1, 1);
+}
 
 %hidescroll {
 	&::-webkit-scrollbar {

@@ -142,22 +142,53 @@
 }
 .blog-item {
 	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
 	gap: 1rem;
 	padding: 1.5rem 4rem 2rem;
 	border: 1px solid $neutral-40;
 	border-radius: 1.5rem;
+	// .blog-item__col
+	&__col {
+		// .blog-item__col_left
+		&_left {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 1rem;
+			flex: 0 0 524px;
+		}
+		// .blog-item__col_right
+		&_right {
+			flex: 1 1 auto;
+		}
+	}
 	// .blog-item__tag
 	&__tag {
 	}
 	// .blog-item__title
 	&__title {
+		@extend %textLimit-2;
 	}
 	// .blog-item__date
 	&__date {
 		color: $neutral-90;
 		@extend .p6;
+	}
+	// .blog-item__image-wrapper
+	&__image-wrapper {
+		padding-top: 50%;
+	}
+	&.blog-item_sm {
+		align-items: center;
+		padding: 1.5rem 2rem;
+		.blog-item__col_left {
+			flex: 0 0 280px;
+		}
+		.blog-item__image-wrapper {
+			padding-top: 63.07%;
+		}
+		.blog-item__title {
+			@extend %textLimit-3;
+		}
 	}
 }
 .separator {
@@ -170,5 +201,85 @@
 	// .separator_hoz
 	&_hoz {
 		height: 2px;
+	}
+}
+.cta-block {
+	position: relative;
+	max-width: rem(864);
+	padding: rem(56) rem(300) rem(56) rem(56);
+	background-color: $neutral-10;
+	border-radius: 1.5rem;
+	// .cta-block__content
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: rem(35);
+	}
+	// .cta-block__title
+	&__title {
+	}
+	// .cta-block__link
+	&__link {
+	}
+	// .cta-block__image
+	&__image {
+		position: absolute;
+		width: percent(291, 864);
+		height: percent(291, 261);
+		top: percent(-55, 261);
+		right: percent(23, 864);
+	}
+	&.cta-block_sm {
+		border: 1px solid rgba(0, 0, 0, 0.11);
+		padding: 32px 200px 32px 40px;
+		.cta-block__content {
+			gap: 1rem;
+		}
+		.cta-block__image {
+			width: percent(291, 584);
+			height: percent(291, 216);
+			top: percent(-55, 216);
+			right: percent(23, 584);
+		}
+	}
+}
+.cta {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4rem;
+	padding: rem(96) 0 rem(200);
+	// .cta__text
+	&__text {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		font-size: rem(48);
+		line-height: math.div(59, 48);
+		font-weight: 900;
+		text-align: center;
+		color: #000;
+		& span:nth-child(2) {
+			margin-top: -4rem;
+			font-size: rem(196);
+			line-height: math.div(240, 196);
+		}
+		img {
+			position: absolute;
+			top: 93px;
+			left: 167px;
+			width: 337px;
+			height: 144px;
+		}
+	}
+	// .cta__buttons
+	&__buttons {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+	// .cta__button
+	&__button {
 	}
 }

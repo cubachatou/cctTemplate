@@ -311,30 +311,28 @@
 	}
 }
 .next-article-sect {
+	padding: 64px 0 80px;
 	// .next-article-sect__container
 	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 24px;
+		max-width: 1200px !important;
 	}
 	// .next-article-sect__title
 	&__title {
+		padding: 0.5rem 0 1rem;
 	}
 	// .next-article-sect__grid
 	&__grid {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
 	}
-	// .next-article-sect__item
-	&__item {
-	}
-}
-.cta-block {
-	// .cta-block__content
-	&__content {
-	}
-	// .cta-block__title
-	&__title {
-	}
-	// .cta-block__link
-	&__link {
-	}
-	// .cta-block__image
-	&__image {
+	// .next-article-sect__grid-item
+	&__grid-item {
+		height: 216px;
+		flex: 0 0 calc(50% - 1rem);
 	}
 }

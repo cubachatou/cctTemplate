@@ -180,23 +180,38 @@
           <span class="section-heading__sub-title">Цікаво та не завжди коротко про тренди, факапи і багато чого іншого</span>
         </div>
         <div class="from-blog__grid">
-          <article class="from-blog__grid-item blog-item">
-            <span class="blog-item__tag tag">Стаття</span>
-            <a href="javascript:void(0)" class="blog-item__title">
-              <h4>ТОП 10 причин, чому юристу потрібен надійний сайт</h4>
-            </a>
-            <time pubdate datetime="2022-09-30" class="blog-item__date">30 вересня 2022</time>
+          <article class="next-article-sect__grid-item blog-item">
+            <div class="blog-item__col blog-item__col_left">
+              <span class="blog-item__tag tag">Стаття</span>
+              <a href="javascript:void(0)" class="blog-item__title">
+                <h4>ТОП 10 причин, чому юристу потрібен надійний сайт</h4>
+              </a>
+              <time pubdate datetime="2022-09-30" class="blog-item__date">30 вересня 2022</time>
+            </div>
           </article>
-          <article class="from-blog__grid-item blog-item">
-            <span class="blog-item__tag tag">Стаття</span>
-            <a href="javascript:void(0)" class="blog-item__title">
-              <h4>ТОП 10 причин, чому юристу потрібен надійний сайт</h4>
-            </a>
-            <time pubdate datetime="2022-09-30" class="blog-item__date">30 вересня 2022</time>
+          <article class="next-article-sect__grid-item blog-item">
+            <div class="blog-item__col blog-item__col_left">
+              <span class="blog-item__tag tag">Стаття</span>
+              <a href="javascript:void(0)" class="blog-item__title">
+                <h4>Топ-15 трендів у веб дизайні 2022 року</h4>
+              </a>
+              <time pubdate datetime="2022-09-30" class="blog-item__date">30 вересня 2022</time>
+            </div>
           </article>
         </div>
         <a href="javascript:void(0)" class="from-blog__link button button_primary">Перейти до блогу</a>
       </div>
+    </div>
+  </section>
+  <section class="cta">
+    <span class="cta__text -ibg_contain">
+      <span>Почніть свій проект</span>
+      <span>зараз</span>
+      <img src="images/fishes/whale.png" alt="Whale">
+    </span>
+    <div class="cta__buttons">
+      <a href="javascript:void(0)" class="cta__button button button_primary">Заповнити бриф</a>
+      <a href="javascript:void(0)" class="cta__button button button_primary">Наші контакти</a>
     </div>
   </section>
 </main>

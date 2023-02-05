@@ -253,22 +253,28 @@
     <div class="next-article-sect__container">
       <h2 class="next-article-sect__title">Наступна стаття</h2>
       <div class="next-article-sect__grid">
-        <div class="next-article-sect__item">
-          <article class="from-blog__grid-item blog-item">
+        <article class="next-article-sect__grid-item blog-item blog-item_sm">
+          <div class="blog-item__col blog-item__col_left">
             <span class="blog-item__tag tag">Стаття</span>
             <a href="javascript:void(0)" class="blog-item__title">
-              <h4>ТОП 10 причин, чому юристу потрібен надійний сайт</h4>
+              <h4>Як ми створили якісну платформу LMS для освітніх проектів</h4>
             </a>
             <time pubdate datetime="2022-09-30" class="blog-item__date">30 вересня 2022</time>
-          </article>
-          <div class="calc__block cta-block">
-            <div class="cta-block__content">
-              <h3 class="cta-block__title">Дізнайтеся, скільки коштуватиме ваш сайт</h3>
-              <a href="javascript:void(0)" class="cta-block__link button button_underline">Дізнатися ціну</a>
+          </div>
+          <div class="blog-item__col blog-item__col_right">
+            <div class="blog-item__image-wrapper -ibg">
+              <img src="images/blog/1.jpg" alt="#">
             </div>
-            <div class="cta-block__image">
-              <img src="images/home/shell.png" alt="Shell">
-            </div>
+          </div>
+        </article>
+        <div class="next-article-sect__grid-item cta-block cta-block_sm">
+          <div class="cta-block__content">
+            <h4 class="cta-block__title">Ми ще не співпрацювали?</h4>
+            <span class="cta-block__sub-title p6">Не втрачайте час, напишіть нам</span>
+            <a href="javascript:void(0)" class="cta-block__link button button_primary">Хочу проєкт</a>
+          </div>
+          <div class="cta-block__image">
+            <img src="images/home/shell.png" alt="Shell">
           </div>
         </div>
       </div>

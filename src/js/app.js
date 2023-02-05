@@ -122,9 +122,6 @@ import * as flsScroll from "./base/scroll/scroll.js";
 
 // flsScroll.stickyBlock();
 
-// Documentation: https://template.fls.guru/template-docs/modul-animacii-cifrovogo-lichilnika.html
-// flsScroll.digitsCounter();
-
 // import './base/scroll/simplebar.js';
 
 //===================== GALLERY =====================//
