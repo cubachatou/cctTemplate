@@ -110,7 +110,6 @@ class ShapeOverlays {
     }
 
     this.isInvert ? str += `H 100 V 0` : str += `H 0 V 0`;
-    console.log(str);
     return str;
   }
   render() {

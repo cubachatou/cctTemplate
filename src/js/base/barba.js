@@ -16,6 +16,30 @@ barba.init({
       afterEnter() {},
     },
     {
+      namespace: "portoflio",
+      beforeLeave() {
+        menuClose();
+        flsModules.svgOverlay.invert();
+      },
+      afterEnter() {},
+    },
+    {
+      namespace: "about",
+      beforeLeave() {
+        menuClose();
+        flsModules.svgOverlay.invert();
+      },
+      afterEnter() {},
+    },
+    {
+      namespace: "blog",
+      beforeLeave() {
+        menuClose();
+        flsModules.svgOverlay.invert();
+      },
+      afterEnter() {},
+    },
+    {
       namespace: "contacts",
       beforeLeave() {
         menuClose();

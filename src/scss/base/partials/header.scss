@@ -321,17 +321,13 @@
 		opacity: 0;
 		transform: translateY(100%);
 		pointer-events: none;
-		transition: transform 0.3s, opacity 0.3s;
-		transition-timing-function: ease-in;
-		transition-delay: 0.15s;
+		transition: transform 0.3s ease-in 0.15s, opacity 0.3s ease-in 0.15s, background-color 0.3s ease 0s, color 0.3s ease 0s;
 
 		.menu-open & {
 			opacity: 1;
 			transform: translateY(0) rotate(0);
 			pointer-events: auto;
-			transition-timing-function: ease;
-			transition: transform 0.3s, opacity 0.3s;
-			transition-delay: 0.6s;
+			transition: transform 0.3s ease 0.6s, opacity 0.3s ease 0.6s, background-color 0.3s ease 0s, color 0.3s ease 0s;
 		}
 	}
 	// .footer-menu__socials
