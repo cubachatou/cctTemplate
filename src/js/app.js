@@ -136,7 +136,7 @@ import * as flsScroll from "./base/scroll/scroll.js";
 
 //===================== MY-CODE =====================//
 import "./base/lenis.js";
-// import "./base/cursor.js";
+import "./base/cursor.js";
 import "./base/menu_bulge.js";
 import "./base/svg_overlay.js";
 // import "./base/tilt.js";

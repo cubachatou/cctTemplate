@@ -44,9 +44,11 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 ScrollTrigger.create({
-  trigger: '.numbers',
+  trigger: ".numbers",
+  start: "top bottom",
   once: true,
   onEnter: function () {
+    console.log("123");
     flsScroll.digitsCounter();
-  }
-})
+  },
+});

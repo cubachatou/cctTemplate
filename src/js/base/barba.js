@@ -1,6 +1,7 @@
 import {
   flsModules
 } from "../base/modules.js";
+
 import {
   menuClose
 } from "./functions.js";
@@ -15,6 +16,10 @@ import {
   menuBulge_open
 } from "./menu_bulge.js";
 
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger.js";
+gsap.registerPlugin(ScrollTrigger)
+
 import barba from "@barba/core";
 
 barba.init({
@@ -25,7 +30,6 @@ barba.init({
         flsModules.svgOverlay.invert();
       },
       afterEnter() {
-
         flsModules.lenis.scrollTo(0, {
           immediate: true,
         });
@@ -66,15 +70,27 @@ barba.init({
       beforeLeave() {
         menuClose();
         flsModules.svgOverlay.invert();
+
       },
+      beforeEnter() {},
       afterEnter() {
         flsModules.lenis.scrollTo(0, {
           immediate: true,
         });
+
+        setTimeout(() => {
+          document.documentElement.classList.add("menu-visible");
+        }, 1000);
+
         cursorsInit();
+
         initSliders();
+
         VanillaTilt.init(document.querySelectorAll("[data-tilt]"))
-        flsModules.select.selectInit();
+
+        flsModules.select.selectsInit;
+
+        menuBulge_open(1);
       },
     },
     {
@@ -87,10 +103,20 @@ barba.init({
         flsModules.lenis.scrollTo(0, {
           immediate: true,
         });
+
+        setTimeout(() => {
+          document.documentElement.classList.add("menu-visible");
+        }, 1000);
+
         cursorsInit();
+
         initSliders();
+
         VanillaTilt.init(document.querySelectorAll("[data-tilt]"))
-        flsModules.select.selectInit();
+
+        flsModules.select.selectsInit;
+
+        menuBulge_open(1);
       },
     },
     {

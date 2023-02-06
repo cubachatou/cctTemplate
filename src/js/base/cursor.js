@@ -13,7 +13,6 @@ flsModules.cursor = new MouseFollower({
 
 export function cursorsInit() {
 
-
   const fhSection = document.querySelector(".fh-section");
 
   if (fhSection) {
@@ -31,7 +30,7 @@ export function cursorsInit() {
   const clients = document.querySelector('.clients');
 
   if (clients) {
-    clients.addEventListener("mouseover", () => {
+    clients.addEventListener("mouseenter", () => {
       flsModules.cursor.show();
       flsModules.cursor.addState("-spotlight");
     });
