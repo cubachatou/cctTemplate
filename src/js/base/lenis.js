@@ -1,7 +1,6 @@
 import {
   flsModules
 } from "./modules.js";
-import * as flsScroll from "../base/scroll/scroll.js";
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger.js";

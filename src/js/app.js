@@ -68,7 +68,7 @@ import * as flsForms from "./base/forms/forms.js";
 // flsForms.formQuantity();
 // flsForms.formRating();
 
-// import "./libs/select.js";
+import "./libs/select.js";
 // import "./base/forms/datepicker.js";
 
 // Plugin documentation: https://github.com/RobinHerbots/inputmask
@@ -137,6 +137,7 @@ import * as flsScroll from "./base/scroll/scroll.js";
 //===================== MY-CODE =====================//
 import "./base/lenis.js";
 import "./base/cursor.js";
+import "./base/scrollTrigger.js";
 import "./base/menu_bulge.js";
 import "./base/svg_overlay.js";
 import "./base/blob.js";
@@ -148,8 +149,40 @@ import {
 } from "gia";
 import SwupGiaPlugin from "@swup/gia-plugin/dist/SwupGiaPlugin.js";
 // import SwupDebugPlugin from "@swup/debug-plugin/dist/SwupDebugPlugin.js";
+import {
+  Component
+} from 'gia';
+import {
+  cursorsInit
+} from './base/cursor.js';
+import {
+  menuInit
+} from './base/functions.js';
+import {
+  numbersCounter
+} from './base/scrollTrigger.js';
+import {
+  initSliders
+} from './base/sliders.js';
+import VanillaTilt from 'vanilla-tilt';
+import {
+  flsModules
+} from "./base/modules.js";
 
-import components from "./gComponents/index.js";
+class AllInOne extends Component {
+  mount() {
+    menuInit();
+    cursorsInit();
+    numbersCounter();
+    initSliders();
+    VanillaTilt.init(document.querySelectorAll("[data-tilt]"))
+  }
+}
+
+const components = {
+  AllInOne
+};
+
 // loadComponents(components);
 
 const swup = new Swup({
