@@ -41,4 +41,5 @@ export function cursorsInit() {
       }, 250);
     });
   }
+
 }

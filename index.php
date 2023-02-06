@@ -6,8 +6,8 @@
 <?php include('inc/header.php'); ?>
 
 <!-- MAIN -->
-<main class="page page_home transition-fade" g-component="LLenis">
-  <section class="fh-section">
+<main class="page page_home transition-fade">
+  <section class="fh-section" g-component="cursorInit">
     <a href="javascript:void(0)" class="project-order-link"></a>
     <div class="fh-section__container">
       <div class="fh-section__inner">
@@ -26,7 +26,7 @@
       </div>
     </div>
   </section>
-  <section class="services">
+  <section class="services" g-component="tiltInit">
     <div class="services__container">
       <div class="services__inner">
         <div class="services__heading section-heading">
@@ -70,7 +70,7 @@
           <h2 class="sction-heading__title">Останні кейси</h2>
           <span class="section-heading__sub-title next">Наші останні роботи з портфоліо</span>
         </div>
-        <div class="cases__slider case-slider swiper">
+        <div class="cases__slider case-slider swiper" g-component="slidersInit">
           <div class="case-slider__controls">
             <button type="button" class="case-slider__arrow case-slider__arrow_prev">
               <svg class="icon icon-chevron-left">
@@ -123,7 +123,7 @@
       </div>
     </div>
   </section>
-  <section class="clients">
+  <section class="clients" g-component="cursorInit">
     <div class="clients__container">
       <div class="clients__inner">
         <div class="clients__heading section-heading">

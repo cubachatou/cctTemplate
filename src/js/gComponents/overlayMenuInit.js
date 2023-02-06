@@ -5,7 +5,7 @@ import {
   menuInit
 } from '../base/functions.js';
 
-export default class menuFunctions extends Component {
+export default class overlayMenuInit extends Component {
   mount() {
     menuInit();
   }

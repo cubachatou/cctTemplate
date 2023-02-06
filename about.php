@@ -59,7 +59,7 @@
       </div>
     </div>
   </section>
-  <section class="clients">
+  <section class="clients" g-component="cursorInit">
     <div class="clients__container">
       <div class="clients__inner">
         <div class="clients__heading section-heading">
@@ -94,7 +94,7 @@
         </div>
       </div>
   </section>
-  <section class="numbers">
+  <section class="numbers" g-component="digitCounterInit">
     <div class="numbers__container">
       <ul class="numbers__list">
         <li class="numbers__item">
@@ -122,7 +122,7 @@
         <h2 class="feedbacks__title">Відгуки</h2>
       </div>
       <div class="feedbacks__col feedbacks__col_right">
-        <div class="feedbacks__slider feedback-slider swiper">
+        <div class="feedbacks__slider feedback-slider swiper" g-component="slidersInit">
           <div class="feedback-slider__wrapper swiper-wrapper">
             <div class="feedback-slider__slide feedback-slide swiper-slide">
               <span class="feedback-slide__rate h4">5.0</span>

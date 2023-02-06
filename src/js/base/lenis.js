@@ -7,7 +7,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger.js";
 import Lenis from "@studio-freight/lenis";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 flsModules.lenis = new Lenis({
   duration: 1.2,
@@ -20,6 +20,7 @@ flsModules.lenis = new Lenis({
   touchMultiplier: 2,
   infinite: false,
 });
+
 //get scroll value
 flsModules.lenis.on("scroll", ({
   scroll,
@@ -44,17 +45,3 @@ function raf(time) {
   requestAnimationFrame(raf);
 }
 requestAnimationFrame(raf);
-
-export function initScrollTrigger() {
-  if (document.querySelector(".numbers")) {
-    ScrollTrigger.create({
-      trigger: ".numbers",
-      start: "top bottom",
-      once: true,
-      onEnter: function () {
-        flsScroll.digitsCounter();
-      },
-    });
-    ScrollTrigger.update();
-  }
-}

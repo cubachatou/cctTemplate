@@ -16,7 +16,7 @@ import {
   formValidate
 } from "../base/forms/forms.js";
 
-export default class SelectConstructor extends Component {
+export default class selectConstructor extends Component {
   constructor(props, data = null) {
     super(props);
     let defaultConfig = {

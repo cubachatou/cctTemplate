@@ -13,7 +13,7 @@
       <div class="gradient-menu__item gradient-menu__item_blue"></div>
       <div class="gradient-menu__item gradient-menu__item_purple"></div>
     </div>
-    <button type="button" class="menu__icon icon-menu" g-component="menuFunctions"><span></span></button>
+    <button type="button" class="menu__icon icon-menu" g-component="overlayMenuInit"><span></span></button>
     <div class="menu__header header-menu">
       <div class="header-menu__col header-menu__col_left">
         <nav class="header-menu__navigation">
@@ -39,7 +39,7 @@
         </nav>
       </div>
       <div class="header-menu__col header-menu__col-right">
-        <select name="language-select" data-class-modif="lang" g-component="SelectConstructor">
+        <select name="language-select" data-class-modif="lang" g-component="selectConstructor">
           <option value="1" data-href="javascript:void(0)" selected>Eng</option>
           <option value="2" data-href="javascript:void(0)">Ua</option>
         </select>
@@ -68,7 +68,7 @@
     <path class="shape-overlays__path"></path>
   </svg>
 
-  <div id="MenuBulge" class="MenuBulge">
+  <div id="MenuBulge" class="MenuBulge" g-component="menuBuldgeInit">
     <svg class="wiper" viewBox="0 0 65 1088">
       <path id="wiper" d="M 0 1088 V 0 C 0 0 0 317.333 0 543.37 C 0 757 0 1088 0 1088 Z"></path>
     </svg>

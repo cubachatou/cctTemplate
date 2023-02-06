@@ -425,7 +425,8 @@
 	span {
 		top: calc(50% - rem(1));
 	}
-	.menu-hovered & {
+	.menu-hovered &,
+	.menu-visible & {
 		opacity: 1;
 		left: rem(16);
 	}
