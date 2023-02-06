@@ -24,7 +24,7 @@ import * as flsFunctions from "./base/functions.js";
 // flsFunctions.isWebp();
 // flsFunctions.addTouchClass();
 // flsFunctions.addLoadedClass();
-flsFunctions.menuInit();
+// flsFunctions.menuInit();
 // flsFunctions.setAnimateDelay(0.07);
 // flsFunctions.fullVHfix();
 
@@ -68,7 +68,7 @@ import * as flsForms from "./base/forms/forms.js";
 // flsForms.formQuantity();
 // flsForms.formRating();
 
-import "./libs/select.js";
+// import "./libs/select.js";
 // import "./base/forms/datepicker.js";
 
 // Plugin documentation: https://github.com/RobinHerbots/inputmask
@@ -135,11 +135,33 @@ import * as flsScroll from "./base/scroll/scroll.js";
 // import './libs/wNumb.min.js';
 
 //===================== MY-CODE =====================//
-import "./base/lenis.js";
-import "./base/cursor.js";
+// import "./base/lenis.js";
+// import "./base/cursor.js";
 import "./base/menu_bulge.js";
 import "./base/svg_overlay.js";
 // import "./base/tilt.js";
 import "./base/blob.js";
-import "./base/barba.js";
+// import "./base/barba.js";
+// import "./base/swup.js";
 import "./base/script.js";
+
+import Swup from "swup";
+import {
+  loadComponents
+} from "gia";
+import SwupGiaPlugin from "@swup/gia-plugin/dist/SwupGiaPlugin.js";
+// import SwupDebugPlugin from "@swup/debug-plugin/dist/SwupDebugPlugin.js";
+
+import components from "./gComponents/index.js";
+// loadComponents(components);
+
+const swup = new Swup({
+  linkSelector: 'a[href^="' + window.location.origin + '"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup]), a[href^="./"]:not([data-no-swup]), a[href^="#"]:not([data-no-swup])',
+  plugins: [
+    // new SwupDebugPlugin(),
+    new SwupGiaPlugin({
+      components: components,
+      log: true
+    })
+  ],
+});

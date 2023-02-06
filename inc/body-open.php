@@ -1,2 +1,2 @@
 <body class="no-transition">
-  <div class="wrapper" data-barba="wrapper">
+  <div class="wrapper" id="swup">

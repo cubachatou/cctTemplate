@@ -6,7 +6,7 @@
 <?php include('inc/header.php'); ?>
 
 <!-- MAIN -->
-<main class="page page_about" data-barba="container" data-barba-namespace="about">
+<main class="page page_about transition-fade">
   <section class="hight-hero">
     <div class="hight-hero__container">
       <h1 class="hight-hero__title">Люди, які розробляють рішення та створюють вебсайти для людей</h1>

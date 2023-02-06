@@ -6,7 +6,7 @@
 <?php include('inc/header.php'); ?>
 
 <!-- MAIN -->
-<main class="page page_home" data-barba="container" data-barba-namespace="home">
+<main class="page page_home transition-fade" g-component="LLenis">
   <section class="fh-section">
     <a href="javascript:void(0)" class="project-order-link"></a>
     <div class="fh-section__container">

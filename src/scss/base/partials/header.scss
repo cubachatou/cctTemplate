@@ -425,25 +425,7 @@
 	span {
 		top: calc(50% - rem(1));
 	}
-	// .menu-open & {
-	// 	opacity: 0;
-	// 	span {
-	// 		width: 0;
-	// 	}
-	// 	&::before,
-	// 	&::after {
-	// 	}
-	// 	&::before {
-	// 		top: calc(50% - rem(1));
-	// 		transform: rotate(-45deg);
-	// 	}
-	// 	&::after {
-	// 		bottom: calc(50% - rem(1));
-	// 		transform: rotate(45deg);
-	// 	}
-	// }
-	.menu-hovered &,
-	.menu-visible & {
+	.menu-hovered & {
 		opacity: 1;
 		left: rem(16);
 	}
