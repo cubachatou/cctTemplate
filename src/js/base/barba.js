@@ -15,10 +15,15 @@ import {
 import {
   menuBulge_open
 } from "./menu_bulge.js";
+import {
+  initScrollTrigger
+} from "./lenis.js";
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger.js";
 gsap.registerPlugin(ScrollTrigger)
+
+
 
 import barba from "@barba/core";
 
@@ -28,6 +33,7 @@ barba.init({
       beforeLeave() {
         menuClose();
         flsModules.svgOverlay.invert();
+        ScrollTrigger.killAll();
       },
       afterEnter() {
         flsModules.lenis.scrollTo(0, {
@@ -54,6 +60,7 @@ barba.init({
       beforeLeave() {
         menuClose();
         flsModules.svgOverlay.invert();
+        ScrollTrigger.killAll();
       },
       afterEnter() {
         flsModules.lenis.scrollTo(0, {
@@ -83,6 +90,8 @@ barba.init({
         }, 1000);
 
         cursorsInit();
+
+        initScrollTrigger();
 
         initSliders();
 

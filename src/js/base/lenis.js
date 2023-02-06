@@ -28,6 +28,7 @@ flsModules.lenis.on("scroll", ({
   direction,
   progress
 }) => {
+  ScrollTrigger.update();
   // console.log({
   //   scroll,
   //   limit,
@@ -39,16 +40,21 @@ flsModules.lenis.on("scroll", ({
 
 function raf(time) {
   flsModules.lenis.raf(time);
+  ScrollTrigger.update();
   requestAnimationFrame(raf);
 }
 requestAnimationFrame(raf);
 
-ScrollTrigger.create({
-  trigger: ".numbers",
-  start: "top bottom",
-  once: true,
-  onEnter: function () {
-    console.log("123");
-    flsScroll.digitsCounter();
-  },
-});
+export function initScrollTrigger() {
+  if (document.querySelector(".numbers")) {
+    ScrollTrigger.create({
+      trigger: ".numbers",
+      start: "top bottom",
+      once: true,
+      onEnter: function () {
+        flsScroll.digitsCounter();
+      },
+    });
+    ScrollTrigger.update();
+  }
+}
