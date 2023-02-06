@@ -14,6 +14,7 @@ import {
 // Змінна контролю додавання події window scroll.
 let addWindowScrollEvent = false;
 
+
 //====================================================================================================================================================================================================================================================================================================
 // Плавна навігація по сторінці
 export function pageNavigation() {
@@ -158,15 +159,13 @@ export function digitsCounter() {
     window.requestAnimationFrame(step);
   }
 
-  function digitsCounterAction(e) {
-    const entry = e.detail.entry;
-    const targetElement = entry.target;
-    if (targetElement.querySelectorAll("[data-digits-counter]").length) {
-      digitsCountersInit(targetElement.querySelectorAll("[data-digits-counter]"));
+  function digitsCounterAction() {
+    if (document.querySelectorAll("[data-digits-counter]").length) {
+      digitsCountersInit(document.querySelectorAll("[data-digits-counter]"));
     }
   }
 
-  document.addEventListener("watcherCallback", digitsCounterAction);
+  digitsCounterAction();
 }
 // При підключенні модуля обробник події запуститься автоматично
 setTimeout(() => {

@@ -31,13 +31,13 @@ flsModules.lenis.on("scroll", ({
   direction,
   progress
 }) => {
-  console.log({
-    scroll,
-    limit,
-    velocity,
-    direction,
-    progress
-  })
+  // console.log({
+  //   scroll,
+  //   limit,
+  //   velocity,
+  //   direction,
+  //   progress
+  // })
 });
 
 const wiper = document.getElementById("wiper");
