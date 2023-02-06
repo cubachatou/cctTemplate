@@ -1,6 +1,9 @@
+import {
+  flsModules
+} from "./modules.js";
 import Lenis from "@studio-freight/lenis";
 
-const lenis = new Lenis({
+flsModules.lenis = new Lenis({
   duration: 1.2,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
   direction: "vertical", // vertical, horizontal
@@ -13,7 +16,7 @@ const lenis = new Lenis({
 });
 
 //get scroll value
-lenis.on("scroll", ({
+flsModules.lenis.on("scroll", ({
   scroll,
   limit,
   velocity,
@@ -30,7 +33,7 @@ lenis.on("scroll", ({
 });
 
 function raf(time) {
-  lenis.raf(time);
+  flsModules.lenis.raf(time);
   requestAnimationFrame(raf);
 }
 
@@ -78,10 +81,13 @@ function digitsCounterAction(e) {
     digitsCountersInit(e.querySelectorAll("[data-digits-counter]"));
   }
 }
-ScrollTrigger.create({
-  trigger: '.numbers',
-  once: true,
-  onEnter: function () {
-    digitsCounterAction(document.querySelector('.numbers'));
-  }
-})
+
+if (document.querySelector('.numbers')) {
+  ScrollTrigger.create({
+    trigger: '.numbers',
+    once: true,
+    onEnter: function () {
+      digitsCounterAction(document.querySelector('.numbers'));
+    }
+  })
+}

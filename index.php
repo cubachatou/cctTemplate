@@ -8,6 +8,7 @@
 <!-- MAIN -->
 <main class="page page_home" data-barba="container" data-barba-namespace="home">
   <section class="fh-section">
+    <a href="javascript:void(0)" class="project-order-link"></a>
     <div class="fh-section__container">
       <div class="fh-section__inner">
         <h1 class="fh-section__title">

@@ -12,6 +12,8 @@ flsModules.cursor = new MouseFollower({
 });
 
 export function cursorsInit() {
+
+
   const fhSection = document.querySelector(".fh-section");
 
   if (fhSection) {

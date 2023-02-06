@@ -442,7 +442,8 @@
 	// 		transform: rotate(45deg);
 	// 	}
 	// }
-	.menu-hovered & {
+	.menu-hovered &,
+	.menu-visible & {
 		opacity: 1;
 		left: rem(16);
 	}
