@@ -68,7 +68,7 @@ import * as flsForms from "./base/forms/forms.js";
 // flsForms.formQuantity();
 // flsForms.formRating();
 
-import "./libs/select.js";
+// import "./libs/select.js";
 // import "./base/forms/datepicker.js";
 
 // Plugin documentation: https://github.com/RobinHerbots/inputmask
@@ -168,6 +168,7 @@ import VanillaTilt from 'vanilla-tilt';
 import {
   flsModules
 } from "./base/modules.js";
+import SelectConstructor from "./libs/select.js"
 
 class AllInOne extends Component {
   mount() {
@@ -180,7 +181,8 @@ class AllInOne extends Component {
 }
 
 const components = {
-  AllInOne
+  AllInOne,
+  SelectConstructor
 };
 
 // loadComponents(components);

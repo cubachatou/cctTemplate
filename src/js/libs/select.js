@@ -12,6 +12,9 @@ import {
 import {
   formValidate
 } from "../base/forms/forms.js";
+import {
+  Component
+} from 'gia';
 
 // Підключення файлу стилів
 // Базові стилі полягають у src/scss/forms.scss
@@ -55,8 +58,9 @@ data-href-blank - відкриє посилання у новому вікні
 */
 
 // Клас побудови Select
-class SelectConstructor {
+export default class SelectConstructor extends Component {
   constructor(props, data = null) {
+    super(props, data);
     let defaultConfig = {
       init: true,
       logging: true,
@@ -502,6 +506,9 @@ class SelectConstructor {
   setLogging(message) {
     this.config.logging ? FLS(`[select]: ${message}`) : null;
   }
+  mount() {
+
+  }
 }
 
-flsModules.select = new SelectConstructor({});
+// flsModules.select = new SelectConstructor({});

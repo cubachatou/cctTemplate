@@ -31,3 +31,12 @@ document.addEventListener("mouseover", function (e) {
   e.target.closest(".menu-gradient-purple") ? gradientMenu.classList.add("menu-gradient-purple") : gradientMenu.classList.remove("menu-gradient-purple");
 });
 //================================================================
+document.addEventListener('swup:transitionStart', () => {
+  menuClose();
+  flsModules.svgOverlay.invert();
+});
+document.addEventListener('swup:contentReplaced', () => {
+  flsModules.lenis.scrollTo(0, {
+    immediate: true,
+  });
+});

@@ -28,7 +28,7 @@ flsModules.lenis.on("scroll", ({
   direction,
   progress
 }) => {
-  ScrollTrigger.update();
+  // ScrollTrigger.update();
   // console.log({
   //   scroll,
   //   limit,

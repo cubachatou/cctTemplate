@@ -6,7 +6,7 @@
 <?php include('inc/header.php'); ?>
 
 <!-- MAIN -->
-<main class="page page_about transition-fade">
+<main class="page page_about transition-fade" g-component="AllInOne">
   <section class="hight-hero">
     <div class="hight-hero__container">
       <h1 class="hight-hero__title">Люди, які розробляють рішення та створюють вебсайти для людей</h1>

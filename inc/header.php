@@ -18,7 +18,7 @@
       <div class="header-menu__col header-menu__col_left">
         <nav class="header-menu__navigation">
           <ul class="header-menu__list">
-            <li class="header-menu__item"><a href="index.php" class="header-menu__link _active">Home</a></li>
+            <li class="header-menu__item"><a href="/index.php" class="header-menu__link _active">Home</a></li>
             <li class="header-menu__item">
               <a href="javascript:void(0)" class="header-menu__link">Services</a>
               <ul class="header-menu__sub-list">
@@ -31,15 +31,15 @@
                 <li class="header-menu__sub-item"><span class="header-menu__sub-link">/</span></li>
               </ul>
             </li>
-            <li class="header-menu__item"><a href="portfolio.php" class="header-menu__link">Portfolio</a></li>
+            <li class="header-menu__item"><a href="/portfolio.php" class="header-menu__link">Portfolio</a></li>
             <li class="header-menu__item"><a href="/about.php" class="header-menu__link">About</a></li>
-            <li class="header-menu__item"><a href="blog.php" class="header-menu__link">Blog</a></li>
-            <li class="header-menu__item"><a href="contacts.php" class="header-menu__link">Contacts</a></li>
+            <li class="header-menu__item"><a href="/blog.php" class="header-menu__link">Blog</a></li>
+            <li class="header-menu__item"><a href="/contacts.php" class="header-menu__link">Contacts</a></li>
           </ul>
         </nav>
       </div>
       <div class="header-menu__col header-menu__col-right">
-        <select name="language-select" data-class-modif="lang">
+        <select name="language-select" data-class-modif="lang" g-component="SelectConstructor">
           <option value="1" data-href="javascript:void(0)" selected>Eng</option>
           <option value="2" data-href="javascript:void(0)">Ua</option>
         </select>

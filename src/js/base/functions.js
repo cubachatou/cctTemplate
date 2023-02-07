@@ -431,12 +431,14 @@ export function tabs() {
   }
 }
 // Модуль роботи з меню (бургер) =======================================================================================================================================================================================================================
+
 export function menuInit() {
   if (document.querySelector(".icon-menu")) {
     document.addEventListener("click", function (e) {
       if (bodyLockStatus && e.target.closest('.icon-menu')) {
         bodyLockToggle();
         document.documentElement.classList.toggle("menu-open");
+        document.documentElement.classList.remove("menu-visible");
       }
     });
   };
@@ -444,12 +446,13 @@ export function menuInit() {
 export function menuOpen() {
   bodyLock();
   document.documentElement.classList.add("menu-open");
-  document.documentElement.classList.remove("menu-visible");
 }
 export function menuClose() {
   bodyUnlock();
   document.documentElement.classList.remove("menu-open");
-
+  if (window.scrollY < 100) {
+    document.documentElement.classList.add("menu-visible");
+  }
 }
 // Модуль "показати ще" =======================================================================================================================================================================================================================
 export function showMore() {
