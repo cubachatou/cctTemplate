@@ -75,27 +75,42 @@ try {
 
   let page_atTop = true;
 
-  setTimeout(() => {
-    flsModules.menuBulge.open();
-    flsModules.menuBulge.visibility_ON();
-  }, 700);
-
-  flsModules.lenis.on("scroll", function (e) {
-
-    page_atTop = flsModules.menuBulge.options.states.pageAt_Top;
-
-    flsModules.lenis.scroll > 100 ? page_atTop = false : page_atTop = true;
-
-    if (flsModules.lenis.direction = 1) {
-      flsModules.menuBulge.close();
-      flsModules.menuBulge.visibility_OFF();
-    }
-
-    if (page_atTop && flsModules.lenis.velocity === 0) {
+  if (flsModules.lenis.scroll === 0) {
+    setTimeout(() => {
       flsModules.menuBulge.open();
       flsModules.menuBulge.visibility_ON();
-    }
-  });
+    }, 700);
+  }
+
+  more();
+
+  function more() {
+    document.addEventListener("scroll", function moreEvent(e) {
+      if (flsModules.lenis.scroll > 100) {
+
+        document.removeEventListener('scroll', moreEvent)
+        flsModules.menuBulge.close();
+        flsModules.menuBulge.visibility_OFF();
+        page_atTop = false;
+
+        less();
+      }
+    })
+  }
+
+  function less() {
+    document.addEventListener("scroll", function lessEvent(e) {
+      if (flsModules.lenis.scroll < 100) {
+
+        document.removeEventListener('scroll', lessEvent)
+        flsModules.menuBulge.open();
+        flsModules.menuBulge.visibility_ON();
+        page_atTop = true;
+
+        more();
+      }
+    });
+  }
 
   document.addEventListener("mousemove", function (e) {
     if (e.x <= 64) {

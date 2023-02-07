@@ -403,7 +403,7 @@
 	width: rem(24);
 	height: rem(18);
 	cursor: pointer;
-	transition: left 0.5s ease 0s, opacity 0.3s ease 0s;
+	transition: left 0.3s ease 0s, opacity 0.15s ease 0s;
 	span,
 	&::before,
 	&::after {
@@ -429,6 +429,12 @@
 	.menu-visible & {
 		opacity: 1;
 		left: rem(16);
+	}
+	.lock & {
+		transition: left 0s ease 0s, opacity 0.3s ease 0s;
+	}
+	.menu-hovered & {
+		transition: left 0.3s ease 0.2s, opacity 0.15s ease 0.2s;
 	}
 	.menu-hovered.menu-open & {
 		opacity: 0;
