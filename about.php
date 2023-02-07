@@ -6,8 +6,8 @@
 <?php include('inc/header.php'); ?>
 
 <!-- MAIN -->
-<main class="page page_about transition-fade" g-component="AllInOne">
-  <section class="hight-hero">
+<main class="page page_about transition-fade" id="swup">
+  <section class="hight-hero" g-component="AllInOne">
     <div class="hight-hero__container">
       <h1 class="hight-hero__title">Люди, які розробляють рішення та створюють вебсайти для людей</h1>
       <span class="hight-hero__arrow icon-wrapper">

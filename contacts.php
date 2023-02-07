@@ -6,8 +6,8 @@
 <?php include('inc/header.php'); ?>
 
 <!-- MAIN -->
-<main class="page page_contacts" data-barba="container" data-barba-namespace="contacts">
-  <section class="page-heading">
+<main class="page page_contacts transition-fade" id="swup">
+  <section class=" page-heading" g-component="AllInOne">
     <div class="page-heading__container">
       <a href="javascript:void(0)" class="page-heading__button">
         <span class="icon-wrapper">

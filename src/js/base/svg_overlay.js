@@ -135,28 +135,36 @@ class ShapeOverlays {
   }
 }
 
-const elmHamburger = document.querySelector(".icon-menu");
-const elmOverlay = document.querySelector(".shape-overlays");
-flsModules.svgOverlay = new ShapeOverlays(elmOverlay);
+try {
+  const elmHamburger = document.querySelector(".icon-menu");
+  const elmOverlay = document.querySelector(".shape-overlays");
 
-elmHamburger.addEventListener("click", () => {
-  if (flsModules.svgOverlay.isAnimating) {
-    return false;
+  if (elmOverlay) {
+    flsModules.svgOverlay = new ShapeOverlays(elmOverlay);
   }
-  flsModules.svgOverlay.toggle();
-});
 
-document.addEventListener("click", function (e) {
-  if (e.target.closest("[data-menu-close]")) {
-    flsModules.svgOverlay.close();
+  if (elmHamburger) {
+    elmHamburger.addEventListener("click", () => {
+      if (flsModules.svgOverlay.isAnimating) {
+        return false;
+      }
+      flsModules.svgOverlay.toggle();
+    });
   }
-  if (e.target.closest(".header-menu__link")) {
-    flsModules.svgOverlay.invert();
-  }
-});
+  document.addEventListener("click", function (e) {
+    if (e.target.closest("[data-menu-close]")) {
+      flsModules.svgOverlay.close();
+    }
+    if (e.target.closest(".header-menu__link")) {
+      flsModules.svgOverlay.invert();
+    }
+  });
 
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") {
-    flsModules.svgOverlay.close();
-  }
-});
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      flsModules.svgOverlay.close();
+    }
+  });
+} catch (error) {
+  console.error(error);
+}

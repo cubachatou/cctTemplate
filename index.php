@@ -6,8 +6,8 @@
 <?php include('inc/header.php'); ?>
 
 <!-- MAIN -->
-<main class="page page_home transition-fade" g-component="AllInOne">
-  <section class="fh-section">
+<main class="page page_home transition-fade" id="swup">
+  <section class="fh-section" g-component="AllInOne">
     <a href="javascript:void(0)" class="project-order-link"></a>
     <div class="fh-section__container">
       <div class="fh-section__inner">

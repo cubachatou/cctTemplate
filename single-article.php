@@ -6,8 +6,8 @@
 <?php include('inc/header.php'); ?>
 
 <!-- MAIN -->
-<main class="page page_single-article" data-barba="container" data-barba-namespace="single-article">
-  <article class="single-article">
+<main class="page page_single-article transition-fade" id="swup">
+  <article class="single-article" g-component="AllInOne">
     <div class="single-article__container">
       <header class="single-article__cover article-header">
         <div class="article-header__content">

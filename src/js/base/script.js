@@ -35,6 +35,9 @@ document.addEventListener('swup:transitionStart', () => {
   menuClose();
   flsModules.svgOverlay.invert();
 });
+document.addEventListener('swup:willReplaceContent', () => {
+  flsModules.cursor.destroy();
+});
 document.addEventListener('swup:contentReplaced', () => {
   flsModules.lenis.scrollTo(0, {
     immediate: true,

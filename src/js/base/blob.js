@@ -1,74 +1,3 @@
-function formatPoints(points, close) {
-  points = [...points];
-  // so that coords can be passed as objects or arrays
-  if (!Array.isArray(points[0])) {
-    points = points.map(({
-      x,
-      y
-    }) => [x, y]);
-  }
-
-  if (close) {
-    const lastPoint = points[points.length - 1];
-    const secondToLastPoint = points[points.length - 2];
-
-    const firstPoint = points[0];
-    const secondPoint = points[1];
-
-    points.unshift(lastPoint);
-    points.unshift(secondToLastPoint);
-
-    points.push(firstPoint);
-    points.push(secondPoint);
-  }
-
-  return points.flat();
-}
-
-function spline(points = [], tension = 1, close = false, cb) {
-  points = formatPoints(points, close);
-
-  const size = points.length;
-  const last = size - 4;
-
-  const startPointX = close ? points[2] : points[0];
-  const startPointY = close ? points[3] : points[1];
-
-  let path = "M " + `${startPointX} ${startPointY}`;
-
-  cb && cb("MOVE", [startPointX, startPointY]);
-
-  const startIteration = close ? 2 : 0;
-  const maxIteration = close ? size - 4 : size - 2;
-  const inc = 2;
-
-  for (let i = startIteration; i < maxIteration; i += inc) {
-    const x0 = i ? points[i - 2] : points[0];
-    const y0 = i ? points[i - 1] : points[1];
-
-    const x1 = points[i + 0];
-    const y1 = points[i + 1];
-
-    const x2 = points[i + 2];
-    const y2 = points[i + 3];
-
-    const x3 = i !== last ? points[i + 4] : x2;
-    const y3 = i !== last ? points[i + 5] : y2;
-
-    const cp1x = x1 + ((x2 - x0) / 6) * tension;
-    const cp1y = y1 + ((y2 - y0) / 6) * tension;
-
-    const cp2x = x2 - ((x3 - x1) / 6) * tension;
-    const cp2y = y2 - ((y3 - y1) / 6) * tension;
-
-    path += " C " + `${cp1x} ${cp1y} ${cp2x} ${cp2y} ${x2} ${y2}`;
-
-    cb && cb("CURVE", [cp1x, cp1y, cp2x, cp2y, x2, y2]);
-  }
-
-  return path;
-}
-
 import {
   createNoise2D
 } from 'simplex-noise';
@@ -78,112 +7,189 @@ import {
 import MorphSVGPlugin from "gsap/MorphSVGPlugin.js";
 gsap.registerPlugin(MorphSVGPlugin);
 
-// our <path> element
-let blobPath = document.querySelector(".icon-nav-blob__path");
-const blobPathes = document.querySelectorAll(".icon-nav-blob__path");
-const blobButtons = document.querySelectorAll('.case-slider__arrow_prev, .case-slider__arrow_next');
+export function blobInit() {
+  try {
+    function formatPoints(points, close) {
+      points = [...points];
+      // so that coords can be passed as objects or arrays
+      if (!Array.isArray(points[0])) {
+        points = points.map(({
+          x,
+          y
+        }) => [x, y]);
+      }
 
-blobPathes.forEach(el => {
-  gsap.to(el, {
-    transition: "all .1s ease 0"
-  });
-});
+      if (close) {
+        const lastPoint = points[points.length - 1];
+        const secondToLastPoint = points[points.length - 2];
 
-blobButtons.forEach((blobButton) => {
-  blobButton.addEventListener("mouseenter", function (e) {
-    blobPath = blobButton.querySelector(".icon-nav-blob__path");
-    gsap.to(blobPath, {
-      transition: "all 0s ease 0",
+        const firstPoint = points[0];
+        const secondPoint = points[1];
+
+        points.unshift(lastPoint);
+        points.unshift(secondToLastPoint);
+
+        points.push(firstPoint);
+        points.push(secondPoint);
+      }
+
+      return points.flat();
+    }
+
+    function spline(points = [], tension = 1, close = false, cb) {
+      points = formatPoints(points, close);
+
+      const size = points.length;
+      const last = size - 4;
+
+      const startPointX = close ? points[2] : points[0];
+      const startPointY = close ? points[3] : points[1];
+
+      let path = "M " + `${startPointX} ${startPointY}`;
+
+      cb && cb("MOVE", [startPointX, startPointY]);
+
+      const startIteration = close ? 2 : 0;
+      const maxIteration = close ? size - 4 : size - 2;
+      const inc = 2;
+
+      for (let i = startIteration; i < maxIteration; i += inc) {
+        const x0 = i ? points[i - 2] : points[0];
+        const y0 = i ? points[i - 1] : points[1];
+
+        const x1 = points[i + 0];
+        const y1 = points[i + 1];
+
+        const x2 = points[i + 2];
+        const y2 = points[i + 3];
+
+        const x3 = i !== last ? points[i + 4] : x2;
+        const y3 = i !== last ? points[i + 5] : y2;
+
+        const cp1x = x1 + ((x2 - x0) / 6) * tension;
+        const cp1y = y1 + ((y2 - y0) / 6) * tension;
+
+        const cp2x = x2 - ((x3 - x1) / 6) * tension;
+        const cp2y = y2 - ((y3 - y1) / 6) * tension;
+
+        path += " C " + `${cp1x} ${cp1y} ${cp2x} ${cp2y} ${x2} ${y2}`;
+
+        cb && cb("CURVE", [cp1x, cp1y, cp2x, cp2y, x2, y2]);
+      }
+
+      return path;
+    }
+
+    // our <path> element
+    let blobPath = document.querySelector(".icon-nav-blob__path");
+    const blobPathes = document.querySelectorAll(".icon-nav-blob__path");
+    const blobButtons = document.querySelectorAll('.case-slider__arrow_prev, .case-slider__arrow_next');
+
+    blobPathes.forEach(el => {
+      gsap.to(el, {
+        transition: "all .1s ease 0"
+      });
     });
-    animate()
-  });
-  blobButton.addEventListener("mouseleave", function (e) {
-    cancelAnimationFrame(requestAnimationFrameID)
-    gsap.to(blobPath, {
-      morphSVG: "M 90 45 C 90 53.8168 86.5881 64.3174 81.4058 71.4503 C 76.2234 78.5833 67.291 85.073 58.9058 87.7975 C 50.5205 90.5221 39.4795 90.5221 31.0942 87.7975 C 22.709 85.073 13.7766 78.5833 8.5942 71.4503 C 3.4119 64.3174 0 53.8168 0 45 C 0 36.1832 3.4119 25.6826 8.5942 18.5497 C 13.7766 11.4167 22.709 4.927 31.0942 2.2025 C 39.4795 -0.5221 50.5205 -0.5221 58.9058 2.2025 C 67.291 4.927 76.2234 11.4167 81.4058 18.5497 C 86.5881 25.6826 90 36.1832 90 45 C 90 53.8168 86.5881 64.3174 81.4058 71.4503",
-      duration: 0.3,
-      transition: "all .1s ease 0"
+
+    blobButtons.forEach((blobButton) => {
+      blobButton.addEventListener("mouseenter", function (e) {
+        blobPath = blobButton.querySelector(".icon-nav-blob__path");
+        gsap.to(blobPath, {
+          transition: "all 0s ease 0",
+        });
+        animate()
+      });
+      blobButton.addEventListener("mouseleave", function (e) {
+        cancelAnimationFrame(requestAnimationFrameID)
+        gsap.to(blobPath, {
+          morphSVG: "M 90 45 C 90 53.8168 86.5881 64.3174 81.4058 71.4503 C 76.2234 78.5833 67.291 85.073 58.9058 87.7975 C 50.5205 90.5221 39.4795 90.5221 31.0942 87.7975 C 22.709 85.073 13.7766 78.5833 8.5942 71.4503 C 3.4119 64.3174 0 53.8168 0 45 C 0 36.1832 3.4119 25.6826 8.5942 18.5497 C 13.7766 11.4167 22.709 4.927 31.0942 2.2025 C 39.4795 -0.5221 50.5205 -0.5221 58.9058 2.2025 C 67.291 4.927 76.2234 11.4167 81.4058 18.5497 C 86.5881 25.6826 90 36.1832 90 45 C 90 53.8168 86.5881 64.3174 81.4058 71.4503",
+          duration: 0.3,
+          transition: "all .1s ease 0"
+        });
+      });
     });
-  });
-});
 
-let hueNoiseOffset = 0;
-let noiseStep = 0.008;
+    let hueNoiseOffset = 0;
+    let noiseStep = 0.008;
 
-const noise2D = createNoise2D();
+    const noise2D = createNoise2D();
 
-const points = createPoints();
+    const points = createPoints();
 
-let requestAnimationFrameID = null;
+    let requestAnimationFrameID = null;
 
-function animate() {
+    function animate() {
 
-  blobPath.setAttribute("d", spline(points, 1, true));
+      blobPath.setAttribute("d", spline(points, 1, true));
 
-  // // for every point...
-  for (let i = 0; i < points.length; i++) {
-    const point = points[i];
+      // // for every point...
+      for (let i = 0; i < points.length; i++) {
+        const point = points[i];
 
-    // return a pseudo random value between -1 / 1 based on this point's current x, y positions in "time"
-    const nX = noise(point.noiseOffsetX, point.noiseOffsetX);
-    const nY = noise(point.noiseOffsetY, point.noiseOffsetY);
-    // map this noise value to a new value, somewhere between it's original location -20 and it's original location + 20
-    const x = map(nX, -1, 1, point.originX - 5, point.originX + 5);
-    const y = map(nY, -1, 1, point.originY - 5, point.originY + 5);
+        // return a pseudo random value between -1 / 1 based on this point's current x, y positions in "time"
+        const nX = noise(point.noiseOffsetX, point.noiseOffsetX);
+        const nY = noise(point.noiseOffsetY, point.noiseOffsetY);
+        // map this noise value to a new value, somewhere between it's original location -20 and it's original location + 20
+        const x = map(nX, -1, 1, point.originX - 5, point.originX + 5);
+        const y = map(nY, -1, 1, point.originY - 5, point.originY + 5);
 
-    // update the point's current coordinates
-    point.x = x;
-    point.y = y;
+        // update the point's current coordinates
+        point.x = x;
+        point.y = y;
 
-    // progress the point's x, y values through "time"
-    point.noiseOffsetX += noiseStep;
-    point.noiseOffsetY += noiseStep;
+        // progress the point's x, y values through "time"
+        point.noiseOffsetX += noiseStep;
+        point.noiseOffsetY += noiseStep;
+      }
+
+      const hueNoise = noise(hueNoiseOffset, hueNoiseOffset);
+      const hue = map(hueNoise, -1, 1, 0, 360);
+
+      hueNoiseOffset += noiseStep / 6;
+
+      requestAnimationFrameID = requestAnimationFrame(animate);
+    };
+
+    function map(n, start1, end1, start2, end2) {
+      return ((n - start1) / (end1 - start1)) * (end2 - start2) + start2;
+    }
+
+    function noise(x, y) {
+      return noise2D(x, y);
+    }
+
+    function createPoints() {
+      const points = [];
+      // how many points do we need
+      const numPoints = 10;
+      // used to equally space each point around the circle
+      const angleStep = (Math.PI * 2) / numPoints;
+      // the radius of the circle
+      const rad = 45;
+
+      for (let i = 1; i <= numPoints; i++) {
+        // x & y coordinates of the current point
+        const theta = i * angleStep;
+
+        const x = 45 + Math.cos(theta) * rad;
+        const y = 45 + Math.sin(theta) * rad;
+
+        // store the point's position
+        points.push({
+          x: x,
+          y: y,
+          // we need to keep a reference to the point's original point for when we modulate the values later
+          originX: x,
+          originY: y,
+          // more on this in a moment!
+          noiseOffsetX: Math.random() * 1000,
+          noiseOffsetY: Math.random() * 1000
+        });
+      }
+
+      return points;
+    }
+  } catch (error) {
+    console.error(error);
   }
-
-  const hueNoise = noise(hueNoiseOffset, hueNoiseOffset);
-  const hue = map(hueNoise, -1, 1, 0, 360);
-
-  hueNoiseOffset += noiseStep / 6;
-
-  requestAnimationFrameID = requestAnimationFrame(animate);
-};
-
-function map(n, start1, end1, start2, end2) {
-  return ((n - start1) / (end1 - start1)) * (end2 - start2) + start2;
-}
-
-function noise(x, y) {
-  return noise2D(x, y);
-}
-
-function createPoints() {
-  const points = [];
-  // how many points do we need
-  const numPoints = 10;
-  // used to equally space each point around the circle
-  const angleStep = (Math.PI * 2) / numPoints;
-  // the radius of the circle
-  const rad = 45;
-
-  for (let i = 1; i <= numPoints; i++) {
-    // x & y coordinates of the current point
-    const theta = i * angleStep;
-
-    const x = 45 + Math.cos(theta) * rad;
-    const y = 45 + Math.sin(theta) * rad;
-
-    // store the point's position
-    points.push({
-      x: x,
-      y: y,
-      // we need to keep a reference to the point's original point for when we modulate the values later
-      originX: x,
-      originY: y,
-      // more on this in a moment!
-      noiseOffsetX: Math.random() * 1000,
-      noiseOffsetY: Math.random() * 1000
-    });
-  }
-
-  return points;
 }

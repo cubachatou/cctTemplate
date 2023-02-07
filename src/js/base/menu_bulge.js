@@ -69,43 +69,49 @@ class MenuBulge {
   }
 }
 
-flsModules.menuBulge = new MenuBulge({})
+try {
 
-let page_atTop = true;
+  flsModules.menuBulge = new MenuBulge({})
 
-setTimeout(() => {
-  flsModules.menuBulge.open();
-  flsModules.menuBulge.visibility_ON();
-}, 700);
+  let page_atTop = true;
 
-flsModules.lenis.on("scroll", function (e) {
-
-  page_atTop = flsModules.menuBulge.options.states.pageAt_Top;
-
-  flsModules.lenis.scroll > 100 ? page_atTop = false : page_atTop = true;
-
-  if (flsModules.lenis.direction = 1) {
-    flsModules.menuBulge.close();
-    flsModules.menuBulge.visibility_OFF();
-  }
-
-  if (page_atTop && flsModules.lenis.velocity === 0) {
+  setTimeout(() => {
     flsModules.menuBulge.open();
     flsModules.menuBulge.visibility_ON();
-  }
-});
+  }, 700);
 
-document.addEventListener("mousemove", function (e) {
-  if (e.x <= 64) {
-    flsModules.menuBulge.open();
-    flsModules.menuBulge.hover_ON();
-  } else if (e.x > 64) {
-    if (page_atTop) {
-      flsModules.menuBulge.hover_OFF();
-    }
-    if (!page_atTop) {
+  flsModules.lenis.on("scroll", function (e) {
+
+    page_atTop = flsModules.menuBulge.options.states.pageAt_Top;
+
+    flsModules.lenis.scroll > 100 ? page_atTop = false : page_atTop = true;
+
+    if (flsModules.lenis.direction = 1) {
       flsModules.menuBulge.close();
-      flsModules.menuBulge.hover_OFF();
+      flsModules.menuBulge.visibility_OFF();
     }
-  }
-})
+
+    if (page_atTop && flsModules.lenis.velocity === 0) {
+      flsModules.menuBulge.open();
+      flsModules.menuBulge.visibility_ON();
+    }
+  });
+
+  document.addEventListener("mousemove", function (e) {
+    if (e.x <= 64) {
+      flsModules.menuBulge.open();
+      flsModules.menuBulge.hover_ON();
+    } else if (e.x > 64) {
+      if (page_atTop) {
+        flsModules.menuBulge.hover_OFF();
+      }
+      if (!page_atTop) {
+        flsModules.menuBulge.close();
+        flsModules.menuBulge.hover_OFF();
+      }
+    }
+  })
+
+} catch (error) {
+  console.error(error);
+}

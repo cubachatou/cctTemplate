@@ -6,40 +6,43 @@ import {
 
 MouseFollower.registerGSAP(gsap);
 
-flsModules.cursor = new MouseFollower({
-  visible: false,
-  skewingMedia: 0
-});
-
 export function cursorsInit() {
-
-  const fhSection = document.querySelector(".fh-section");
-
-  if (fhSection) {
-    fhSection.addEventListener("mouseenter", () => {
-      flsModules.cursor.show();
-      flsModules.cursor.setImg("/images/svg/circle-path-group.svg");
+  try {
+    flsModules.cursor = new MouseFollower({
+      visible: false,
+      skewingMedia: 0
     });
+    const fhSection = document.querySelector(".fh-section");
 
-    fhSection.addEventListener("mouseleave", () => {
-      flsModules.cursor.removeImg();
-      flsModules.cursor.hide();
-    });
-  }
+    if (fhSection) {
+      fhSection.addEventListener("mouseenter", () => {
+        flsModules.cursor.show();
+        flsModules.cursor.setImg("/images/svg/circle-path-group.svg");
+      });
 
-  const clients = document.querySelector('.clients');
+      fhSection.addEventListener("mouseleave", () => {
+        flsModules.cursor.removeImg();
+        flsModules.cursor.hide();
+      });
+    }
 
-  if (clients) {
-    clients.addEventListener("mouseenter", () => {
-      flsModules.cursor.show();
-      flsModules.cursor.addState("-spotlight");
-    });
-    clients.addEventListener("mouseleave", () => {
-      flsModules.cursor.hide();
-      setTimeout(() => {
-        flsModules.cursor.removeState("-spotlight");
-      }, 250);
-    });
+    const clients = document.querySelector('.clients');
+
+    if (clients) {
+      clients.addEventListener("mouseenter", () => {
+        flsModules.cursor.show();
+        flsModules.cursor.addState("-spotlight");
+      });
+      clients.addEventListener("mouseleave", () => {
+        flsModules.cursor.hide();
+        setTimeout(() => {
+          flsModules.cursor.removeState("-spotlight");
+        }, 250);
+      });
+    }
+
+  } catch (error) {
+    console.error(error);
   }
 
 }

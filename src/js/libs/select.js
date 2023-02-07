@@ -58,9 +58,8 @@ data-href-blank - відкриє посилання у новому вікні
 */
 
 // Клас побудови Select
-export default class SelectConstructor extends Component {
+class SelectConstructor {
   constructor(props, data = null) {
-    super(props, data);
     let defaultConfig = {
       init: true,
       logging: true,
@@ -506,9 +505,6 @@ export default class SelectConstructor extends Component {
   setLogging(message) {
     this.config.logging ? FLS(`[select]: ${message}`) : null;
   }
-  mount() {
-
-  }
 }
 
-// flsModules.select = new SelectConstructor({});
+flsModules.select = new SelectConstructor({});

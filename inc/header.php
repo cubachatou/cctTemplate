@@ -39,7 +39,7 @@
         </nav>
       </div>
       <div class="header-menu__col header-menu__col-right">
-        <select name="language-select" data-class-modif="lang" g-component="SelectConstructor">
+        <select name="language-select" data-class-modif="lang">
           <option value="1" data-href="javascript:void(0)" selected>Eng</option>
           <option value="2" data-href="javascript:void(0)">Ua</option>
         </select>

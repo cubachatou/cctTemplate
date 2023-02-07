@@ -24,7 +24,7 @@ import * as flsFunctions from "./base/functions.js";
 // flsFunctions.isWebp();
 // flsFunctions.addTouchClass();
 // flsFunctions.addLoadedClass();
-// flsFunctions.menuInit();
+flsFunctions.menuInit();
 // flsFunctions.setAnimateDelay(0.07);
 // flsFunctions.fullVHfix();
 
@@ -68,7 +68,7 @@ import * as flsForms from "./base/forms/forms.js";
 // flsForms.formQuantity();
 // flsForms.formRating();
 
-// import "./libs/select.js";
+import "./libs/select.js";
 // import "./base/forms/datepicker.js";
 
 // Plugin documentation: https://github.com/RobinHerbots/inputmask
@@ -156,9 +156,6 @@ import {
   cursorsInit
 } from './base/cursor.js';
 import {
-  menuInit
-} from './base/functions.js';
-import {
   numbersCounter
 } from './base/scrollTrigger.js';
 import {
@@ -168,26 +165,27 @@ import VanillaTilt from 'vanilla-tilt';
 import {
   flsModules
 } from "./base/modules.js";
-import SelectConstructor from "./libs/select.js"
+import {
+  blobInit
+} from "./base/blob.js";
 
 class AllInOne extends Component {
   mount() {
-    menuInit();
     cursorsInit();
     numbersCounter();
     initSliders();
-    VanillaTilt.init(document.querySelectorAll("[data-tilt]"))
+    VanillaTilt.init(document.querySelectorAll("[data-tilt]"));
+    blobInit();
   }
 }
 
 const components = {
-  AllInOne,
-  SelectConstructor
+  AllInOne
 };
 
 // loadComponents(components);
 
-const swup = new Swup({
+flsModules.swup = new Swup({
   linkSelector: 'a[href^="' + window.location.origin + '"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup]), a[href^="./"]:not([data-no-swup]), a[href^="#"]:not([data-no-swup])',
   plugins: [
     // new SwupDebugPlugin(),
