@@ -11,14 +11,24 @@ h2,
 .h2 {
 	font-weight: 900;
 	@include adaptiveValue("font-size", 80, 48, $containerWidth, 767.98, 1);
-	@include adaptiveValue("line-height", math.div(59, 48), 100%, $containerWidth, 767.98, 1);
+	@media (min-width: $mobile) {
+		line-height: 1;
+	}
+	@media (min-width: $tablet) {
+		line-height: math.div(59, 48);
+	}
 }
 
 h3,
 .h3 {
 	font-weight: 900;
 	@include adaptiveValue("font-size", 36, 24, $containerWidth, 767.98, 1);
-	@include adaptiveValue("line-height", math.div(44, 36), math.div(29, 24), $containerWidth, 767.98, 1);
+	@media (min-width: $mobile) {
+		line-height: math.div(29, 24);
+	}
+	@media (min-width: $tablet) {
+		line-height: math.div(44, 36);
+	}
 }
 
 h4,
@@ -32,20 +42,35 @@ h5,
 .h5 {
 	font-weight: 800;
 	@include adaptiveValue("font-size", 24, 18, $containerWidth, 767.98, 1);
-	@include adaptiveValue("line-height", math.div(29, 24), math.div(22, 18), $containerWidth, 767.98, 1);
+	@media (min-width: $mobile) {
+		line-height: math.div(22, 18);
+	}
+	@media (min-width: $tablet) {
+		line-height: math.div(29, 24);
+	}
 }
 
 h6,
 .h6 {
 	font-weight: 700;
 	@include adaptiveValue("font-size", 18, 16, $containerWidth, 767.98, 1);
-	@include adaptiveValue("line-height", math.div(18, 22), math.div(20, 16), $containerWidth, 767.98, 1);
+	@media (min-width: $mobile) {
+		line-height: math.div(20, 16);
+	}
+	@media (min-width: $tablet) {
+		line-height: math.div(18, 22);
+	}
 }
 
 .p1 {
 	font-weight: 600;
 	@include adaptiveValue("font-size", 48, 32, $containerWidth, 767.98, 1);
-	@include adaptiveValue("line-height", math.div(59, 48), math.div(39, 32), $containerWidth, 767.98, 1);
+	@media (min-width: $mobile) {
+		line-height: math.div(39, 32);
+	}
+	@media (min-width: $tablet) {
+		line-height: math.div(59, 48);
+	}
 }
 .p2 {
 	line-height: 1.5;
@@ -55,12 +80,22 @@ h6,
 .p3 {
 	font-weight: 400;
 	@include adaptiveValue("font-size", 24, 20, $containerWidth, 767.98, 1);
-	@include adaptiveValue("line-height", math.div(33, 24), math.div(27, 20), $containerWidth, 767.98, 1);
+	@media (min-width: $mobile) {
+		line-height: math.div(27, 20);
+	}
+	@media (min-width: $tablet) {
+		line-height: math.div(33, 24);
+	}
 }
 .p4 {
 	font-weight: 400;
 	@include adaptiveValue("font-size", 18, 16, $containerWidth, 767.98, 1);
-	@include adaptiveValue("line-height", 150%, math.div(22, 16), $containerWidth, 767.98, 1);
+	@media (min-width: $mobile) {
+		line-height: math.div(22, 16);
+	}
+	@media (min-width: $tablet) {
+		line-height: 1.5;
+	}
 }
 .p5 {
 	line-height: 1.5;
