@@ -231,6 +231,13 @@
 	a {
 		font-weight: 600;
 		color: $primary-main;
+		&:not(&.button) {
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
 	}
 
 	// article-content * p, li, tr
