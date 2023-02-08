@@ -12,11 +12,12 @@ export function initSliders() {
       modules: [Navigation, EffectCreative],
       speed: 800,
       loop: true,
+      loopedSlides: 2,
       allowTouchMove: false,
       effect: "creative",
       creativeEffect: {
         prev: {
-          shadow: true,
+          shadow: false,
           translate: ["0%", "-8%", 112],
           opacity: 0
         },

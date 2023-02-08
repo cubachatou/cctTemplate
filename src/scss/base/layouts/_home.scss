@@ -247,11 +247,7 @@
 	}
 	// .case-slider__item
 	&__item {
-		position: absolute;
-		top: 0;
-		left: 0;
 		border-radius: 1.5rem;
-		overflow: hidden;
 		&.swiper-slide-prev {
 			pointer-events: none;
 		}
@@ -262,10 +258,16 @@
 		position: absolute;
 		inset: 0;
 		background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, rgba(0, 0, 0, 0) 27.63%, rgba(0, 0, 0, 0.7) 100%);
+		&:not(.swiper-slide-active &) {
+			border-radius: 1.6rem;
+		}
 	}
 	// .case-slider__img
 	&__img {
 		pointer-events: none;
+		&:not(.swiper-slide-active &) {
+			border-radius: 1.6rem;
+		}
 	}
 	// .case-slider__item-content
 	&__item-content {
