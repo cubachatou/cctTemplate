@@ -27,7 +27,7 @@
         <span class="short-us__text p2">Маверікс – це місце для серфінгу в північній Каліфорнії, де хвилі можуть сягати 20 метрів. Підкорити таких велетнів здатні тільки найкращі серфери світу.
 
           Агенція Mavericks з’явилася з бажання засновників підкорювати хвилі й у своїй професійній діяльності. І ми не зупиняємось! Ми постійно кидаємо виклик власним здібностям та знаходимо рішення, які б повністю задовольняли потреби клієнтів.</span>
-        <a href="javascript:void(0)" class="short-us__link button button_primary">Стати клієнтом</a>
+        <a href="javascript:void(0)" class="short-us__link button button_primary"><span>Стати клієнтом</span></a>
       </div>
     </div>
   </section>
@@ -210,8 +210,8 @@
       <img src="images/fishes/whale.png" alt="Whale">
     </span>
     <div class="cta__buttons">
-      <a href="javascript:void(0)" class="cta__button button button_primary">Заповнити бриф</a>
-      <a href="javascript:void(0)" class="cta__button button button_primary">Наші контакти</a>
+      <a href="javascript:void(0)" class="cta__button button button_primary"><span>Заповнити бриф</span></a>
+      <a href="javascript:void(0)" class="cta__button button button_primary"><span>Наші контакти</span></a>
     </div>
   </section>
 </main>

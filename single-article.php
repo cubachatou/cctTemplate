@@ -271,7 +271,7 @@
           <div class="cta-block__content">
             <h4 class="cta-block__title">Ми ще не співпрацювали?</h4>
             <span class="cta-block__sub-title p6">Не втрачайте час, напишіть нам</span>
-            <a href="javascript:void(0)" class="cta-block__link button button_primary">Хочу проєкт</a>
+            <a href="javascript:void(0)" class="cta-block__link button button_primary"><span>Хочу проєкт</span></a>
           </div>
           <div class="cta-block__image">
             <img src="images/home/shell.png" alt="Shell">

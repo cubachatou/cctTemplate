@@ -2,20 +2,48 @@
 // Сніппет (HTML): btn
 
 .button {
+	position: relative;
+	overflow: hidden;
+
 	display: inline-flex;
 	font-size: rem(16);
 	line-height: math.div(20, 16);
 	font-weight: 500;
 	letter-spacing: 0.05em;
 	transition: all 0.3s ease 0s;
+	span {
+		position: relative;
+		z-index: 1;
+	}
 	&_primary {
 		padding: rem(8) rem(16);
 		background: rgba(0, 0, 0, 0.09);
 		border-radius: rem(32);
+
+		&::after {
+			content: "";
+			background: $neutral-100;
+			transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+			transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+			transition-duration: 0.7s;
+			position: absolute;
+			border-radius: 50%;
+			left: -3rem;
+			right: -3rem;
+			top: -100%;
+			bottom: -100%;
+			transform-origin: top;
+			transform: scaleY(0);
+			will-change: transform;
+		}
+
 		@media (any-hover: hover) {
 			&:hover {
 				color: $neutral-10;
-				background-color: $neutral-100;
+				&::after {
+					transform-origin: bottom;
+					transform: scaleY(1);
+				}
 			}
 		}
 		&:active {
@@ -31,10 +59,12 @@
 			background: rgba(255, 255, 255, 0.2);
 			border-radius: rem(32);
 			color: $neutral-20;
+			&::after {
+				background: $neutral-10;
+			}
 			@media (any-hover: hover) {
 				&:hover {
 					color: $neutral-100;
-					background-color: $neutral-20;
 				}
 			}
 			&:active {

@@ -22,7 +22,7 @@
     <div class="short-about__container">
       <div class="short-about__inner">
         <span class="short-about__title p1">Mavericks Agency є командою дизайнерів та розробників продуктів, котрі працюють задля отримання результату</span>
-        <a href="javascript:void(0)" class="short-about__button button button_primary">Більше про компанію</a>
+        <a href="javascript:void(0)" class="short-about__button button button_primary"><span>Більше про компанію</span></a>
       </div>
     </div>
   </section>
@@ -59,7 +59,7 @@
             <a href="javascript:void(0)" class="service-card__button button button_underline">Деталі</a>
           </div>
         </div>
-        <a href="javascript:void(0)" class="services__more-button button button_primary">Більше про послуги</a>
+        <a href="javascript:void(0)" class="services__more-button button button_primary"><span>Більше про послуги</span></a>
       </div>
     </div>
   </section>
@@ -119,7 +119,7 @@
             </div>
           </div>
         </div>
-        <a href="javascript:void(0)" class="cases__link button button_primary">Всі кейси</a>
+        <a href="javascript:void(0)" class="cases__link button button_primary"><span>Всі кейси</span></a>
       </div>
     </div>
   </section>
@@ -200,7 +200,7 @@
             </div>
           </article>
         </div>
-        <a href="javascript:void(0)" class="from-blog__link button button_primary">Перейти до блогу</a>
+        <a href="javascript:void(0)" class="from-blog__link button button_primary"><span>Перейти до блогу</span></a>
       </div>
     </div>
   </section>
@@ -211,8 +211,8 @@
       <img src="images/fishes/whale.png" alt="Whale">
     </span>
     <div class="cta__buttons">
-      <a href="javascript:void(0)" class="cta__button button button_primary">Заповнити бриф</a>
-      <a href="javascript:void(0)" class="cta__button button button_primary">Наші контакти</a>
+      <a href="javascript:void(0)" class="cta__button button button_primary"><span>Заповнити бриф</span></a>
+      <a href="javascript:void(0)" class="cta__button button button_primary"><span>Наші контакти</span></a>
     </div>
   </section>
 </main>

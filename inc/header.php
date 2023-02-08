@@ -51,7 +51,7 @@
       </div>
     </div>
     <div class="menu__footer footer-menu">
-      <a href="javascript:void(0)" class="footer-menu__brief button button_primary">Fill out the brief</a>
+      <a href="javascript:void(0)" class="footer-menu__brief button button_primary"><span>Fill out the brief</span></a>
       <div class="footer-menu__socials socials-menu">
         <a href="javascript:void(0)" class="socials-menu__link">Instagram</a>
         <a href="javascript:void(0)" class="socials-menu__link">Behance</a>

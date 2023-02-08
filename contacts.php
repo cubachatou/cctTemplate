@@ -99,7 +99,7 @@
           <div class="contact-info__row contact-info__row_last">
             <span class="contact-info__row__title p2">Хочете отримати попередню пропозицію?</span>
             <span class="contact-info__row__sub-title p6 text-neutral-90">Дайте відповідь на декілька запитань і ми надішлемо вам розрахунок</span>
-            <a href="javascript:void(0)" class="contact-info__row__button button button_primary">Заповнити бриф</a>
+            <a href="javascript:void(0)" class="contact-info__row__button button button_primary"><span>Заповнити бриф</span></a>
           </div>
         </div>
         <form action="#" method="post" class="contact-action__col contact-action__col_right form form_contact">
@@ -137,7 +137,7 @@
       <span class="short-us__title">Про нас</span>
       <div class="short-us__content">
         <span class="short-us__text p2">Ми допомагаємо стартапам і відомим компаніям розробляти нові цифрові продукти та оптимізувати існуючі онлайн-послуги, орієнтовані на клієнтів, досліджуючи та розробляючи чудовий і цінний досвід користувачів, а також розробляючи високоефективні веб-і мобільні додатки.</span>
-        <a href="javascript:void(0)" class="short-us__link button button_primary">Більше про нас</a>
+        <a href="javascript:void(0)" class="short-us__link button button_primary"><span>Більше про нас</span></a>
       </div>
     </div>
   </section>
@@ -197,8 +197,8 @@
       <img src="images/fishes/whale.png" alt="Whale">
     </span>
     <div class="cta__buttons">
-      <a href="javascript:void(0)" class="cta__button button button_primary">Заповнити бриф</a>
-      <a href="javascript:void(0)" class="cta__button button button_primary">Наші контакти</a>
+      <a href="javascript:void(0)" class="cta__button button button_primary"><span>Заповнити бриф</span></a>
+      <a href="javascript:void(0)" class="cta__button button button_primary"><span>Наші контакти</span></a>
     </div>
   </section>
 </main>
