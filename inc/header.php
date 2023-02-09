@@ -13,7 +13,11 @@
       <div class="gradient-menu__item gradient-menu__item_blue"></div>
       <div class="gradient-menu__item gradient-menu__item_purple"></div>
     </div>
-    <button type="button" class="menu__icon icon-menu"><span></span></button>
+    <button type="button" class="menu__icon icon-menu">
+      <svg class="icon icon-burger">
+        <use xlink:href="/images/svgMap.svg#icon-burger"></use>
+      </svg>
+    </button>
     <div class="menu__header header-menu">
       <div class="header-menu__col header-menu__col_left">
         <nav class="header-menu__navigation">

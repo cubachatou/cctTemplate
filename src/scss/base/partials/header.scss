@@ -398,37 +398,22 @@
 	opacity: 0;
 	position: fixed;
 	top: 50%;
-	left: 0;
-	display: block;
+	left: -0.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: rem(24);
 	height: rem(18);
+	padding: 1.5rem;
 	cursor: pointer;
 	transition: left 0.3s ease 0s, opacity 0.15s ease 0s;
-	span,
-	&::before,
-	&::after {
-		content: "";
-		transition: all 0.3s ease 0s;
-		right: 0;
-		position: absolute;
-		width: 100%;
-		height: rem(2);
-		background-color: $turquoise;
-		border-radius: 8px;
-	}
-	&::before {
-		top: 0;
-	}
-	&::after {
-		bottom: 0;
-	}
-	span {
-		top: calc(50% - rem(1));
+	svg {
+		flex-shrink: 0;
 	}
 	.menu-hovered &,
 	.menu-visible & {
 		opacity: 1;
-		left: rem(16);
+		left: 0;
 	}
 	.lock & {
 		transition: left 0s ease 0s, opacity 0.3s ease 0s;

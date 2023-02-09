@@ -1,5 +1,10 @@
 /*ANIMATION*/
 
+// will-change
+.icon-menu {
+	will-change: transform, top;
+}
+
 @keyframes rotate {
 	from {
 		transform: rotate(-360deg);

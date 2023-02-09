@@ -74,6 +74,7 @@ try {
   flsModules.menuBulge = new MenuBulge({})
 
   let page_atTop = true;
+  let cursor_atLeft = null;
 
   if (flsModules.lenis.scroll === 0) {
     setTimeout(() => {
@@ -82,41 +83,50 @@ try {
     }, 700);
   }
 
-  more();
-
-  function more() {
-    document.addEventListener("scroll", function moreEvent(e) {
-      if (flsModules.lenis.scroll > 100) {
-
-        document.removeEventListener('scroll', moreEvent)
+  flsModules.lenis.on("scroll", function (e) {
+    let cursorY = document.querySelector(".mf-cursor").getBoundingClientRect().y;
+    if (e.scroll > 50) {
+      if (!cursor_atLeft) {
         flsModules.menuBulge.close();
         flsModules.menuBulge.visibility_OFF();
-        page_atTop = false;
-
-        less();
       }
-    })
-  }
-
-  function less() {
-    document.addEventListener("scroll", function lessEvent(e) {
-      if (flsModules.lenis.scroll < 100) {
-
-        document.removeEventListener('scroll', lessEvent)
-        flsModules.menuBulge.open();
-        flsModules.menuBulge.visibility_ON();
-        page_atTop = true;
-
-        more();
+      page_atTop = false;
+    } else {
+      flsModules.menuBulge.open();
+      flsModules.menuBulge.visibility_ON();
+      page_atTop = true;
+      if (e.direction === 1) {
+        gsap.to(menuBulgeSvg, {
+          top: cursorY,
+          y: "-480",
+        })
+        gsap.to(burgerIcon, {
+          top: cursorY,
+          y: "-50%",
+        })
+      } else {
+        gsap.to(menuBulgeSvg, {
+          top: 0,
+          y: 0,
+        })
+        gsap.to(burgerIcon, {
+          top: "50%",
+          y: 0,
+        })
       }
-    });
-  }
+    }
+  });
+
+  const menuBulgeSvg = document.querySelector(".MenuBulge");
+  const burgerIcon = document.querySelector(".icon-menu");
 
   document.addEventListener("mousemove", function (e) {
     if (e.x <= 64) {
       flsModules.menuBulge.open();
       flsModules.menuBulge.hover_ON();
+      cursor_atLeft = true;
     } else if (e.x > 64) {
+      cursor_atLeft = false;
       if (page_atTop) {
         flsModules.menuBulge.hover_OFF();
       }
@@ -124,6 +134,17 @@ try {
         flsModules.menuBulge.close();
         flsModules.menuBulge.hover_OFF();
       }
+    }
+
+    if (!page_atTop) {
+      gsap.to(menuBulgeSvg, {
+        top: e.clientY,
+        y: "-480",
+      })
+      gsap.to(burgerIcon, {
+        top: e.clientY,
+        y: "-50%",
+      })
     }
   })
 
