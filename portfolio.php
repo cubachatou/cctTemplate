@@ -29,7 +29,7 @@
           <figcaption class="folio-figure__figcap">
             <h2 class="folio-figure__title h4">Gulliver</h2>
             <span class="folio-figure__sub-title capt-1">Дизайн сайту для торгово-розважального і бізнес-центру Gulliver</span>
-            <a href="javascript:void(0)" class="folio-figure__link icon-wrapper">
+            <a href="javascript:void(0)" class="folio-figure__link icon-wrapper" data-cursor-stick>
               <svg class="icon icon-arrow rotate-[135deg]">
                 <use xlink:href="/images/svgMap.svg#icon-arrow"></use>
               </svg>

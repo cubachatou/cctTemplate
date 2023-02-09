@@ -10,7 +10,7 @@ h1,
 h2,
 .h2 {
 	font-weight: 900;
-	@include adaptiveValue("font-size", 80, 48, $containerWidth, 767.98, 1);
+	@include adaptiveValue("font-size", 48, 40, $containerWidth, 767.98, 1);
 	@media (min-width: $mobile) {
 		line-height: 1;
 	}

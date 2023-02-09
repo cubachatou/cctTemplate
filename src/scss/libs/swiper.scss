@@ -95,8 +95,13 @@
 	pointer-events: none;
 	z-index: 10;
 }
-.swiper-3d .swiper-slide-shadow {
-	background: $neutral-30;
+.swiper-3d {
+	&.feedback-slider .swiper-slide-shadow {
+		background-color: rgba(255, 255, 255, 0.6);
+	}
+	&.case-slider .swiper-slide-shadow {
+		background-color: $neutral-30;
+	}
 }
 .swiper-3d .swiper-slide-shadow-left {
 	background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));

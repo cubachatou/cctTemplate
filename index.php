@@ -8,7 +8,7 @@
 <!-- MAIN -->
 <main class="page page_home transition-fade" id="swup">
   <section class="fh-section" g-component="AllInOne">
-    <a href="javascript:void(0)" class="project-order-link"></a>
+    <!-- <a href="javascript:void(0)" class="project-order-link"></a> -->
     <div class="fh-section__container">
       <div class="fh-section__inner">
         <h1 class="fh-section__title">

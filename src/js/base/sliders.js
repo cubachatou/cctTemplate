@@ -1,3 +1,4 @@
+import gsap from "gsap";
 import Swiper, {
   Navigation,
   EffectCreative
@@ -38,12 +39,11 @@ export function initSliders() {
     new Swiper(".feedback-slider", {
       modules: [Navigation, EffectCreative],
       speed: 800,
-      // slidesPerView: 3,
       spaceBetween: 16,
       allowTouchMove: false,
-      // virtualTranslate: true,
       effect: "creative",
       creativeEffect: {
+        limitProgress: 3,
         prev: {
           shadow: true,
           translate: [0, 0, -400],
@@ -57,9 +57,6 @@ export function initSliders() {
         prevEl: ".feedbacks__button_prev",
         nextEl: ".feedbacks__button_next",
       },
-      on: {
-
-      }
     });
   }
 }
