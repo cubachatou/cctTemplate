@@ -13,7 +13,7 @@
       <div class="gradient-menu__item gradient-menu__item_blue"></div>
       <div class="gradient-menu__item gradient-menu__item_purple"></div>
     </div>
-    <button type="button" class="menu__icon icon-menu">
+    <button type="button" class="menu__icon icon-menu" data-menu>
       <svg class="icon icon-burger">
         <use xlink:href="/images/svgMap.svg#icon-burger"></use>
       </svg>

@@ -96,14 +96,20 @@ try {
       flsModules.menuBulge.visibility_ON();
       page_atTop = true;
       if (e.direction === 1) {
-        gsap.to(menuBulgeSvg, {
-          top: cursorY,
-          y: "-480",
-        })
-        gsap.to(burgerIcon, {
-          top: cursorY,
-          y: "-50%",
-        })
+        if (e.scroll < 50 && !cursor_atLeft) {
+          flsModules.menuBulge.close();
+          flsModules.menuBulge.visibility_OFF();
+        } else {
+          gsap.to(menuBulgeSvg, {
+            top: cursorY,
+            y: "-480",
+          })
+          gsap.to(burgerIcon, {
+            top: cursorY,
+            y: "-50%",
+          })
+        }
+
       } else {
         gsap.to(menuBulgeSvg, {
           top: 0,
