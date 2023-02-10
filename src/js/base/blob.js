@@ -83,7 +83,7 @@ export function blobInit() {
     // our <path> element
     let blobPath = document.querySelector(".icon-nav-blob__path");
     const blobPathes = document.querySelectorAll(".icon-nav-blob__path");
-    const blobButtons = document.querySelectorAll('.case-slider__arrow_prev, .case-slider__arrow_next');
+    const blobButtons = document.querySelectorAll('.last-cases-slider__arrow_prev, .last-cases-slider__arrow_next');
 
     blobPathes.forEach(el => {
       gsap.to(el, {

@@ -4,6 +4,7 @@
 @import "portfolio";
 @import "blog";
 @import "single-article";
+@import "single-case";
 
 .page {
 	&:not(&_home) {
@@ -29,5 +30,8 @@
 	}
 	// .page_single-article
 	&_single-article {
+	}
+	// .page_single-case
+	&_single-case {
 	}
 }

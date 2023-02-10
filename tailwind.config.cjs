@@ -1,6 +1,6 @@
 module.exports = {
   mode: "jit",
-  content: ["./src/**/*.vue", "index.php", "header.php", "footer.php", "home.php", "contacts.php", "about.php", "404.php", "portfolio.php", "blog.php", "single-article.php", "inc/**/*.php"],
+  content: ["./src/**/*.vue", "index.php", "header.php", "footer.php", "home.php", "contacts.php", "about.php", "404.php", "portfolio.php", "blog.php", "single-article.php", "single-case.php", "inc/**/*.php"],
   theme: {
     content: {},
     container: {

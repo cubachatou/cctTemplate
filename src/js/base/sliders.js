@@ -8,8 +8,8 @@ import {
 } from "./modules.js";
 
 export function initSliders() {
-  if (document.querySelector(".case-slider")) {
-    new Swiper(".case-slider", {
+  if (document.querySelector(".last-cases-slider")) {
+    new Swiper(".last-cases-slider", {
       modules: [Navigation, EffectCreative],
       speed: 800,
       loop: true,
@@ -30,8 +30,8 @@ export function initSliders() {
       },
 
       navigation: {
-        prevEl: ".case-slider__arrow_prev",
-        nextEl: ".case-slider__arrow_next",
+        prevEl: ".last-cases-slider__arrow_prev",
+        nextEl: ".last-cases-slider__arrow_next",
       },
     });
   }
