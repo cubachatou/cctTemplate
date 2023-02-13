@@ -14,7 +14,12 @@
 	}
 	// .paggination__item
 	&__item {
+		font-family: $primary-fontFamily;
+		font-weight: 500;
+		font-size: 1rem;
+		line-height: math.div(20, 16);
 		&._active {
+			color: $primary-main;
 		}
 	}
 	// .paggination__link

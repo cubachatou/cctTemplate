@@ -118,7 +118,7 @@
           <li class="paggination__item">
             <a href="javascript:void(0)" class="paggination__link">1</a>
           </li>
-          <li class="paggination__item">
+          <li class="paggination__item _active">
             <a href="javascript:void(0)" class="paggination__link">2</a>
           </li>
           <li class="paggination__item">
