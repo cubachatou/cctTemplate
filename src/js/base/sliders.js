@@ -1,7 +1,8 @@
 import gsap from "gsap";
 import Swiper, {
   Navigation,
-  EffectCreative
+  EffectCreative,
+  Pagination
 } from "swiper";
 import {
   flsModules
@@ -56,6 +57,31 @@ export function initSliders() {
       navigation: {
         prevEl: ".feedbacks__button_prev",
         nextEl: ".feedbacks__button_next",
+      },
+    });
+  }
+  if (document.querySelector(".cs-slider-block__slider")) {
+    new Swiper(".cs-slider-block__slider", {
+      modules: [Navigation, EffectCreative, Pagination],
+      speed: 800,
+      effect: "creative",
+      creativeEffect: {
+        // limitProgress: 3,
+        prev: {
+          opacity: 0,
+        },
+        next: {
+          opacity: 0,
+        },
+      },
+
+      navigation: {
+        prevEl: ".cs-slider-block__button_prev",
+        nextEl: ".cs-slider-block__button_next",
+      },
+      pagination: {
+        el: ".cs-slider-block__pagination",
+        type: "fraction",
       },
     });
   }

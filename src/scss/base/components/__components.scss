@@ -57,6 +57,16 @@
 		border-radius: 50%;
 	}
 }
+.circle-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 0 0 2.25rem;
+	width: 2.25rem;
+	height: 2.25rem;
+	background: $neutral-30;
+	border-radius: 50%;
+}
 .icon-wrapper {
 	display: flex;
 	justify-content: center;
@@ -290,4 +300,19 @@
 	z-index: 5;
 	position: absolute;
 	inset: 0;
+}
+.marquee {
+	display: flex;
+	justify-content: flex-start;
+	font-family: $primary-fontSize;
+	font-weight: 900;
+	font-size: rem(196);
+	line-height: math.div(240, 196);
+	color: #000;
+	white-space: nowrap;
+	// .marquee__content
+	&__content {
+		padding: 0 25%;
+		animation: marquee 10s linear infinite;
+	}
 }

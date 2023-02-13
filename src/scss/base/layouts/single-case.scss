@@ -1,3 +1,4 @@
+// case-hero
 .case-hero {
 	// .case-hero__image
 	&__image {
@@ -59,5 +60,269 @@
 	}
 	// .info-block__site-tags
 	&__site-tags {
+	}
+}
+
+// case-content
+.case-content {
+	// .case-content__center
+	&__center {
+	}
+	// .case-content__single-image
+	&__single-image {
+	}
+	// .case-content__aim
+	&__aim {
+	}
+	// .case-content__result
+	&__result {
+	}
+	// .case-content__gallery
+	&__gallery {
+	}
+	// .case-content__slider
+	&__slider {
+	}
+}
+.cs-center {
+	padding: 4rem 0;
+	// .cs-center__container
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	// .cs-center__text
+	&__text {
+		max-width: rem(864);
+	}
+}
+.cs-single-image {
+	padding: 1rem 4rem;
+	// .cs-single-image__image
+	&__image {
+	}
+}
+.cs-aim {
+	padding: 4rem 0;
+	// .cs-aim__container
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		gap: 2rem;
+	}
+	// .cs-aim__col
+	&__col {
+		// .cs-aim__col_left
+		&_left {
+		}
+		// .cs-aim__col_right
+		&_right {
+			display: flex;
+			flex-direction: column;
+			gap: 4rem;
+			flex: 0 0 rem(640);
+		}
+	}
+	// .cs-aim__title
+	&__title {
+		color: $neutral-90;
+	}
+	// .cs-aim__text
+	&__text {
+	}
+	// .cs-aim__example
+	&__example {
+	}
+}
+.cs-example {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	// .cs-example__image
+	&__image {
+	}
+	// .cs-example__title
+	&__title {
+		color: $neutral-70;
+	}
+}
+.cs-result {
+	padding: rem(140) 0;
+	// .cs-result__container
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	// .cs-result__inner
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: rem(864);
+		gap: rem(72);
+	}
+
+	// .cs-result__content
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 2.5rem;
+	}
+	// .cs-result__title
+	&__title {
+	}
+	// .cs-result__text
+	&__text {
+	}
+	// .cs-result__awards
+	&__awards {
+	}
+	// .cs-result__get-to-know
+	&__get-to-know {
+	}
+}
+.cs-awards-grid {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	// .cs-awards-grid__figure
+	&__figure {
+	}
+}
+.award-figure {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 1rem 2rem 2rem;
+	border-radius: 1rem;
+	background: $neutral-10;
+	// .award-figure__image
+	&__image {
+		max-width: rem(192);
+	}
+	// .award-figure__figcap
+	&__figcap {
+		color: $neutral-90;
+	}
+}
+.get-to-know {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	// .get-to-know__title
+	&__title {
+		color: $neutral-80;
+	}
+	// .get-to-know__links
+	&__links {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+	// .get-to-know__list-item
+	&__list-item {
+	}
+	// .get-to-know__list-link
+	&__list-link {
+	}
+}
+.cs-gallery {
+	padding: 1rem 4rem;
+	// .cs-gallery__grid
+	&__grid {
+		display: grid;
+		grid-auto-flow: dense;
+		grid-template-columns: repeat(3, 1fr);
+		grid-auto-rows: 848px;
+		gap: 2rem;
+	}
+}
+.cs-gallery-grid {
+	// .cs-gallery-grid__item
+	&__item {
+	}
+}
+.cs-gallery-subgrid {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	// .cs-gallery-subgrid__item
+	&__item {
+		height: 100%;
+	}
+}
+.cs-slider-block {
+	padding: 1rem 4rem;
+	// .cs-slider-block__slider
+	&__slider {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+	// .cs-slider-block__wrapper
+	&__wrapper {
+	}
+	// .cs-slider-block__slide
+	&__slide {
+	}
+	// .cs-slider-block__image
+	&__image {
+		height: rem(827);
+	}
+	// .cs-slider-block__controls
+	&__controls {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+	// .cs-slider-block__button
+	&__button {
+		// .cs-slider-block__button_next
+		&_next {
+		}
+	}
+	// .cs-slider-block__button-prev
+	&__button-prev {
+	}
+	// .cs-slider-block__pagination
+	&__pagination {
+		color: $neutral-80;
+	}
+}
+
+// next-works
+.next-works {
+	position: relative;
+	padding: 2.5rem 0 8rem;
+	border-radius: 3rem;
+	background: $neutral-30;
+	// .next-works__marqee
+	&__marqee {
+		margin-bottom: rem(120);
+	}
+	// .next-works__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(120);
+		.folio-grid {
+			padding: 0;
+		}
+	}
+	// .next-works__content
+	&__content {
+		width: 100%;
+	}
+	// .next-works__more-button
+	&__more-button {
 	}
 }

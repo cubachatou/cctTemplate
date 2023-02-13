@@ -175,12 +175,12 @@
             </div>
           </div>
           <div class="feedbacks__controls">
-            <button type="button" class="feedbacks__button feedbacks__button_prev">
+            <button type="button" class="feedbacks__button feedbacks__button_prev circle-button">
               <svg class="icon icon-arrow">
                 <use xlink:href="/images/svgMap.svg#icon-arrow"></use>
               </svg>
             </button>
-            <button type="button" class="feedbacks__button feedbacks__button_next">
+            <button type="button" class="feedbacks__button feedbacks__button_next circle-button">
               <svg class="icon icon-arrow rotate-180">
                 <use xlink:href="/images/svgMap.svg#icon-arrow"></use>
               </svg>

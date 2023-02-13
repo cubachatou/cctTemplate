@@ -14,6 +14,14 @@
 	span {
 		position: relative;
 		z-index: 1;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		svg {
+			transition-property: fill, stroke;
+			transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+			transition-duration: 0.3s;
+		}
 	}
 	&_primary {
 		padding: rem(8) rem(16);
@@ -40,6 +48,9 @@
 		@media (any-hover: hover) {
 			&:hover {
 				color: $neutral-10;
+				span svg {
+					fill: $neutral-10;
+				}
 				&::after {
 					transform-origin: bottom;
 					transform: scaleY(1);
