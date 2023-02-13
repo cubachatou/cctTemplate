@@ -1,8 +1,12 @@
 .icon {
 	&-logo {
-		width: rem(56.2);
-		height: rem(40);
+		width: rem(45);
+		height: 2rem;
 		fill: $primary-main;
+		@media (min-width: $mobile) {
+			width: rem(56.2);
+			height: rem(40);
+		}
 	}
 	&-close {
 		width: 1.5rem;
@@ -60,6 +64,12 @@
 		width: 1.5rem;
 		height: rem(18);
 		fill: $turquoise;
+		.menu__icon_mobile & {
+			width: 1rem;
+			height: 0.75rem;
+			fill: $neutral-10;
+			stroke: $neutral-10;
+		}
 	}
 	&-globe,
 	&-be {

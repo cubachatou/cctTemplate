@@ -16,17 +16,29 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		font-size: rem(196);
 		line-height: math.div(240, 196);
 		cursor: default;
+		font-size: rem(60);
+		@media (min-width: $mobileSmall) {
+			@include adaptiveValue("font-size", 100, 70, 767.98, 414.98, 1);
+		}
+		@media (min-width: $mobile) {
+			@include adaptiveValue("font-size", 148, 100, 1023.98, 767.98, 1);
+		}
+		@media (min-width: $tablet) {
+			@include adaptiveValue("font-size", 196, 148, $containerWidth, 1023.98, 1);
+		}
 		&::before {
 			content: "";
 			position: absolute;
-			top: -1rem;
-			left: 133px;
-			width: 958px;
-			height: 409px;
+			top: -2rem;
+			left: percent(133, 1082);
+			width: percent(958, 1082);
+			height: percent(409, 445.5);
 			background: url("../../../../images/fishes/whale.png") no-repeat center / contain;
+			@media (min-width: $mobile) {
+				top: -1rem;
+			}
 		}
 		span {
 			&:first-child {

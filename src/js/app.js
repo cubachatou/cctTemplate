@@ -22,7 +22,7 @@ import "../scss/style.scss";
 import * as flsFunctions from "./base/functions.js";
 
 // flsFunctions.isWebp();
-// flsFunctions.addTouchClass();
+flsFunctions.addTouchClass();
 // flsFunctions.addLoadedClass();
 flsFunctions.menuInit();
 // flsFunctions.setAnimateDelay(0.07);
@@ -130,7 +130,7 @@ import * as flsScroll from "./base/scroll/scroll.js";
 
 //===================== OTHERS =====================//
 // Documentation: https://template.fls.guru/template-docs/dinamicheskij-adaptiv.html
-// import "./libs/dynamic_adapt.js";
+import "./libs/dynamic_adapt.js";
 
 // import './libs/wNumb.min.js';
 

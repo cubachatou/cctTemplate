@@ -5,6 +5,9 @@
 	height: 100%;
 	display: flex;
 	pointer-events: none;
+	.touch & {
+		pointer-events: all;
+	}
 	.menu-hovered &,
 	.menu-open & {
 		pointer-events: all;
@@ -15,7 +18,13 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: rem(136);
+		height: rem(148);
+		@media (min-width: $mobile) {
+			height: rem(136);
+		}
+	}
+	// .header__logo
+	&__logo {
 	}
 	// .header__menu
 	&__menu {
@@ -35,6 +44,11 @@
 	padding-bottom: rem(77);
 	.menu-open & {
 		z-index: 999;
+	}
+	&.__container {
+		@media (max-width: $pc) {
+			padding: rem(72) 2.5rem rem(77);
+		}
 	}
 	// .menu__gradients
 	&__gradients {
@@ -105,6 +119,34 @@
 	}
 	// .menu__icon
 	&__icon {
+		// .menu__icon_pc
+		&_pc {
+			.touch & {
+				display: none;
+			}
+		}
+		// .menu__icon_mobile
+		&_mobile {
+			display: block;
+			position: fixed;
+			top: 90%;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			padding: 0.5rem 1rem;
+			background: #000;
+			border-radius: 2rem;
+			color: $neutral-10;
+			transition: opacity 0.3s ease 0s;
+			&:not(.touch &) {
+				display: none;
+			}
+			.menu-open & {
+				opacity: 0;
+			}
+		}
 	}
 	// .menu__header
 	&__header {
@@ -119,6 +161,10 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
+	margin-bottom: 2rem;
+	@media (max-width: $mobile) {
+		flex-direction: column-reverse;
+	}
 	// .header-menu__col
 	&__col {
 		display: flex;
@@ -130,10 +176,20 @@
 	}
 	// .header-menu__col-right
 	&__col-right {
+		@media (max-width: $mobile) {
+			width: 100%;
+			justify-content: space-between;
+		}
 	}
 	// .header-menu__navigation
 	&__navigation {
 		padding-top: rem(170);
+		@media (max-width: $pc) {
+			padding-top: rem(82);
+		}
+		@media (max-width: $mobile) {
+			padding-top: 2rem;
+		}
 	}
 	// .header-menu__list
 	&__list {
@@ -194,6 +250,15 @@
 				transition-delay: 0.6s;
 			}
 		}
+
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 1rem;
+		}
+		@media (max-width: $mobile) {
+			gap: 1.5rem;
+		}
 	}
 	// .header-menu__link
 	&__link {
@@ -245,7 +310,17 @@
 	&__sub-list {
 		display: flex;
 		align-items: center;
-		padding: rem(20) rem(20) rem(20) rem(56);
+		padding: rem(20) rem(20) rem(20) rem(76);
+		@media (max-width: $tablet) {
+			padding: 0.5rem 0.5rem 0.5rem 2rem;
+		}
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 0;
+			gap: 1rem;
+			margin-bottom: 1rem;
+		}
 		pointer-events: none;
 		&:hover {
 			pointer-events: all;
@@ -269,11 +344,13 @@
 	}
 	// .header-menu__sub-item
 	&__sub-item {
-		opacity: 0;
-		transform: translateY(-100%);
-		pointer-events: none;
 		transition: transform 0.3s, opacity 0.3s;
 		transition-timing-function: ease-in;
+		@media (min-width: $pc) {
+			transform: translateY(-100%);
+			opacity: 0;
+			pointer-events: none;
+		}
 		&:nth-child(1) {
 			transition-delay: 0.1s;
 		}
@@ -299,6 +376,9 @@
 		transition: color 0.3s ease 0s;
 		&:not(span) {
 			padding: 1rem 2rem;
+			@media (max-width: $tablet) {
+				padding: 0;
+			}
 		}
 	}
 	// .header-menu__close
@@ -316,6 +396,24 @@
 	align-items: flex-end;
 	justify-content: space-between;
 	color: $neutral-10;
+	@media (max-width: $tablet) {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 2.25rem;
+	}
+	@media (max-width: $mobile) {
+		gap: rem(28);
+	}
+	// .footer-menu__pc-visible
+	&__pc-visible {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: flex-start;
+		gap: 1rem;
+		@media (min-width: $tablet) {
+			display: none;
+		}
+	}
 	// .footer-menu__brief
 	&__brief {
 		opacity: 0;
@@ -388,45 +486,58 @@
 }
 .contacts-menu {
 	@extend .socials-menu;
+	@media (max-width: $pc) {
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 0.75rem;
+	}
+	@media (max-width: $tablet) {
+		align-items: flex-start;
+	}
 	// .contacts-menu__link
 	&__link {
 		@extend .socials-menu__link;
 	}
 }
 .icon-menu {
-	z-index: 15;
-	opacity: 0;
-	position: fixed;
-	top: 50%;
-	left: -1.5rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: rem(24);
-	height: rem(18);
-	padding: 1.5rem;
-	cursor: pointer;
-	transition: left 0.5s ease 0s, opacity 0.3s ease 0s;
-	svg {
-		flex-shrink: 0;
-	}
-	.menu-hovered &,
-	.menu-visible & {
-		opacity: 1;
-		left: 0;
-	}
-	.lock & {
+	&:not(.touch) {
+		z-index: 15;
 		opacity: 0;
-		transition: left 0s ease 0s, opacity 0.3s ease 0.4s;
+		position: fixed;
+		top: 50%;
+		left: -1.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: rem(24);
+		height: rem(18);
+		padding: 1.5rem;
+		cursor: pointer;
+		transition: left 0.5s ease 0s, opacity 0.3s ease 0s;
+		svg {
+			flex-shrink: 0;
+		}
+		.menu-hovered &,
+		.menu-visible & {
+			opacity: 1;
+			left: 0;
+		}
+		.lock & {
+			opacity: 0;
+			transition: left 0s ease 0s, opacity 0.3s ease 0.4s;
+		}
+		.menu-hovered & {
+			transition: left 0.3s ease 0.2s, opacity 0.15s ease 0.2s;
+		}
+		.menu-hovered.menu-open & {
+			opacity: 0;
+			transition: all 0.3s ease 0s;
+		}
+		.menu-open & {
+			pointer-events: none;
+		}
 	}
-	.menu-hovered & {
-		transition: left 0.3s ease 0.2s, opacity 0.15s ease 0.2s;
-	}
-	.menu-hovered.menu-open & {
-		opacity: 0;
-		transition: all 0.3s ease 0s;
-	}
-	.menu-open & {
-		pointer-events: none;
+	.touch & {
+		display: none;
 	}
 }

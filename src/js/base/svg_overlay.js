@@ -136,19 +136,21 @@ class ShapeOverlays {
 }
 
 try {
-  const elmHamburger = document.querySelector(".icon-menu");
+  const elmHamburgers = document.querySelectorAll("[data-menu]");
   const elmOverlay = document.querySelector(".shape-overlays");
 
   if (elmOverlay) {
     flsModules.svgOverlay = new ShapeOverlays(elmOverlay);
   }
 
-  if (elmHamburger) {
-    elmHamburger.addEventListener("click", () => {
-      if (flsModules.svgOverlay.isAnimating) {
-        return false;
-      }
-      flsModules.svgOverlay.toggle();
+  if (elmHamburgers.length) {
+    elmHamburgers.forEach(elmHamburger => {
+      elmHamburger.addEventListener("click", () => {
+        if (flsModules.svgOverlay.isAnimating) {
+          return false;
+        }
+        flsModules.svgOverlay.toggle();
+      });
     });
   }
   document.addEventListener("click", function (e) {

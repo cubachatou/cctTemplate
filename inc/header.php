@@ -13,7 +13,7 @@
       <div class="gradient-menu__item gradient-menu__item_blue"></div>
       <div class="gradient-menu__item gradient-menu__item_purple"></div>
     </div>
-    <button type="button" class="menu__icon icon-menu" data-menu>
+    <button type="button" class="menu__icon menu__icon_pc icon-menu" data-menu>
       <svg class="icon icon-burger">
         <use xlink:href="/images/svgMap.svg#icon-burger"></use>
       </svg>
@@ -26,13 +26,13 @@
             <li class="header-menu__item">
               <a href="javascript:void(0)" class="header-menu__link">Services</a>
               <ul class="header-menu__sub-list">
-                <li class="header-menu__sub-item"><span class="header-menu__sub-link">/</span></li>
+                <li class="header-menu__sub-item hidden mmd3:visible"><span class="header-menu__sub-link">/</span></li>
                 <li class="header-menu__sub-item"><a href="javascript:void(0)" class="header-menu__sub-link menu-gradient-red hover:text-red">design</a></li>
-                <li class="header-menu__sub-item"><span class="header-menu__sub-link">/</span></li>
+                <li class="header-menu__sub-item hidden mmd3:visible"><span class="header-menu__sub-link">/</span></li>
                 <li class="header-menu__sub-item"><a href="javascript:void(0)" class="header-menu__sub-link menu-gradient-blue hover:text-blue">development</a></li>
-                <li class="header-menu__sub-item"><span class="header-menu__sub-link">/</span></li>
+                <li class="header-menu__sub-item hidden mmd3:visible"><span class="header-menu__sub-link">/</span></li>
                 <li class="header-menu__sub-item"><a href="javascript:void(0)" class="header-menu__sub-link menu-gradient-purple hover:text-purple">support</a></li>
-                <li class="header-menu__sub-item"><span class="header-menu__sub-link">/</span></li>
+                <li class="header-menu__sub-item hidden mmd3:visible"><span class="header-menu__sub-link">/</span></li>
               </ul>
             </li>
             <li class="header-menu__item"><a href="/portfolio.php" class="header-menu__link">Portfolio</a></li>
@@ -56,17 +56,25 @@
     </div>
     <div class="menu__footer footer-menu">
       <a href="javascript:void(0)" class="footer-menu__brief button button_primary"><span>Fill out the brief</span></a>
-      <div class="footer-menu__socials socials-menu">
+      <div class="mmd2:hidden footer-menu__pc-visible"></div>
+      <div class="footer-menu__socials socials-menu" data-da=".footer-menu__pc-visible, 1023.98">
         <a href="javascript:void(0)" class="socials-menu__link">Instagram</a>
         <a href="javascript:void(0)" class="socials-menu__link">Behance</a>
         <a href="javascript:void(0)" class="socials-menu__link">Facebook</a>
         <a href="javascript:void(0)" class="socials-menu__link">LinkedIn</a>
       </div>
-      <address class="footer-menu__contacts contacts-menu">
+      <address class="footer-menu__contacts contacts-menu" data-da=".footer-menu__pc-visible, 1023.98">
         <a href="tel:+380983858280" class="contacts-menu__link">+38 098 385 82 80</a>
         <a href="mailto:hello@mavericksagency" class="contacts-menu__link">hello@mavericksagency</a>
       </address>
     </div>
+
+    <button type="button" class="menu__icon menu__icon_mobile" data-menu>
+      <svg class="icon icon-burger">
+        <use xlink:href="/images/svgMap.svg#icon-burger"></use>
+      </svg>
+      Меню
+    </button>
   </div>
   <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
     <path class="shape-overlays__path"></path>
