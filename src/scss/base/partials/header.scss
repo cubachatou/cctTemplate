@@ -5,9 +5,9 @@
 	height: 100%;
 	display: flex;
 	pointer-events: none;
-	.touch & {
-		pointer-events: all;
-	}
+	// .touch & {
+	// 	pointer-events: all;
+	// }
 	.menu-hovered &,
 	.menu-open & {
 		pointer-events: all;
@@ -127,6 +127,7 @@
 		}
 		// .menu__icon_mobile
 		&_mobile {
+			z-index: 2;
 			display: block;
 			position: fixed;
 			top: 90%;

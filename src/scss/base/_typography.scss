@@ -64,9 +64,11 @@ h6,
 
 .p1 {
 	font-weight: 600;
-	@include adaptiveValue("font-size", 48, 32, $containerWidth, 767.98, 1);
+	font-size: 1.5rem;
+	line-height: math.div(29, 24);
 	@media (min-width: $mobile) {
 		line-height: math.div(39, 32);
+		@include adaptiveValue("font-size", 48, 32, $containerWidth, 767.98, 1);
 	}
 	@media (min-width: $tablet) {
 		line-height: math.div(59, 48);

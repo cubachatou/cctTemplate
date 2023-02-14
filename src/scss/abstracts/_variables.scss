@@ -66,20 +66,18 @@ $mobileSmall: em(414.98);
 [class*="__container"] {
 	margin: 0 auto;
 	box-sizing: content-box;
-	padding: 0 rem(16);
+	padding: 0 1rem;
 	@media (min-width: $mobileSmall) {
 		max-width: rem(688);
-		padding: 0 rem(40);
 	}
 	@media (min-width: $mobile) {
 		max-width: rem(944);
-		padding: 0 rem(64);
+		padding: 0 2.5rem;
 	}
 	@media (min-width: $tablet) {
 		max-width: rem(1312);
 	}
 	@media (min-width: $pc) {
-		max-width: rem($maxWidthContainer);
-		padding: 0 rem(math.div($containerPadding, 2));
+		padding: 0 4rem;
 	}
 }

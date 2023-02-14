@@ -15,7 +15,7 @@ export function initSliders() {
       speed: 800,
       loop: true,
       loopedSlides: 2,
-      allowTouchMove: false,
+      allowTouchMove: true,
       effect: "creative",
       creativeEffect: {
         prev: {
@@ -34,6 +34,11 @@ export function initSliders() {
         prevEl: ".last-cases-slider__arrow_prev",
         nextEl: ".last-cases-slider__arrow_next",
       },
+      breakpoints: {
+        1023.98: {
+          allowTouchMove: false,
+        }
+      }
     });
   }
   if (document.querySelector(".feedback-slider")) {

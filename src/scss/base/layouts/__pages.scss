@@ -9,9 +9,6 @@
 .page {
 	&:not(&_home) {
 		padding-top: rem(136);
-		& [class*="__container"] {
-			max-width: 1312px;
-		}
 	}
 	// .page_home
 	&_home {

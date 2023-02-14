@@ -68,13 +68,6 @@
         <a href="mailto:hello@mavericksagency" class="contacts-menu__link">hello@mavericksagency</a>
       </address>
     </div>
-
-    <button type="button" class="menu__icon menu__icon_mobile" data-menu>
-      <svg class="icon icon-burger">
-        <use xlink:href="/images/svgMap.svg#icon-burger"></use>
-      </svg>
-      Меню
-    </button>
   </div>
   <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
     <path class="shape-overlays__path"></path>
