@@ -6,7 +6,7 @@
       </svg>
     </div>
   </div>
-  <div class="header__menu __container menu">
+  <div class="header__menu menu">
     <div class="menu__gradients gradient-menu">
       <div class="gradient-menu__item gradient-menu__item_main"></div>
       <div class="gradient-menu__item gradient-menu__item_red"></div>
@@ -26,13 +26,13 @@
             <li class="header-menu__item">
               <a href="javascript:void(0)" class="header-menu__link">Services</a>
               <ul class="header-menu__sub-list">
-                <li class="header-menu__sub-item hidden mmd3:visible"><span class="header-menu__sub-link">/</span></li>
+                <li class="header-menu__sub-item hidden mmd3:inline-flex"><span class="header-menu__sub-link">/</span></li>
                 <li class="header-menu__sub-item"><a href="javascript:void(0)" class="header-menu__sub-link menu-gradient-red hover:text-red">design</a></li>
-                <li class="header-menu__sub-item hidden mmd3:visible"><span class="header-menu__sub-link">/</span></li>
+                <li class="header-menu__sub-item hidden mmd3:inline-flex"><span class="header-menu__sub-link">/</span></li>
                 <li class="header-menu__sub-item"><a href="javascript:void(0)" class="header-menu__sub-link menu-gradient-blue hover:text-blue">development</a></li>
-                <li class="header-menu__sub-item hidden mmd3:visible"><span class="header-menu__sub-link">/</span></li>
+                <li class="header-menu__sub-item hidden mmd3:inline-flex"><span class="header-menu__sub-link">/</span></li>
                 <li class="header-menu__sub-item"><a href="javascript:void(0)" class="header-menu__sub-link menu-gradient-purple hover:text-purple">support</a></li>
-                <li class="header-menu__sub-item hidden mmd3:visible"><span class="header-menu__sub-link">/</span></li>
+                <li class="header-menu__sub-item hidden mmd3:inline-flex"><span class="header-menu__sub-link">/</span></li>
               </ul>
             </li>
             <li class="header-menu__item"><a href="/portfolio.php" class="header-menu__link">Portfolio</a></li>

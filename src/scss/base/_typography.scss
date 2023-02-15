@@ -4,13 +4,13 @@ h1,
 .h1 {
 	font-weight: 900;
 	line-height: 1;
-	@include adaptiveValue("font-size", 104, 80, $containerWidth, 767.98, 1);
+	@include adaptiveValue("font-size", 104, 80, $containerWidth, 1023.98, 1);
 }
 
 h2,
 .h2 {
 	font-weight: 900;
-	@include adaptiveValue("font-size", 48, 40, $containerWidth, 767.98, 1);
+	@include adaptiveValue("font-size", 48, 40, $containerWidth, 1023.98, 1);
 	@media (min-width: $mobile) {
 		line-height: 1;
 	}
@@ -22,7 +22,7 @@ h2,
 h3,
 .h3 {
 	font-weight: 900;
-	@include adaptiveValue("font-size", 36, 24, $containerWidth, 767.98, 1);
+	@include adaptiveValue("font-size", 36, 24, $containerWidth, 1023.98, 1);
 	@media (min-width: $mobile) {
 		line-height: math.div(29, 24);
 	}
@@ -35,13 +35,13 @@ h4,
 .h4 {
 	font-weight: 900;
 	line-height: 1.2;
-	@include adaptiveValue("font-size", 24, 20, $containerWidth, 767.98, 1);
+	@include adaptiveValue("font-size", 24, 20, $containerWidth, 1023.98, 1);
 }
 
 h5,
 .h5 {
 	font-weight: 800;
-	@include adaptiveValue("font-size", 24, 18, $containerWidth, 767.98, 1);
+	@include adaptiveValue("font-size", 24, 18, $containerWidth, 1023.98, 1);
 	@media (min-width: $mobile) {
 		line-height: math.div(22, 18);
 	}
@@ -53,7 +53,7 @@ h5,
 h6,
 .h6 {
 	font-weight: 700;
-	@include adaptiveValue("font-size", 18, 16, $containerWidth, 767.98, 1);
+	@include adaptiveValue("font-size", 18, 16, $containerWidth, 1023.98, 1);
 	@media (min-width: $mobile) {
 		line-height: math.div(20, 16);
 	}
@@ -68,7 +68,7 @@ h6,
 	line-height: math.div(29, 24);
 	@media (min-width: $mobile) {
 		line-height: math.div(39, 32);
-		@include adaptiveValue("font-size", 48, 32, $containerWidth, 767.98, 1);
+		@include adaptiveValue("font-size", 48, 32, $containerWidth, 1023.98, 1);
 	}
 	@media (min-width: $tablet) {
 		line-height: math.div(59, 48);
@@ -77,11 +77,11 @@ h6,
 .p2 {
 	line-height: 1.5;
 	font-weight: 600;
-	@include adaptiveValue("font-size", 24, 20, $containerWidth, 767.98, 1);
+	@include adaptiveValue("font-size", 24, 20, $containerWidth, 1023.98, 1);
 }
 .p3 {
 	font-weight: 400;
-	@include adaptiveValue("font-size", 24, 20, $containerWidth, 767.98, 1);
+	@include adaptiveValue("font-size", 24, 20, $containerWidth, 1023.98, 1);
 	@media (min-width: $mobile) {
 		line-height: math.div(27, 20);
 	}
@@ -91,7 +91,7 @@ h6,
 }
 .p4 {
 	font-weight: 400;
-	@include adaptiveValue("font-size", 18, 16, $containerWidth, 767.98, 1);
+	@include adaptiveValue("font-size", 18, 16, $containerWidth, 1023.98, 1);
 	@media (min-width: $mobile) {
 		line-height: math.div(22, 16);
 	}
@@ -102,12 +102,12 @@ h6,
 .p5 {
 	line-height: 1.5;
 	font-weight: 600;
-	@include adaptiveValue("font-size", 16, 14, $containerWidth, 767.98, 1);
+	@include adaptiveValue("font-size", 16, 14, $containerWidth, 1023.98, 1);
 }
 .p6 {
 	font-weight: 400;
 	line-height: 1.5;
-	@include adaptiveValue("font-size", 16, 14, $containerWidth, 767.98, 1);
+	@include adaptiveValue("font-size", 16, 14, $containerWidth, 1023.98, 1);
 }
 .capt-1 {
 	font-weight: 400;

@@ -1,27 +1,44 @@
 .hight-hero {
-	padding: 64px 0 75px;
+	padding: 4rem 0 rem(75);
 	// .hight-hero__container
 	&__container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 96px;
+		gap: 6rem;
+		@media (max-width: $mobile) {
+			padding: 3rem;
+		}
 	}
 	// .hight-hero__title
 	&__title {
 		text-align: center;
+		@media (max-width: $mobile) {
+			font-size: 3rem;
+			line-height: math.div(59, 48);
+		}
 	}
 	// .hight-hero__arrow
 	&__arrow {
 	}
 	// .hight-hero__fish
 	&__fish {
-		width: 958px;
+		width: rem(958);
 		padding-top: 31.175%;
+		@media (max-width: $pc) {
+			width: rem(846);
+		}
+		@media (max-width: $tablet) {
+			width: 100vw;
+			padding-top: 47.675%;
+		}
+		@media (max-width: $mobile) {
+			padding-top: 51.9%;
+		}
 	}
 }
 .numbers {
-	padding: 96px 0;
+	padding: 6rem 0;
 	// .numbers__container
 	&__container {
 	}
@@ -29,8 +46,12 @@
 	&__list {
 		display: flex;
 		align-items: center;
-		justify-content: center;
-		gap: 112px;
+		justify-content: space-between;
+		gap: 5rem 1.5rem;
+		@media (max-width: $tablet) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 	// .numbers__item
 	&__item {
@@ -43,14 +64,21 @@
 	}
 	// .numbers__number
 	&__number {
-		width: 232px;
+		min-width: rem(159.5);
+		@media (max-width: $mobile) {
+			font-size: 3rem;
+			line-height: math.div(59, 48);
+		}
 	}
 	// .numbers__descr
 	&__descr {
 	}
 }
 .awards {
-	padding: 144px 0;
+	padding: rem(144) 0;
+	@media (max-width: $mobile) {
+		padding: 3rem 0;
+	}
 	// .awards__container
 	&__container {
 		display: flex;
@@ -68,13 +96,22 @@
 	display: flex;
 	justify-content: space-between;
 	gap: 2rem;
+	@media (max-width: $tablet) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center;
+		gap: 5.5rem 1.5rem;
+	}
+	@media (max-width: $mobile) {
+		grid-template-columns: 1fr;
+	}
 	// .awards-grid__figure
 	&__figure {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 2.5rem;
-		max-width: 192px;
+		max-width: rem(192);
 	}
 	// .awards-grid__image
 	&__image {

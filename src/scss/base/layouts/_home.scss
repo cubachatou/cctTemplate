@@ -410,7 +410,6 @@
 			justify-content: stretch;
 			overflow-x: scroll;
 			margin: 0 -1rem;
-			padding: 0 1rem;
 		}
 		&::before {
 			content: "";
@@ -435,8 +434,7 @@
 			padding: 1.5rem;
 			flex: 0 0 fit-content;
 			max-height: 6rem;
-		}
-		@media (min-width: $mobile) {
+
 			&:nth-child(1) {
 				border-bottom: 2px solid #f7f7f7;
 				border-right: 2px solid #f7f7f7;
@@ -483,6 +481,10 @@
 
 // calc
 .calc {
+	padding: rem(176) 0;
+	@media (max-width: $tablet) {
+		padding: 6rem 0;
+	}
 	// .calc__container
 	&__container {
 	}
@@ -491,8 +493,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: rem(176) rem(64);
-		background: radial-gradient(30.03% 42.39% at 68.19% 50.9%, rgba(255, 187, 152, 0.25) 0%, rgba(255, 173, 136, 0) 91.15%);
+		background-image: radial-gradient(30.03% 42.39% at 68.19% 50.9%, rgba(255, 187, 152, 0.25) 0%, rgba(255, 173, 136, 0) 91.15%);
 	}
 	// .calc__block
 	&__block {
@@ -501,6 +502,10 @@
 
 // from-blog
 .from-blog {
+	padding: 6rem 0 rem(200);
+	@media (max-width: $pc) {
+		padding: 6rem 0;
+	}
 	// .from-blog__container
 	&__container {
 	}
@@ -510,7 +515,6 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 4rem;
-		padding: rem(96) 0 rem(200);
 	}
 	// .from-blog__heading
 	&__heading {
@@ -520,6 +524,11 @@
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			align-items: stretch;
+			width: 100%;
+		}
 	}
 	// .from-blog__grid-item
 	&__grid-item {

@@ -9,7 +9,7 @@
 <main class="page page_contacts transition-fade" id="swup">
   <section class="page-heading" g-component="AllInOne">
     <div class="page-heading__container">
-      <a href="javascript:void(0)" class="page-heading__button">
+      <a href="javascript:void(0)" class="page-heading__button back-button">
         <span class="icon-wrapper">
           <svg class="icon icon-arrow-upleft">
             <use xlink:href="/images/svgMap.svg#icon-arrow-upleft"></use>
@@ -207,7 +207,5 @@
 <?php include('inc/footer.php'); ?>
 <!-- </div class="wrapper"></body> -->
 <?php include('inc/body-close.php'); ?>
-<!-- POPUP -->
-<?php include('inc/popup.php'); ?>
 <!-- SCRIPTS + HTML Close -->
 <?php include('inc/scripts.php'); ?>

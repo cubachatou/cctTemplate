@@ -43,7 +43,7 @@ $mf-color-text: #fff !default;
 			&:before {
 				scale: 100;
 				background: rgb(255, 255, 255);
-				background: radial-gradient(50% 50% at 50% 50%, #f7f7f7 0%, rgba(247, 247, 247, 0) 25%);
+				background-image: radial-gradient(50% 50% at 50% 50%, #f7f7f7 0%, rgba(247, 247, 247, 0) 25%);
 				transition: transform 0.25s ease-in-out, opacity 0.1s;
 			}
 		}
@@ -52,7 +52,7 @@ $mf-color-text: #fff !default;
 		z-index: -1;
 		&::before {
 			scale: 100;
-			background: radial-gradient(50% 50% at 50% 50%, #f7f7f7 0%, rgba(247, 247, 247, 0) 100%);
+			background-image: radial-gradient(50% 50% at 50% 50%, #f7f7f7 0%, rgba(247, 247, 247, 0) 100%);
 			transition: transform 0.25s ease-in-out, opacity 0.1s;
 		}
 	}

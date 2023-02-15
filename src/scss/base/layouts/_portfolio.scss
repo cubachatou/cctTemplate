@@ -1,11 +1,14 @@
 .overview {
-	padding: 96px 0;
+	padding: 6rem 0;
+	@media (max-width: $mobile) {
+		padding: 4rem 0 6rem;
+	}
 	// .overview__container
 	&__container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 48px;
+		gap: 3rem;
 	}
 	// .overview__content
 	&__content {
@@ -15,11 +18,21 @@
 	}
 }
 .folio-grid {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	gap: 48px 32px;
-	padding: 112px 0px 0px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 3rem 2rem;
+	padding: rem(112) 0 0;
+	@media (max-width: $pc) {
+		gap: 3rem 1.5rem;
+	}
+	@media (max-width: $mobile) {
+		padding-top: 3rem;
+	}
+	@media (max-width: $mobile) {
+		grid-template-columns: 1fr;
+		gap: 3.5rem;
+	}
 	// .folio-grid__figure
 	&__figure {
 	}
@@ -55,11 +68,11 @@
 	}
 	// .folio-figure__title
 	&__title {
-		max-width: 304px;
+		max-width: rem(304);
 	}
 	// .folio-figure__sub-title
 	&__sub-title {
-		max-width: 304px;
+		max-width: rem(304);
 	}
 	// .folio-figure__link
 	&__link {
