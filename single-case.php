@@ -6,10 +6,14 @@
 <?php include('inc/header.php'); ?>
 
 <!-- MAIN -->
-<main class="page page_singe-case transition-fade" id="swup">
+<main class="page page_single-case transition-fade" id="swup">
   <section class="case-hero bg-neutral-10" g-component="AllInOne">
-    <div class="case-hero__image -ibg_contain">
-      <img src="images/cases/Zelena/hero.png" alt="Zelena">
+    <div class="case-hero__image -ibg">
+      <!-- <img src="images/cases/OLX/cover.png" alt="Zelena"> -->
+      <picture class="case-hero__image">
+        <source srcset="images/cases/OLX/cover.png" media="(min-width: 413.98px)">
+        <img src="images/cases/OLX/cover-sm.png">
+      </picture>
     </div>
     <div class="case-hero__info">
       <div class="case-hero__container">
@@ -125,13 +129,13 @@
     </div>
     <div class="case-content__gallery cs-gallery">
       <div class="cs-gallery__grid cs-gallery-grid">
-        <div class="cs-gallery-grid__item -ibg col-span-full">
+        <div class="cs-gallery-grid__item -ibg_contain col-span-full">
           <img src="images/cases/Zelena/3.jpg" alt="#">
         </div>
-        <div class="cs-gallery-grid__item -ibg col-span-1">
+        <div class="cs-gallery-grid__item -ibg_contain col-span-1">
           <img src="images/cases/Zelena/4.jpg" alt="#">
         </div>
-        <div class="cs-gallery-grid__item -ibg col-span-2">
+        <div class="cs-gallery-grid__item -ibg_contain col-span-2">
           <img src="images/cases/Zelena/5.jpg" alt="#">
         </div>
         <!-- <div class="cs-gallery-grid__item -ibg col-span-2">

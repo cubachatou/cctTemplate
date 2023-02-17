@@ -7,7 +7,7 @@
 @import "single-case";
 
 .page {
-	&:not(&_home) {
+	&:not(&_home, &_single-case) {
 		padding-top: rem(136);
 	}
 	// .page_home

@@ -33,6 +33,9 @@
 		grid-template-columns: 1fr;
 		gap: 3.5rem;
 	}
+	.next-works & {
+		padding: 0;
+	}
 	// .folio-grid__figure
 	&__figure {
 	}

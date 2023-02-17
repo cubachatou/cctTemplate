@@ -157,7 +157,7 @@ try {
     if (e.target.closest("[data-menu-close]")) {
       flsModules.svgOverlay.close();
     }
-    if (e.target.closest(".header-menu__link")) {
+    if (e.target.closest(".header-menu__link") && !e.target.closest(".header-menu__link").nextSibling) {
       flsModules.svgOverlay.invert();
     }
   });

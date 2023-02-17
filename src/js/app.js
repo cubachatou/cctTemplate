@@ -161,7 +161,7 @@ import {
 import {
   initSliders
 } from './base/sliders.js';
-import VanillaTilt from 'vanilla-tilt';
+import "../../node_modules/vanilla-tilt/dist/vanilla-tilt.babel.js";
 import {
   flsModules
 } from "./base/modules.js";
@@ -174,7 +174,9 @@ class AllInOne extends Component {
     cursorsInit();
     numbersCounter();
     initSliders();
-    VanillaTilt.init(document.querySelectorAll("[data-tilt]"));
+    if (!document.documentElement.classList.contains("touch")) {
+      VanillaTilt.init(document.querySelectorAll("[data-tilt]"));
+    }
     blobInit();
   }
 }

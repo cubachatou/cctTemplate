@@ -75,6 +75,14 @@
 			display: flex;
 			align-items: center;
 			gap: 2rem;
+
+			@media (max-width: $mobile) {
+				.contact-info__row_third & {
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					gap: 2rem 5rem;
+				}
+			}
 		}
 		.contact-info__row_first & {
 			display: flex;
